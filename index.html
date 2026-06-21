@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Full Name] | Agri-Researcher Portfolio</title>
+    <style>
+        /* Modern Agriculture Theme Variables */
+        :root {
+            --bg-color: #f4f7f5;
+            --text-color: #2c3e50;
+            --accent-color: #2e7d32; /* Forest Green */
+            --accent-light: #81c784;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-light);
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        nav .links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav .links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero / About Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #e8f5e9, var(--bg-color));
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #546e7a;
+            margin-bottom: 15px;
+        }
+
+        .hero .location {
+            font-size: 1rem;
+            color: #78909c;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+            text-align: justify;
+        }
+
+        /* Social Badges */
+        .contact-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            background-color: var(--card-bg);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .badge:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Sections General */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Grid for Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .skill-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card ul li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .skill-card ul li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Project & Research Cards */
+        .item-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 20px;
+        }
+
+        .item-card h3 {
+            color: #1a202c;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .status-tag {
+            display: inline-block;
+            background-color: #fff3e0;
+            color: #ef6c00;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .item-card p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .item-card ul {
+            margin-left: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* List styling for Achievements */
+        .list-style {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .list-style li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #718096;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { flex-direction: column; gap: 10px; }
+            nav .links a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="container">
+        <div class="logo">🌾 AgriPortfolio</div>
+        <div class="links">
+            <a href="#skills">Skills</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero / About Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>[Your Full Name]</h1>
+            <div class="subtitle">B.Sc. in Agriculture Student | Agri-Researcher & Sustainability Enthusiast</div>
+            <div class="location">📍 [Your University/Institute Name, Bangladesh]</div>
+            
+            <!-- Contact Badges -->
+            <div class="contact-badges">
+                <a href="[Your LinkedIn Profile Link]" target="_blank" class="badge">🔗 LinkedIn</a>
+                <a href="mailto:[your.email@email.com]" class="badge">✉️ [your.email@email.com]</a>
+                <a href="tel:+8801XXXXXXXXX" class="badge">📱 [+8801XXXXXXXXX]</a>
+            </div>
+
+            <h2 style="font-size: 1.4rem; color: var(--accent-color); margin-top: 25px; margin-bottom: 10px;">🧑‍🌾 About Me</h2>
+            <p>
+                I am a passionate and driven Bachelor of Science in Agriculture student dedicated to bridging the gap between traditional farming and modern agricultural sciences. My academic journey focuses on climate-resilient crop production, soil nutrient management, and sustainable pest control. Combining solid theoretical knowledge with hands-on laboratory and field experience, I aim to contribute to food security and smart agricultural solutions.
+            </p>
+        </div>
+    </header>
+
+    <!-- Core Skills Section -->
+    <section id="skills" class="container">
+        <h2 class="section-title">🛠 Technical & Core Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Laboratory Techniques</h3>
+                <ul>
+                    <li>Soil pH & EC testing</li>
+                    <li>NPK macronutrient analysis</li>
+                    <li>Plant pathology basics</li>
+                    <li>Crop physiology tracking</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Field Agronomy</h3>
+                <ul>
+                    <li>Diagnostic field scouting</li>
+                    <li>Integrated Pest Management (IPM)</li>
+                    <li>Fertilizer recommendation</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Data & Software</h3>
+                <ul>
+                    <li>Agricultural data in MS Excel</li>
+                    <li>Technical report writing</li>
+                    <li>Research presentation design</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Active team collaboration</li>
+                    <li>Farmer community communication</li>
+                    <li>Analytical thinking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="container">
+        <h2 class="section-title">🔬 Research Experience (Work in Progress)</h2>
+        <div class="item-card">
+            <h3>Project: [এখানে আপনার আনপাবলিশড পেপারের আসল নাম/টাইটেলটি লিখবেন]</h3>
+            <span class="status-tag">Manuscript under preparation</span>
+            <p><strong>Objective:</strong> [আপনার এই পেপার বা গবেষণার মূল লক্ষ্য কী ছিল, তা এখানে ১ লাইনে ইংরেজিতে লিখবেন।]</p>
+            <p><strong>My Role:</strong> Formulated the primary research hypothesis, collected field/laboratory samples, performed data compilation using spreadsheet software, and drafted the initial manuscript.</p>
+            <p><strong>Key Focus:</strong> [গবেষণার প্রধান প্রাপ্তি বা কোনো গুরুত্বপূর্ণ ফলাফল ১ লাইনে লিখবেন।]</p>
+        </div>
+    </section>
+
+    <!-- Academic Projects Section -->
+    <section id="projects" class="container">
+        <h2 class="section-title">🚜 Academic Lab & Field Projects</h2>
+        
+        <!-- Project 1 -->
+        <div class="item-card">
+            <h3>1. Soil Analysis and Nutrient Mapping (Academic Lab Work)</h3>
+            <p style="color: #555; margin-top: 5px;">Conducted comprehensive soil testing during practical courses to analyze soil physical and chemical properties, focusing on optimizing crop fertilizer requirements.</p>
+            <p><strong>Skills Applied:</strong> Soil sampling, pH measurement, and calculation of macronutrient deficiencies.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="item-card">
+            <h3>2. Crop Disease Identification and Diagnosis (Field Scouting)</h3>
+            <p style="color: #555; margin-top: 5px;">Participated in regular institutional field visits to identify common plant pathogens, insect pests, and nutrient deficiencies across various seasonal crops.</p>
+            <p><strong>Skills Applied:</strong> Visual diagnosis of plant diseases, insect specimen collection, and recommending sustainable control measures.</p>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="container">
+        <h2 class="section-title">📜 Certifications & Achievements</h2>
+        <div class="list-style">
+            <ul>
+                <li><strong>Undergraduate Academic Excellence:</strong> Maintaining a strong academic record in Bachelor of Science in Agriculture.</li>
+                <li><strong>Active Member:</strong> [Name of your University Agriculture Club/Society, if any].</li>
+                <li><strong>Participated:</strong> [আপনার বিশ্ববিদ্যালয় বা কোনো সেমিনার/কৃষি মেলায় অংশ নিয়ে থাকলে তার নাম লিখবেন]।</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container" style="text-align: center; padding: 40px 0;">
+        <h2 class="section-title" style="border: none; padding: 0;">📞 Get In Touch</h2>
+        <p style="margin-bottom: 20px; font-size: 1.1rem;">I am always open to discussing research collaborations, internships, and innovative agri-tech ideas.</p>
+        <div class="contact-badges" style="justify-content: center;">
+            <a href="mailto:[your.email@email.com]" class="badge" style="background-color: var(--accent-color); color: white;">Email Me Directly</a>
+            <a href="[Optional Email]" class="badge">Alternative Email: [Optional Email]</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 [Your Full Name]. Built with Security & Precision on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
