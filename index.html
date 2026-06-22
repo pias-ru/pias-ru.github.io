@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- মেটা ট্যাগ: ব্রাউজারকে পেজের ভাষা ও ক্যারেক্টার বোঝানোর জন্য -->
     <meta charset="UTF-8">
+    <!-- রেসপন্সিভ মেটা: ওয়েবসাইটটি যেন মোবাইল, ট্যাব ও কম্পিউটারে পারফেক্টলি ফিট হয় -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ব্রাউজার ট্যাবের ওপর যে নাম শো করবে -->
     <title>Pias Ahmed</title>
     
-   */ <!-- 🟢 ১. ব্রাউজার ট্যাবের জন্য লোগো (Favicon) -->
-    <link rel="icon" type="image/jpeg" href="13294 (1).jpg"> */
+    <!-- ব্রাউজার ট্যাবে নামের বাম পাশে যে ছোট গোল লোগো (Favicon) শো করবে -->
+    <link rel="icon" type="image/jpeg" href="13294 (1).jpg">
 
     <style>
-        /* Modern Agriculture Theme Variables */
+        /* --- সিএসএস ডিজাইন সেকশন শুরু --- */
+
+        /* :root ভেরিয়েবল: পুরো ওয়েবসাইটের কালার থিম এক জায়গায় সেট করা */
         :root {
-            --bg-color: #f4f7f5;
-            --text-color: #2c3e50;
-            --accent-color: #2e7d32; /* Forest Green */
-            --accent-light: #81c784;
-            --card-bg: #ffffff;
-            --border-color: #e0e0e0;
+            --bg-color: #f4f7f5;     /* পুরো পেজের হালকা ব্যাকগ্রাউন্ড কালার */
+            --text-color: #2c3e50;   /* লেখার মূল কালার (ডার্ক গ্রে) */
+            --accent-color: #2e7d32; /* প্রধান আকর্ষণীয় কালার (ফরেস্ট গ্রিন) */
+            --accent-light: #81c784; /* হালকা সবুজ কালার */
+            --card-bg: #ffffff;      /* সব বক্স বা কার্ডের ভেতরের সাদা কালার */
+            --border-color: #e0e0e0; /* বক্সগুলোর চারপাশের হালকা বর্ডার কালার */
         }
 
+        /* ইউনিভার্সাল সিলেক্টর: পেজের সব ডিফল্ট মার্জিন-প্যাডিং দূর করে সাইজ পারফেক্ট করা */
         * {
             margin: 0;
             padding: 0;
@@ -26,32 +33,33 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* বডি ডিজাইন: পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড এবং লাইনের দূরত্ব নির্ধারণ করে */
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
         }
 
+        /* কন্টেইনার: সব কন্টেন্টকে স্ক্রিনের একদম মাঝখানে ৯৫০ পিক্সেলের মধ্যে সুন্দরভাবে সাজিয়ে রাখে */
         .container {
             max-width: 950px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Navbar */
+        /* নেভিগেশন বার (টপ মেনু): যা স্ক্রিনের উপরে সবসময় আটকে (Sticky) থাকবে */
         nav {
             position: sticky;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 2px       rgba(0,0,0,0.08);
+            background-color: #ffffff;
+            padding: 15px 0; /* প্যাডিং কিছুটা কমানো হলো সুন্দর ফিটের জন্য */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* মেনুবারের নিচের হালকা ছায়া */
         }
 
+        /* মেনুবারের বাম পাশের শুধু "Portfolio" লেখার ডিজাইন (কোনো ইমেজ লোগো নেই) */
         nav .logo a {
             font-size: 1.4rem; 
             font-weight: bold;
@@ -60,9 +68,38 @@
             letter-spacing: 0.5px;
         }
 
-        /* থ্রি-বার (Hamburger) বাটন ডিজাইন */
+        /* 🟢 ডেস্কটপে মেনু লিংকগুলোর ডিজাইন (সরাসরি ডানপাশে সারিবদ্ধভাবে থাকবে) */
+        nav .links {
+            display: flex; 
+            flex-direction: row;
+            gap: 20px;
+            position: static;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            width: auto;
+        }
+
+        /* ডেস্কটপ মেনুর ভেতরের প্রতিটি লিংকের (Skills, Research ইত্যাদি) টেক্সট ডিজাইন */
+        nav .links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 700;
+            padding: 5px 10px;
+            display: inline-block;
+            transition: color 0.2s;
+        }
+
+        /* ডেস্কটপ লিংকের ওপর মাউস নিলে লেখা সবুজ হওয়ার হোভার এফেক্ট */
+        nav .links a:hover {
+            color: var(--accent-color);
+            background-color: transparent;
+        }
+
+        /* 🟢 টগল বাটন: ডেস্কটপে এটি সম্পূর্ণ গায়েব বা লুকানো (None) থাকবে */
         .menu-toggle {
-            display: flex;
+            display: none;
             flex-direction: column;
             gap: 4px;
             cursor: pointer;
@@ -70,54 +107,32 @@
             z-index: 1010;
         }
 
+        /* টগল বাটনের ভেতরের প্রতিটি লাইনের সাইজ, কালার এবং ট্রানজিশন টাইম */
         .menu-toggle span {
             display: block;
             width: 24px;
             height: 3px;
             background-color: var(--accent-color);
             border-radius: 2px;
-            transition: 0.3s;
+            transition: transform 0.3s ease, opacity 0.3s ease; /* ক্রস হওয়ার স্মুথ অ্যানিমেশন */
         }
 
-        /* ড্রপডাউন মেনু কন্টেইনার */
+        /* 🟢 ক্রস (X) চিহ্নে রূপান্তর করার সিএসএস ম্যাজিক (যখন টগল ওপেন হবে) */
+        .menu-toggle.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg); /* প্রথম দাগটি নিচে নেমে ৪৫ ডিগ্রী ঘুরবে */
+        }
+        .menu-toggle.open span:nth-child(2) {
+            opacity: 0; /* মাঝখানের দাগটি গায়েব হয়ে যাবে */
+        }
+        .menu-toggle.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg); /* শেষ দাগটি উপরে উঠে মাইনাস ৪৫ ডিগ্রী ঘুরবে */
+        }
+
         .menu-wrapper {
             position: relative;
         }
 
-        nav .links {
-            display: none; 
-            position: absolute;
-            right: 0;
-            top: 45px;
-            background-color: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 8px 0;
-            width: 160px;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        nav .links.show {
-            display: flex;
-        }
-
-        nav .links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 700;
-            padding: 12px 20px;
-            display: block;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        nav .links a:hover {
-            background-color: var(--bg-color);
-            color: var(--accent-color);
-        }
-
-        /* Hero / About Section */
+        /* হিরো সেকশন: আপনার ছবি ও নামের পেছনের সুন্দর হালকা সবুজ ব্যাকগ্রাউন্ড */
         .hero {
             padding: 60px 0;
             text-align: center;
@@ -126,28 +141,31 @@
             margin-bottom: 40px;
         }
 
-        /* আপনার প্রোফাইল পিকচারের জন্য প্রিমিয়াম স্টাইল */
+        /* প্রোফাইল পিকচার: ছবিটিকে একদম পারফেক্ট গোল করা, চারপাশের সাদা বর্ডার এবং প্রিমিয়াম ড্রপ শ্যাডো */
         .profile-pic {
             width: 210px;
             height: 210px;
-            border-radius: 50%; /* ছবিটিকে গোল করার জন্য */
-            object-fit: cover; /* ছবির রেশিও ঠিক রাখার জন্য */
-            border: 4px solid #ffffff; /* চারপাশের সাদা বর্ডার */
-            box-shadow: 0 9px 19px rgba(0,0,0,0.15); /* প্রিমিয়াম ড্রপ শ্যাডো এফেক্ট */
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 4px solid #ffffff; 
+            box-shadow: 0 9px 19px rgba(0,0,0,0.15); 
             margin-bottom: 20px;
             transition: transform 0.3s;
         }
 
+        /* মাউস ছবির ওপর নিলে ছবিটা হালকা জুম হবে */
         .profile-pic:hover {
-            transform: scale(1.05); /* মাউস নিলে হালকা জুম হবে */
+            transform: scale(1.05); 
         }
 
+        /* আপনার প্রধান বড় নামের স্টাইল */
         .hero h1 {
             font-size: 2.8rem;
             color: var(--accent-color);
             margin-bottom: 5px;
         }
 
+        /* নামের নিচের পদবী/পড়াশোনার লাইনের স্টাইল */
         .hero .subtitle {
             font-size: 1.2rem;
             font-weight: 600;
@@ -155,12 +173,14 @@
             margin-bottom: 15px;
         }
 
+        /* ইউনিভার্সিটি ও লোকেশন লেখার স্টাইল */
         .hero .location {
             font-size: 1rem;
             color: #78909c;
             margin-bottom: 20px;
         }
 
+        /* About Me এর ভেতরের প্যারাগ্রাফের লেখা জাস্টিফাই করা */
         .hero p {
             font-size: 1.1rem;
             max-width: 800px;
@@ -168,7 +188,7 @@
             text-align: justify;
         }
 
-        /* Social Badges */
+        /* সোশ্যাল বোতামগুলোর কন্টেইনার */
         .contact-badges {
             display: flex;
             justify-content: center;
@@ -177,6 +197,7 @@
             margin-bottom: 20px;
         }
 
+        /* প্রতিটি সোশাল বোতামের ডিজাইন */
         .badge {
             background-color: var(--card-bg);
             padding: 8px 15px;
@@ -194,12 +215,13 @@
             color: var(--accent-color);
         }
 
-        /* Sections General */
+        /* সাধারণ সেকশন স্টাইল */
         section {
             margin-bottom: 40px;
             padding-top: 20px;
         }
 
+        /* সেকশন টাইটেল */
         .section-title {
             font-size: 1.8rem;
             color: var(--accent-color);
@@ -209,13 +231,14 @@
             padding-left: 10px;
         }
 
-        /* Grid for Skills */
+        /* স্কিল গ্রিড লেআউট */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
 
+        /* প্রতিটি স্কিল বক্স বা কার্ডের ব্যাকগ্রাউন্ড ডিজাইন */
         .skill-card {
             background: var(--card-bg);
             padding: 20px;
@@ -251,7 +274,7 @@
             left: 0;
         }
 
-        /* Project & Research Cards */
+        /* প্রোজেক্ট এবং রিসার্চ বক্স ডিজাইন */
         .item-card {
             background: var(--card-bg);
             padding: 25px;
@@ -267,6 +290,7 @@
             margin-bottom: 5px;
         }
 
+        /* স্ট্যাটাস বা রানিং প্রোজেক্ট ট্যাগ */
         .status-tag {
             display: inline-block;
             background-color: #fff3e0;
@@ -288,7 +312,7 @@
             font-size: 0.95rem;
         }
 
-        /* List styling for Achievements */
+        /* অ্যাচিভমেন্ট ও সার্টিফিকেট সেকশনের ব্যাকগ্রাউন্ড বক্স */
         .list-style {
             background: var(--card-bg);
             padding: 20px;
@@ -303,7 +327,7 @@
             margin-left: 20px;
         }
 
-        /* Footer */
+        /* ফুটার */
         footer {
             text-align: center;
             padding: 40px 0;
@@ -313,10 +337,13 @@
             margin-top: 5px;
         }
 
-        /* Responsive Design */
+        /* ===================================================
+           🔴 মোবাইল রেসপন্সিভ কোড (মোবাইলে গেলে ডিজাইন যা পরিবর্তন হবে)
+           =================================================== */
         @media (max-width: 768px) {
+            /* মোবাইলে হিরো সেকশনের স্পেস বা প্যাডিং একটু কমানো */
             .hero {
-                padding: 40px 10px;
+                padding: 40px 10px; 
             }
             .hero h1 { 
                 font-size: 2.2rem; 
@@ -326,33 +353,67 @@
                 margin-top: 35px;
             }
             .profile-pic {
-                width: 220px;
+                width: 220px; 
                 height: 220px;
             }
+
+            /* 🟢 মোবাইলে টগল বাতনটি ডানপাশে দৃশ্যমান (Flex) হবে */
+            .menu-toggle {
+                display: flex; 
+            }
+
+            /* 🟢 মোবাইলে মেনু লিংকগুলো ড্রপডাউন উইন্ডো আকারে লুকানো থাকবে */
+            nav .links {
+                display: none; 
+                position: absolute;
+                right: 20px;
+                top: 45px;
+                background-color: #ffffff;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                padding: 8px 0;
+                width: 160px;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            /* মোবাইলে ক্রসে/টগলে ক্লিক করলে মেনুটি যেভাবে ড্রপডাউন হয়ে শো করবে */
+            nav .links.show {
+                display: flex;
+            }
+
+            nav .links a {
+                padding: 12px 20px;
+                display: block;
+            }
+            nav .links a:hover {
+                background-color: var(--bg-color);
+                color: var(--accent-color);
+            }
         }
+        /* --- সিএসএস ডিজাইন সেকশন শেষ --- */
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- ১. নেভিগেশন বার বা টপ মেনুবার সেকশন -->
     <nav>
         <div class="container" style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
             
-          /*  <!-- 🟢 ২. মেনু বারে "Portfolio" লেখার পাশে সুন্দর গোল লোগো যোগ করা হয়েছে -->
+            <!-- 🟢 বাম পাশে একদম ঘেঁষে থাকবে শুধু টেক্সট পোর্টফোলিও লিংক -->
             <div class="logo">
-                <a href="https://pias-ru.github.io/" style="display: flex; align-items: center; gap: 8px;">
-                    <img src="13294 (1).jpg" alt="Logo" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-color);"> */
-                    Portfolio
-                </a>
+                <a href="https://pias-ru.github.io/">Portfolio</a>
             </div>
             
-            <!-- ৩-বার মেনু সিস্টেম -->
+            <!-- ৩-বার টগল মেনু সিস্টেম (ডেস্কটপে হাইড, মোবাইলে রাইট সাইডে শো করবে) -->
             <div class="menu-wrapper">
                 <div class="menu-toggle" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+                <!-- মেনুবারের লিংকসমূহ -->
                 <div class="links" id="navLinks">
                     <a href="#skills" onclick="toggleMenu()">Skills</a>
                     <a href="#research" onclick="toggleMenu()">Research</a>
@@ -363,22 +424,25 @@
         </div>
     </nav>
 
-    <!-- Hero / About Section -->
+    <!-- ২. হিরো সেকশন: মূল প্রোফাইল (ছবি, নাম, সোশাল লিংক ও বায়ো) শো করবে -->
     <header class="hero">
         <div class="container">
+            <!-- আপনার মূল বড় প্রোফাইল পিকচার -->
             <img src="13294 (1).jpg" alt="Pias Ahmed" class="profile-pic">
             
+            <!-- আপনার নাম এবং টাইটেল -->
             <h1>Pias Ahmed</h1>
             <div class="subtitle"> (Study at B.Sc. in Agriculture)  <br> Agri-Researcher & Sustainability Enthusiast</div>
             <div class="location">University of Rajshahi<br>Rajshahi - 6205, Bangladesh</div>
 
-            <!-- Contact Badges -->
+            <!-- সোশ্যাল বোতাম বা বাটনসমূহ -->
             <div class="contact-badges">
                 <a href="https://www.linkedin.com/in/piasofficial-bd" target="_blank" class="badge">🔗 LinkedIn</a>
                 <a href="mailto:pias@mailfence.com" class="badge">✉️ Email</a>
                 <a href="tel:+8809696339512" class="badge">📱 Mobile</a>
             </div>
 
+            <!-- About Me: নিজের সংক্ষিপ্ত বিবরণ -->
             <h2 style="font-size: 1.4rem; color: var(--accent-color); margin-top: 25px; margin-bottom: 10px;">About Me</h2>
             <p>
                 I am a passionate and driven Bachelor of Science in Agriculture student dedicated to bridging the gap between traditional farming and modern agricultural sciences. My academic journey focuses on climate-resilient crop production, soil nutrient management, and sustainable pest control. Combining solid theoretical knowledge with hands-on laboratory and field experience, I aim to contribute to food security and smart agricultural solutions.
@@ -386,7 +450,7 @@
         </div>
     </header>
 
-    <!-- Core Skills Section -->
+    <!-- ৩. টেকনিক্যাল স্কিল সেকশন -->
     <section id="skills" class="container">
         <h2 class="section-title">🛠 Technical & Core Skills</h2>
         <div class="skills-grid">
@@ -425,7 +489,7 @@
         </div>
     </section>
 
-    <!-- Research Section -->
+    <!-- ৪. রিসার্চ এক্সপেরিয়েন্স সেকশন -->
     <section id="research" class="container">
         <h2 class="section-title">🔬 Research Experience </h2>
         <div class="item-card">
@@ -437,18 +501,16 @@
         </div>
     </section>
 
-    <!-- Academic Projects Section -->
+    <!-- ৫. একাডেমিক ল্যাব ও ফিল্ড প্রজেক্ট সেকশন -->
     <section id="projects" class="container">
         <h2 class="section-title">🚜 Academic Lab & Field Projects</h2>
 
-        <!-- Project 1 -->
         <div class="item-card">
             <h3>1. Soil Analysis and Nutrient Mapping (Academic Lab Work)</h3>
             <p style="color: #555; margin-top: 5px;">Conducted comprehensive soil testing during practical courses to analyze soil physical and chemical properties, focusing on optimizing crop fertilizer requirements.</p>
             <p><strong>Skills Applied:</strong> Soil sampling, pH measurement, and calculation of macronutrient deficiencies.</p>
         </div>
 
-        <!-- Project 2 -->
         <div class="item-card">
             <h3>2. Crop Disease Identification and Diagnosis (Field Scouting)</h3>
             <p style="color: #555; margin-top: 5px;">Participated in regular institutional field visits to identify common plant pathogens, insect pests, and nutrient deficiencies across various seasonal crops.</p>
@@ -456,7 +518,7 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- ৬. সার্টিফিকেট ও অর্জনসমূহ শো করার সেকশন -->
     <section class="container">
         <h2 class="section-title">📜 Certifications & Achievements</h2>
         <div class="list-style">
@@ -468,7 +530,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ৭. কন্টাক্ট বা যোগাযোগ সেকশন -->
     <section id="contact" class="container" style="text-align: center; padding: 40px 0;">
         <h2 class="section-title" style="border: none; font-size: 1.5rem; padding: 0;">📞 <br>Get In Touch</h2>
         <p style="margin-bottom: 20px; font-size: 1.0rem;">I am always open to discussing research collaborations, internships, and innovative agri-tech ideas.</p>
@@ -477,16 +539,22 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ৮. ফুটার বা একদম নিচের পার্ট -->
     <footer>
         <p>&copy; 2026 Pias Ahmed, Built with Security & Precision on GitHub Pages.</p>
     </footer>
 
-    <!-- ট্যাপ ফাংশন চালু করার জাভাস্ক্রিপ্ট কোড -->
+    <!-- ==========================================
+         জাভাস্ক্রিপ্ট সেকশন (মেনু ও ক্রস অ্যানিমেশন কন্ট্রোল)
+         ========================================== -->
     <script>
+        // 🟢 এই ফাংশনটি একই সাথে ড্রপডাউন উইন্ডো অন/অফ করবে এবং থ্রি-বার বাটনকে স্মুথ ক্রসে রূপান্তর করবে
         function toggleMenu() {
             var links = document.getElementById("navLinks");
-            links.classList.toggle("show");
+            var toggleButton = document.querySelector(".menu-toggle");
+            
+            links.classList.toggle("show");        /* মোবাইলে মেনু উইন্ডোটি খোলে/বন্ধ করে */
+            toggleButton.classList.toggle("open"); /* থ্রি-বার আইকনকে ক্রসে (X) রূপান্তর করে */
         }
     </script>
 
