@@ -13,18 +13,18 @@
 
     <style>
         /* ==========================================================================
-           🎨 সিএসএস ভ্যারিয়েবল এবং থিম কালার (এখান থেকে মেইন কালার চেঞ্জ করা যায়)
+           🎨 থিম কালার এবং গ্লোবাল স্টাইল
            ========================================================================== */
         :root {
-            --bg-color: #f8fafc; 
-            --text-main: #0f172a;
-            --text-light: #475569;
-            --accent-main: #1e7e34; /* থিম সবুজ কালার */
-            --accent-light: #e6f4ea;
+            --bg-color: #f4f7f5; /* সফট লাইট ব্যাকগ্রাউন্ড */
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --accent-main: #3b7a57; /* মার্জিত সেজ গ্রিন */
+            --accent-light: #e8f0ec; /* হেডিং শেপের জন্য হালকা ব্যাকগ্রাউন্ড */
             --card-bg: #ffffff;
-            --footer-bg: #0f172a; 
-            --shadow-soft: 0 10px 25px rgba(30, 126, 52, 0.05);
-            --shadow-hover: 0 20px 35px rgba(30, 126, 52, 0.12);
+            --footer-bg: #1e293b; 
+            --shadow-soft: 0 8px 25px rgba(59, 122, 87, 0.04);
+            --shadow-hover: 0 15px 35px rgba(59, 122, 87, 0.08);
         }
 
         * {
@@ -51,27 +51,27 @@
             padding: 0 20px;
         }
 
-        /* --- নেভিগেশন বার --- */
+        /* --- ন্যাভিগেশন বার --- */
         nav {
             position: sticky;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(244, 247, 245, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 18px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            padding: 16px 0;
         }
 
         nav .logo a {
-            font-size: 1.6rem; 
+            font-size: 1.5rem; 
             font-weight: 700;
             color: var(--accent-main);
             text-decoration: none;
         }
 
-        nav .links { display: flex; gap: 20px; align-items: center; }
+        nav .links { display: flex; gap: 22px; align-items: center; }
         nav .links a {
             color: var(--text-main);
             text-decoration: none;
@@ -81,75 +81,166 @@
         }
         nav .links a:hover { color: var(--accent-main); }
 
-        /* টগল বাটন */
-        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
-        .menu-toggle span { display: block; width: 26px; height: 3px; background-color: var(--accent-main); border-radius: 3px; }
+        /* মোবাইল মেনু টগল */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent-main);
+            border-radius: 3px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .menu-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+        .menu-toggle.open span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
+        .menu-toggle.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-        /* --- হিরো সেকশন --- */
+        /* --- হিরো ব্যানার --- */
         .hero {
-            padding: 80px 0 60px;
+            padding: 50px 0 45px;
             text-align: center;
-            background: linear-gradient(-45deg, #134e19, #1e7e34, #2b9348, #0a3a10);
-            background-size: 400% 400%;
-            animation: gradientBG 12s ease infinite;
+            background: linear-gradient(135deg, #4a8c6f, #3b7a57, #2d5e43);
             color: #ffffff;
             border-radius: 0 0 35px 35px;
-            margin-bottom: 60px;
-            box-shadow: 0 15px 30px rgba(30, 126, 52, 0.2);
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            margin-bottom: 50px;
+            box-shadow: 0 12px 30px rgba(59, 122, 87, 0.15);
         }
 
         .profile-pic {
-            width: 190px; height: 190px;
+            width: 140px; height: 140px;
             border-radius: 50%; 
             object-fit: cover; 
-            border: 5px solid rgba(255, 255, 255, 0.9); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
-            margin-bottom: 25px;
+            border: 4px solid rgba(255, 255, 255, 0.9); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12); 
+            margin-bottom: 15px;
         }
 
-        .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 5px; }
-        .hero .subtitle { font-size: 1.25rem; color: #f1f5f9; opacity: 0.9; }
+        .hero h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 4px; }
+        .hero .subtitle { font-size: 1.1rem; color: #e2f0e9; opacity: 0.95; }
 
-        /* --- সেকশন টাইটেল --- */
-        section { margin-bottom: 70px; }
-        .section-title {
-            font-size: 2.2rem; color: var(--text-main); margin-bottom: 40px;
-            border-left: 6px solid var(--accent-main); padding-left: 15px;
-        }
-
-        /* --- টেকনিক্যাল স্কিল --- */
-        .skills-vertical-stack { display: flex; flex-direction: column; gap: 35px; }
-        .skill-category-row {
-            background: var(--card-bg); padding: 35px; border-radius: 20px;
-            box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.02); transition: all 0.3s ease;
-        }
-        .skill-category-row:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-        .skill-category-row h3 {
-            font-size: 1.6rem; color: var(--accent-main); margin-bottom: 20px;
-            border-bottom: 2px solid var(--bg-color); padding-bottom: 12px; display: flex; align-items: center; gap: 10px;
-        }
-        .skill-chips { display: flex; flex-wrap: wrap; gap: 12px; }
-        .skill-chip {
-            background: linear-gradient(135deg, #ffffff, #f4fbf7); color: var(--text-main);
-            padding: 12px 20px; border-radius: 14px; font-size: 1rem; font-weight: 600; cursor: pointer;
-            border: 1px solid #d1fae5; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;
-        }
-        .skill-chip::after { content: "📸"; font-size: 0.9rem; }
-        .skill-chip:hover {
-            background: var(--accent-main); color: #ffffff; border-color: var(--accent-main);
-            transform: translateY(-3px); box-shadow: 0 8px 20px rgba(30, 126, 52, 0.2);
+        /* ==========================================================================
+           🛑 💎 নতুন আপডেট: মেইন হেডিংগুলোর জন্য প্রিমিয়াম ক্যাপসুল শেপ (Shape/Banner)
+           ========================================================================== */
+        section { 
+            margin-bottom: 55px; 
+            padding-top: 25px; 
         }
 
-        /* --- মডাল + লাইভ ইমেজ আপলোডার --- */
+        .section-title-shape {
+            display: inline-block;
+            background: var(--accent-light); /* হালকা সবুজ শেপ ব্যাকগ্রাউন্ড */
+            color: var(--accent-main);
+            padding: 10px 24px;
+            border-radius: 12px; /* মডার্ন কার্ভড শেপ */
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-main); /* বামে একটি গাঢ় বর্ডার লাইন */
+            box-shadow: 0 4px 15px rgba(59, 122, 87, 0.03);
+            letter-spacing: -0.3px;
+        }
+
+        /* ==========================================================================
+           ⚡ স্কিল ও আইটেম কার্ড লেআউট (সবকিছু সুন্দরভাবে নিচে নিচে সাজানো)
+           ========================================================================== */
+        .vertical-stack { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 25px; 
+        }
+
+        /* প্রতিটি সাব-ক্যাটাগরি বা বড় বক্সের মেইন ডিজাইন */
+        .item-card {
+            background: var(--card-bg); 
+            padding: 28px; 
+            border-radius: 18px;
+            border: 1px solid rgba(59, 122, 87, 0.04); 
+            box-shadow: var(--shadow-soft);
+            position: relative; 
+            overflow: hidden;
+            height: auto; 
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .item-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: var(--shadow-hover); 
+            border-color: rgba(59, 122, 87, 0.2);
+        }
+
+        /* সাব-হেডিং স্টাইল (যেমন: Laboratory Analysis, বা প্রজেক্টের নাম) */
+        .item-card h3 { 
+            font-size: 1.25rem; 
+            font-weight: 600; 
+            color: var(--text-main);
+            line-height: 1.4; 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .item-card p { 
+            color: var(--text-light); 
+            font-size: 0.98rem; 
+            word-wrap: break-word; 
+            overflow-wrap: break-word; 
+        }
+
+        /* --- চিপস বা ইনার বাটন এরিয়া (নিচে নিচে সাজানোর জন্য) --- */
+        .inner-chips-list {
+            display: flex;
+            flex-direction: column; /* চিপসগুলোকে একটার নিচে একটা রাখবে */
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .inner-skill-row {
+            background: #fdfefe;
+            border: 1px solid #e6ece8;
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.25s ease;
+        }
+
+        .inner-skill-row:hover {
+            background: var(--accent-light);
+            border-color: var(--accent-main);
+            color: var(--accent-main);
+            transform: translateX(4px); /* মাউস নিলে আলতো ডানদিকে সরবে */
+        }
+
+        .proof-indicator {
+            font-size: 0.8rem;
+            background: rgba(59, 122, 87, 0.08);
+            color: var(--accent-main);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        /* --- স্কিল প্রুফ মডাল পপআপ --- */
         .modal {
             display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(15, 23, 42, 0.85); justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(8px);
+            background-color: rgba(15, 23, 42, 0.8); justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(8px);
         }
         .modal-content {
             background-color: var(--card-bg); border-radius: 24px; max-width: 600px; width: 100%; position: relative; overflow: hidden;
@@ -169,82 +260,45 @@
         }
         .custom-upload-label:hover { background: var(--accent-main); }
         .modal-text { padding: 25px; }
-        .modal-text h3 { color: var(--accent-main); font-size: 1.4rem; margin-bottom: 8px; }
-        .modal-text p { color: var(--text-light); font-size: 1rem; }
+        .modal-text h3 { color: var(--accent-main); font-size: 1.3rem; margin-bottom: 6px; }
+        .modal-text p { color: var(--text-light); font-size: 0.95rem; }
 
-        /* ==========================================================================
-           ⚡ 🟢 ফ্লেক্সিবল অটো-এডজাস্টিং বক্স ডিজাইন (লেখা যত বড়ই হোক, ভেঙে যাবে না)
-           ========================================================================== */
-        .item-card {
-            background: var(--card-bg); 
-            padding: 30px; 
-            border-radius: 20px;
-            border: 1px solid rgba(0,0,0,0.02); 
-            box-shadow: var(--shadow-soft);
-            margin-bottom: 20px; 
-            position: relative; 
-            overflow: hidden;
-            
-            /* এই ৪টি প্রপার্টি বক্সগুলোকে যেকোনো ডিসপ্লে ও বড় লেখার সাথে অটোমেটিক খাপ খাওয়াতে সাহায্য করে */
-            height: auto; 
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .item-card::before {
-            content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 5px; background: var(--accent-main);
-        }
-        
-        .item-card h3 { 
-            font-size: 1.4rem; 
-            font-weight: 600;
-            line-height: 1.4;
-            /* লম্বা টাইটেল বা হেডিং থাকলে তা যেন সুন্দরভাবে নিচে নেমে আসে */
-            word-wrap: break-word;
-            overflow-wrap: break-word; 
-        }
-        
-        .item-card p { 
-            color: var(--text-light); 
-            font-size: 1rem;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        /* --- সোশ্যাল ফুটার --- */
+        /* --- কন্টাক্ট সোশ্যাল ফুটার --- */
         .modern-footer {
-            background-color: var(--footer-bg); color: #9ca3af; padding: 60px 0 40px; border-radius: 40px 40px 0 0; margin-top: 80px; text-align: center;
+            background-color: var(--footer-bg); color: #9ca3af; padding: 50px 0 35px; border-radius: 40px 40px 0 0; margin-top: 70px; text-align: center;
         }
-        .footer-social-title { color: #ffffff; font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; }
-        .footer-subtitle { font-size: 0.95rem; color: #6b7280; margin-bottom: 30px; }
-        .social-links-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 40px; }
+        .footer-social-title { color: #ffffff; font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; }
+        .footer-subtitle { font-size: 0.9rem; color: #6b7280; margin-bottom: 25px; }
+        .social-links-container { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 35px; }
+        
         .social-btn {
-            background-color: #1e293b; color: #ffffff; padding: 12px 24px; border-radius: 30px;
-            font-size: 0.95rem; font-weight: 600; text-decoration: none; border: 1px solid #334155;
-            transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;
+            background-color: #273549; color: #ffffff; padding: 11px 22px; border-radius: 30px;
+            font-size: 0.9rem; font-weight: 600; text-decoration: none; border: 1px solid #3d4f68;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: inline-flex; align-items: center; gap: 8px;
         }
         .btn-whatsapp:hover { background-color: #25d366; border-color: #25d366; color: #fff; transform: translateY(-3px); }
-        .btn-signal:hover { background-color: #3a76f0; border-color: #3a76f0; color: #fff; transform: translateY(-3px); }
-        .btn-linkedin:hover { background-color: #0077b5; border-color: #0077b5; color: #fff; transform: translateY(-3px); }
-        .btn-github:hover { background-color: #24292e; border-color: #24292e; color: #fff; transform: translateY(-3px); }
         .btn-email:hover { background-color: #059669; border-color: #059669; color: #fff; transform: translateY(-3px); }
-        .footer-bottom-text { border-top: 1px solid #1e293b; padding-top: 25px; font-size: 0.85rem; color: #4b5563; }
+        .btn-telegram:hover { background-color: #0088cc; border-color: #0088cc; color: #fff; transform: translateY(-3px); }
+        .btn-linkedin:hover { background-color: #0077b5; border-color: #0077b5; color: #fff; transform: translateY(-3px); }
+        .btn-x:hover { background-color: #111111; border-color: #444444; color: #fff; transform: translateY(-3px); }
+        .btn-mobile:hover { background-color: #3b7a57; border-color: #3b7a57; color: #fff; transform: translateY(-3px); }
 
-        /* 📱 মোবাইল রেসপন্সিভ */
+        .footer-bottom-text { border-top: 1px solid #273549; padding-top: 25px; font-size: 0.85rem; color: #57677e; }
+
+        /* 📱 মোবাইল রেসপন্সিভ মেনু */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.3rem; }
+            .hero h1 { font-size: 2.1rem; }
             .menu-toggle { display: flex; }
             nav .links {
-                display: none; position: absolute; right: 20px; top: 65px;
-                background: #ffffff; border-radius: 12px; flex-direction: column; width: 220px; padding: 10px 0;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.15); align-items: flex-start; border: 1px solid rgba(0,0,0,0.05);
+                display: flex; position: absolute; right: 20px; top: 65px;
+                background: #ffffff; border-radius: 14px; flex-direction: column; width: 220px; padding: 10px 0;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1); align-items: flex-start; border: 1px solid rgba(0,0,0,0.04);
+                opacity: 0; transform: translateY(-20px) scale(0.95); pointer-events: none;
+                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
-            nav .links.show { display: flex; }
-            nav .links a { padding: 14px 25px; display: block; width: 100%; border-bottom: 1px solid #f1f5f9; box-sizing: border-box; }
+            nav .links.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+            nav .links a { padding: 12px 22px; display: block; width: 100%; border-bottom: 1px solid #f1f5f9; box-sizing: border-box; }
             nav .links a:last-child { border-bottom: none; }
-            .skill-category-row { padding: 25px 20px; }
-            .skill-category-row h3 { font-size: 1.35rem; }
             .social-links-container { flex-direction: column; align-items: center; width: 100%; padding: 0 20px; }
             .social-btn { width: 100%; justify-content: center; }
         }
@@ -253,31 +307,28 @@
 <body>
 
     <!-- ==========================================
-         🟢 ১. নেভিগেশন বার (NAVBAR SECTION)
+         🧭 ১. ন্যাভিগেশন বার সেকশন
          ========================================== -->
     <nav>
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <div class="logo"><a href="#">Portfolio</a></div>
-            
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </div>
-            
             <div class="links" id="navLinks">
                 <a href="#skills" onclick="toggleMenu()">Skills</a>
                 <a href="#projects" onclick="toggleMenu()">Projects</a>
-                <!-- নতুন লিঙ্ক দুটি এখানে অ্যাড করা হয়েছে -->
                 <a href="#research" onclick="toggleMenu()">Research</a>
                 <a href="#achievements" onclick="toggleMenu()">Achievements</a>
-                <a href="Resume_Pias.pdf" target="_blank" onclick="toggleMenu()">📄 CV</a>
-                <a href="https://github.com/Pias-ru" target="_blank" onclick="toggleMenu()">💻 GitHub</a>
+                <a href="Resume_Pias.pdf" target="_blank" onclick="toggleMenu()">CV</a>
+                <a href="https://github.com/Pias-ru" target="_blank" onclick="toggleMenu()">GitHub</a>
             </div>
         </div>
     </nav>
 
 
     <!-- ==========================================
-         🟢 ২. হিরো সেকশন (HERO / PROFILE WELCOME)
+         👤 ২. হিরো / প্রফেশনাল ব্যানার সেকশন
          ========================================== -->
     <header class="hero">
         <div class="container">
@@ -289,38 +340,60 @@
 
 
     <!-- ==========================================
-         🟢 ৩. টেকনিক্যাল স্কিল সেকশন (SKILLS SECTION)
+         💎 ৩. টেকনিক্যাল স্কিল সেকশন (শেপ হেডিং এবং নিচে নিচে সাজানো কার্ড)
          ========================================== -->
     <section id="skills" class="container">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-vertical-stack">
+        <!-- 🎯 হেডিং এখন একটি সুন্দর মডার্ন শেপের মধ্যে রয়েছে -->
+        <div class="section-title-shape">Technical Expertise</div>
+        
+        <div class="vertical-stack">
             
-            <!-- স্কিল ক্যাটাগরি ১ -->
-            <div class="skill-category-row">
+            <!-- ল্যাব স্কিল কার্ড -->
+            <div class="item-card">
                 <h3>🧪 Laboratory Analysis</h3>
-                <div class="skill-chips">
-                    <div class="skill-chip" onclick="openModal('Soil Organic Carbon Testing', 'Tested soil samples to determine the percentage of organic carbon using the Walkley-Black method.')">Soil Carbon Testing</div>
-                    <div class="skill-chip" onclick="openModal('Soil pH & EC Testing', 'Measured electrical conductivity and pH levels for varying soil textures.')">pH & EC Testing</div>
-                    <div class="skill-chip" onclick="openModal('Seed Germination Testing', 'Conducted TZ tests and observed germination percentages.')">Seed Testing</div>
+                <p>Hands-on expertise in chemical and physical analysis of agronomic elements.</p>
+                <!-- এই এরিয়ার ভেতরে সবগুলো স্কিল একটার নিচে একটা (Vertical Row) শো করবে -->
+                <div class="inner-chips-list">
+                    <div class="inner-skill-row" onclick="openModal('Soil Organic Carbon Testing', 'Tested soil samples to determine the percentage of organic carbon using the Walkley-Black method.')">
+                        <span>Soil Carbon Testing</span> <span class="proof-indicator">📸 Proof</span>
+                    </div>
+                    <div class="inner-skill-row" onclick="openModal('Soil pH & EC Testing', 'Measured electrical conductivity and pH levels for varying soil textures.')">
+                        <span>pH & EC Testing</span> <span class="proof-indicator">📸 Proof</span>
+                    </div>
+                    <div class="inner-skill-row" onclick="openModal('Seed Germination Testing', 'Conducted TZ tests and observed germination percentages.')">
+                        <span>Seed Testing</span> <span class="proof-indicator">📸 Proof</span>
+                    </div>
                 </div>
             </div>
             
-            <!-- স্কিল ক্যাটাগরি ২ -->
-            <div class="skill-category-row">
+            <!-- ফিল্ড স্কিল কার্ড -->
+            <div class="item-card">
                 <h3>🚜 Field Agronomy</h3>
-                <div class="skill-chips">
-                    <div class="skill-chip" onclick="openModal('Crop Cutting Experiment', 'Collected crop yield data directly from the field for statistical reporting.')">Crop Cutting</div>
-                    <div class="skill-chip" onclick="openModal('Integrated Pest Management', 'Identified field pests and recommended eco-friendly IPM solutions.')">IPM Strategy</div>
-                    <div class="skill-chip" onclick="openModal('Fertilizer Application', 'Calculated and applied specific fertilizer doses based on soil test values.')">Fertilizer Rec.</div>
+                <p>Practical execution of field experiments and real-time data monitoring.</p>
+                <div class="inner-chips-list">
+                    <div class="inner-skill-row" onclick="openModal('Crop Cutting Experiment', 'Collected crop yield data directly from the field for statistical reporting.')">
+                        <span>Crop Cutting</span> <span class="proof-indicator">📸 Proof</span>
+                    </div>
+                    <div class="inner-skill-row" onclick="openModal('Integrated Pest Management', 'Identified field pests and recommended eco-friendly IPM solutions.')">
+                        <span>IPM Strategy</span> <span class="proof-indicator">📸 Proof</span>
+                    </div>
+                    <div class="inner-skill-row" onclick="openModal('Fertilizer Application', 'Calculated and applied specific fertilizer doses based on soil test values.')">
+                        <span>Fertilizer Rec.</span> <span class="proof-indicator">📸 Proof</span>
+                    </div>
                 </div>
             </div>
             
-            <!-- স্কিল ক্যাটাগরি ৩ -->
-            <div class="skill-category-row">
+            <!-- ডাটা টুলস কার্ড -->
+            <div class="item-card">
                 <h3>💻 Data & Tech Tools</h3>
-                <div class="skill-chips">
-                    <div class="skill-chip" onclick="openModal('Data Analysis in Excel', 'Processed and visualized agricultural yield data using advanced Excel charts.')">MS Excel Analysis</div>
-                    <div class="skill-chip" onclick="openModal('Technical Report Writing', 'Drafted comprehensive technical reports for ongoing academic researches.')">Technical Reports</div>
+                <p>Processing and compilation of research outcomes using technical applications.</p>
+                <div class="inner-chips-list">
+                    <div class="inner-skill-row" onclick="openModal('Data Analysis in Excel', 'Processed and visualized agricultural yield data using advanced Excel charts.')">
+                        <span>MS Excel Analysis</span> <span class="proof-indicator">📸 Proof</span>
+                    </div>
+                    <div class="inner-skill-row" onclick="openModal('Technical Report Writing', 'Drafted comprehensive technical reports for ongoing academic researches.')">
+                        <span>Technical Reports</span> <span class="proof-indicator">📸 Proof</span>
+                    </div>
                 </div>
             </div>
 
@@ -329,62 +402,65 @@
 
 
     <!-- ==========================================
-         🟢 ৪. একাডেমিক প্রজেক্ট সেকশন (PROJECTS SECTION)
+         📂 ৪. একাডেমিক প্রজেক্ট সেকশন (শেপ হেডিং সহ)
          ========================================== -->
     <section id="projects" class="container">
-        <h2 class="section-title">Academic Projects</h2>
+        <!-- 🎯 হেডিং শেপ -->
+        <div class="section-title-shape">Academic Projects</div>
         
-        <!-- প্রজেক্ট কার্ড ১ (এখানে নিজের মতো বড় টাইটেল লিখতে পারবেন, বক্স মানিয়ে নেবে) -->
-        <div class="item-card">
-            <h3>Soil Analysis and Nutrient Mapping</h3>
-            <p>Conducted comprehensive soil testing during practical courses to analyze physical and chemical properties, optimizing crop fertilizer requirements.</p>
+        <div class="vertical-stack">
+            <div class="item-card">
+                <h3>Soil Analysis and Nutrient Mapping</h3>
+                <p>Conducted comprehensive soil testing during practical courses to analyze physical and chemical properties, optimizing crop fertilizer requirements.</p>
+            </div>
         </div>
-        
     </section>
 
 
     <!-- ==========================================
-         🟢 ৫. নতুন যোগ করা: রিসার্চ সেকশন (RESEARCH SECTION)
+         🔬 ৫. রিসার্চ সেকশন (শেপ হেডিং সহ)
          ========================================== -->
     <section id="research" class="container">
-        <h2 class="section-title">Research Experience</h2>
+        <!-- 🎯 হেডিং শেপ -->
+        <div class="section-title-shape">Research Experience</div>
         
-        <!-- রিসার্চ কার্ড ১ (টাইটেল বড় হলে বক্সের সাইজ অটোমেটিক বড় হবে) -->
-        <div class="item-card">
-            <h3>Effects of Climate Change on Local Crop Varieties</h3>
-            <p>Undergraduate research assistant focusing on data collection, surveying regional farmers, and analyzing temperature resilience in localized rice genotypes.</p>
-        </div>
+        <div class="vertical-stack">
+            <div class="item-card">
+                <h3>Effects of Climate Change on Local Crop Varieties</h3>
+                <p>Undergraduate research assistant focusing on data collection, surveying regional farmers, and analyzing temperature resilience in localized rice genotypes.</p>
+            </div>
 
-        <!-- রিসার্চ কার্ড ২ (নতুন কিছু লিখতে চাইলে এই নিচের বক্সটি এডিট করুন) -->
-        <div class="item-card">
-            <h3>Innovative Pest Management in Organic Farming</h3>
-            <p>Studying bio-rational pesticides and ecological engineering tools to control harmful infestations without disturbing regional biodiversity.</p>
+            <div class="item-card">
+                <h3>Innovative Pest Management in Organic Farming</h3>
+                <p>Studying bio-rational pesticides and ecological engineering tools to control harmful infestations without disturbing regional biodiversity.</p>
+            </div>
         </div>
     </section>
 
 
     <!-- ==========================================
-         🟢 ৬. নতুন যোগ করা: একাডেমিক অ্যাচিভমেন্ট সেকশন (ACHIEVEMENTS SECTION)
+         🏆 ৬. একাডেমিক অ্যাچیভমেন্ট সেকশন (শেপ হেডিং সহ)
          ========================================== -->
     <section id="achievements" class="container">
-        <h2 class="section-title">Academic Achievements</h2>
+        <!-- 🎯 হেডিং শেপ -->
+        <div class="section-title-shape">Academic Achievements</div>
         
-        <!-- অ্যাচিভমেন্ট কার্ড ১ -->
-        <div class="item-card">
-            <h3>Government Board Scholarship</h3>
-            <p>Awarded for outstanding academic performance and ranking in top percentiles during prior examinations.</p>
-        </div>
+        <div class="vertical-stack">
+            <div class="item-card">
+                <h3>Government Board Scholarship</h3>
+                <p>Awarded for outstanding academic performance and ranking in top percentiles during prior examinations.</p>
+            </div>
 
-        <!-- অ্যাচিভমেন্ট কার্ড ২ -->
-        <div class="item-card">
-            <h3>Best Presentation Award at Agri-Conference</h3>
-            <p>Received recognition for presenting an innovative poster layout on sustainable soil carbon replenishment techniques.</p>
+            <div class="item-card">
+                <h3>Best Presentation Award at Agri-Conference</h3>
+                <p>Received recognition for presenting an innovative poster layout on sustainable soil carbon replenishment techniques.</p>
+            </div>
         </div>
     </section>
 
 
     <!-- ==========================================
-         🟢 7. মডাল প্রিভিউ (MODAL / IMAGE PREVIEW)
+         🖼️ 7. ইমেজ আপলোড ও প্রিভিউ মডাল উইন্ডো
          ========================================== -->
     <div id="skillModal" class="modal">
         <div class="modal-content">
@@ -394,7 +470,7 @@
                     <label for="imageUploader" class="custom-upload-label">📁 Upload/Preview Live Photo</label>
                     <input type="file" id="imageUploader" accept="image/*" onchange="previewLiveImage(event)" style="display:none;">
                 </div>
-                <img id="modalImg" src="https://via.placeholder.com/600x320/1e7e34/ffffff?text=Click+Upload+To+Test+Your+Photo" alt="Skill Proof" class="modal-img">
+                <img id="modalImg" src="https://via.placeholder.com/600x320/3b7a57/ffffff?text=Click+Upload+To+Test+Your+Photo" alt="Skill Proof" class="modal-img">
             </div>
             <div class="modal-text">
                 <h3 id="modalTitle">Skill Title</h3>
@@ -405,7 +481,7 @@
 
 
     <!-- ==========================================
-         🟢 ৮. সোশ্যাল ফুটার (CLEAN FOOTER SECTION)
+         📞 ৮. কন্টাক্ট সোশ্যাল ফুটার (৬টি স্পেসিফিক বাটন)
          ========================================== -->
     <footer class="modern-footer">
         <div class="container">
@@ -414,10 +490,11 @@
             
             <div class="social-links-container">
                 <a href="https://wa.me/8809696339512" target="_blank" class="social-btn btn-whatsapp">💬 WhatsApp</a>
-                <a href="https://signal.me/#p/+8809696339512" target="_blank" class="social-btn btn-signal">🔒 Signal Secure</a>
-                <a href="https://www.linkedin.com/in/piasofficial-bd" target="_blank" class="social-btn btn-linkedin">🔗 LinkedIn</a>
-                <a href="https://github.com/Pias-ru" target="_blank" class="social-btn btn-github">💻 GitHub</a>
                 <a href="mailto:pias@mailfence.com" class="social-btn btn-email">✉️ Email</a>
+                <a href="https://t.me/pias_ahmed" target="_blank" class="social-btn btn-telegram">✈️ Telegram</a>
+                <a href="https://www.linkedin.com/in/piasofficial-bd" target="_blank" class="social-btn btn-linkedin">🔗 LinkedIn</a>
+                <a href="https://x.com/pias_tweets" target="_blank" class="social-btn btn-x">𝕏 Twitter</a>
+                <a href="tel:+8809696339512" class="social-btn btn-mobile">📞 Mobile</a>
             </div>
             
             <div class="footer-bottom-text">
@@ -428,25 +505,25 @@
 
 
     <!-- ==========================================
-         🟢 ৯. জাভাস্ক্রিপ্ট (FUNCTIONAL LOGIC)
+         ⚙️ ৯. জাভাস্ক্রিপ্ট লজিক
          ========================================== -->
     <script>
-        // মোবাইল মেনু ওপেন/ক্লোজ করার লজিক
+        // মোবাইল মেনু এবং ক্রস টগল লজিক
         function toggleMenu() {
             document.getElementById("navLinks").classList.toggle("show");
             document.querySelector(".menu-toggle").classList.toggle("open");
         }
 
-        // স্কিল মডাল পপআপ ওপেন করার লজিক
+        // মডাল পপআপ ওপেন করার লজিক
         function openModal(title, description) {
             document.getElementById("skillModal").style.display = "flex";
             document.getElementById("modalTitle").innerText = title;
             document.getElementById("modalDesc").innerText = description;
-            document.getElementById("modalImg").src = "https://via.placeholder.com/600x320/1e7e34/ffffff?text=Click+Upload+To+Test+Your+Photo";
+            document.getElementById("modalImg").src = "https://via.placeholder.com/600x320/3b7a57/ffffff?text=Click+Upload+To+Test+Your+Photo";
             document.getElementById("imageUploader").value = ""; 
         }
 
-        // লাইভ ফটো আপলোড এবং ইনস্ট্যান্ট প্রিভিউ লজিক
+        // লাইভ ফটো আপলোড প্রিভিউ লজিক
         function previewLiveImage(event) {
             const reader = new FileReader();
             reader.onload = function() {
@@ -458,12 +535,12 @@
             }
         }
 
-        // মডাল উইন্ডো ক্লোজ করার লজিক
+        // মডাল ক্লোজ করার লজিক
         function closeModal() {
             document.getElementById("skillModal").style.display = "none";
         }
 
-        // মডালের বাইরে ফাঁকা জায়গায় ক্লিক করলে ক্লোজ হওয়ার অপশন
+        // মডালের বাইরে ক্লিক করলে ক্লোজ হওয়ার লজিক
         window.onclick = function(event) {
             let modal = document.getElementById("skillModal");
             if (event.target == modal) {
