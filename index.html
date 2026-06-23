@@ -64,34 +64,43 @@
     .menu-active .line-1 { transform: translateY(8px) rotate(45deg); }
     .menu-active .line-2 { opacity: 0; }
     .menu-active .line-3 { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Smooth transition for the slideshow */
+    .slide {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      position: absolute;
+      inset: 0;
+    }
+    .slide.active {
+      opacity: 1;
+      position: relative;
+    }
   </style>
 </head>
 <body class="bg-light text-dark font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
 
-  <!-- মূল কন্টেইনার -->
   <div class="overflow-hidden max-w-full relative">
 
     <!-- NAVIGATION BAR -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-surface/50 transition-all duration-300">
       <div class="max-w-[1280px] mx-auto px-[24px] h-[80px] flex items-center justify-between relative z-20 bg-transparent">
         
-        <a href="#" class="font-serif text-[24px] font-bold text-dark flex items-center gap-[8px] group">
+        <a href="#" class="font-serif text-[22px] font-bold text-dark flex items-center gap-[7px] group">
           <i data-lucide="leaf" class="text-primary group-hover:rotate-12 transition-transform duration-300"></i> Pias Ahmed
         </a>
         
-        <!-- ডেস্কটপ মেনু -->
         <div class="hidden md:flex items-center gap-[32px] font-medium text-[16px] text-textMuted">
           <a href="#about" class="hover:text-primary transition-colors">About</a>
           <a href="#expertise" class="hover:text-primary transition-colors">Expertise</a>
           <a href="#education" class="hover:text-primary transition-colors">Education</a>
           <a href="#fieldwork" class="hover:text-primary transition-colors">Field Work</a>
           <a href="#research" class="hover:text-primary transition-colors">Research</a>
-          <a href="Resume_Pias.pdf" class="px-[24px] py-[10px] bg-dark text-white rounded-[100px] hover:bg-primary transition-all shadow-md">
+          <a href="My CV.pdf" class="px-[24px] py-[10px] bg-dark text-white rounded-[100px] hover:bg-primary transition-all shadow-md">
             Download CV
           </a>
         </div>
 
-        <!-- মোবাইল মেনু টগল বাটন -->
         <button id="menu-btn" class="md:hidden w-[40px] h-[40px] flex flex-col justify-center items-center gap-[6px] focus:outline-none">
           <span class="line-1 w-[24px] h-[2px] bg-dark block"></span>
           <span class="line-2 w-[24px] h-[2px] bg-dark block"></span>
@@ -99,7 +108,6 @@
         </button>
       </div>
       
-      <!-- মোবাইল ড্রপডাউন মেনু -->
       <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-b border-surface overflow-hidden max-h-0 transition-all duration-500 ease-in-out md:hidden z-10 shadow-md">
         <div class="flex flex-col items-center justify-center gap-[24px] py-[24px] px-[24px]">
           <a href="#about" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">About</a>
@@ -107,12 +115,11 @@
           <a href="#education" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Education</a>
           <a href="#fieldwork" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Field Work</a>
           <a href="#research" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Research</a>
-          <a href="Resume_Pias.pdf" class="px-[32px] py-[12px] bg-dark text-white rounded-[100px] mt-[8px] w-full text-center text-[18px]">Download CV</a>
+          <a href="My CV.pdf" class="px-[32px] py-[12px] bg-dark text-white rounded-[100px] mt-[8px] w-full text-center text-[18px]">Download CV</a>
         </div>
       </div>
     </nav>
 
-    <!-- মেইন কন্টেন্ট র্যাপার -->
     <main id="main-content" class="transition-transform duration-500 ease-in-out">
       
       <!-- HERO SECTION -->
@@ -151,7 +158,8 @@
           
           <div class="relative fade-up flex justify-center items-center w-full max-w-[350px] sm:max-w-[400px] mx-auto">
             <div class="absolute top-[16px] left-[16px] sm:top-[24px] sm:left-[24px] w-full h-full bg-primary/20 rounded-tl-[120px] rounded-br-[120px] rounded-tr-[32px] rounded-bl-[32px] -z-10 transition-transform duration-500"></div>
-            <img src="profile.jpg" alt="Pias Ahmed" class="w-full h-auto aspect-square object-cover rounded-tl-[120px] rounded-br-[120px] rounded-tr-[32px] rounded-bl-[32px] shadow-2xl border-[6px] border-white hover:scale-[1.03] transition-transform duration-500">
+            <!-- প্রোফাইল পিকচার আপনার ফোল্ডারে থাকলে name ঠিক করুন -->
+            <img src="images/profile.jpg" alt="Pias Ahmed" class="w-full h-auto aspect-square object-cover rounded-tl-[120px] rounded-br-[120px] rounded-tr-[32px] rounded-bl-[32px] shadow-2xl border-[6px] border-white hover:scale-[1.03] transition-transform duration-500">
             <div class="absolute -bottom-[20px] -right-[20px] w-[80px] h-[80px] bg-accent/20 rounded-full blur-[16px] -z-20"></div>
           </div>
           
@@ -162,15 +170,13 @@
               I am a B.Sc. Agriculture student at the <strong class="text-primary font-semibold">University of Rajshahi</strong> with a profound passion for Soil Science and Agronomy. My academic journey is defined by rigorous laboratory analysis and extensive fieldwork.
             </p>
             
-            <!-- Career Objective added from CV -->
             <blockquote class="border-l-4 border-primary pl-[16px] italic text-[16px] text-textMuted bg-white/50 p-[12px] rounded-r-[8px] mb-[24px]">
               "I aim to contribute my full experience to an organization that prioritizes honesty and excellence, fostering a partnership where my contributions fuel both company prosperity and my own career development."
             </blockquote>
             
-            <!-- CGPA Updated to 3.70 from CV -->
             <div class="grid grid-cols-3 gap-[16px] sm:gap-[24px]">
               <div>
-                <h3 class="text-[28px] sm:text-[36px] font-serif font-bold text-primary">3.70</h3>
+                <h3 class="text-[28px] sm:text-[36px] font-serif font-bold text-primary">3.70+</h3>
                 <p class="text-[12px] sm:text-[14px] text-textMuted uppercase tracking-widest mt-[8px] font-medium">CGPA (RU)</p>
               </div>
               <div>
@@ -207,7 +213,6 @@
           </div>
 
           <div class="fade-up">
-            <!-- ল্যাব কন্টেন্ট -->
             <div id="content-lab" class="tab-content border border-surface rounded-[32px] p-[24px] sm:p-[48px] bg-white shadow-sm">
               <div class="flex items-center gap-[16px] mb-[24px]">
                 <div class="w-[56px] h-[56px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
@@ -218,17 +223,16 @@
               <p class="text-textMuted mb-[32px] text-[16px] sm:text-[18px]">Proficient in standard chemical protocols for determining soil health and plant nutrient status.</p>
               <div class="grid sm:grid-cols-2 gap-[16px]">
                 <div class="p-[20px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Soil Carbon Testing</h4>
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Soil Organic Carbon Testing</h4>
                   <p class="text-[14px] text-textMuted">Walkley-Black method for organic matter determination.</p>
                 </div>
                 <div class="p-[20px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">pH & EC Measurement</h4>
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Soil pH & EC Measurement</h4>
                   <p class="text-[14px] text-textMuted">Potentiometric analysis for soil acidity and salinity.</p>
                 </div>
               </div>
             </div>
 
-            <!-- ফিল্ড কন্টেন্ট -->
             <div id="content-field" class="tab-content hidden border border-surface rounded-[32px] p-[24px] sm:p-[48px] bg-white shadow-sm">
               <div class="flex items-center gap-[16px] mb-[24px]">
                 <div class="w-[56px] h-[56px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
@@ -239,17 +243,16 @@
               <p class="text-textMuted mb-[32px] text-[16px] sm:text-[18px]">Hands-on experience in managing crop life cycles and implementing sustainable practices.</p>
               <div class="grid sm:grid-cols-2 gap-[16px]">
                 <div class="p-[20px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Crop Cutting</h4>
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Crop Cutting Experiment</h4>
                   <p class="text-[14px] text-textMuted">Yield estimation and harvest index calculation directly from plots.</p>
                 </div>
                 <div class="p-[20px] bg-light rounded-[12px] border border-surface">
                   <h4 class="font-semibold text-dark text-[16px] mb-[6px]">IPM Strategies</h4>
-                  <p class="text-[14px] text-textMuted">Identification of pests and eco-friendly control measures.</p>
+                  <p class="text-[14px] text-textMuted">Identification of pests and eco-friendly acceptable measures.</p>
                 </div>
               </div>
             </div>
 
-            <!-- ডাটা কন্টেন্ট (Updated with Skills from CV) -->
             <div id="content-data" class="tab-content hidden border border-surface rounded-[32px] p-[24px] sm:p-[48px] bg-white shadow-sm">
               <div class="flex items-center gap-[16px] mb-[24px]">
                 <div class="w-[56px] h-[56px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
@@ -261,11 +264,11 @@
               <div class="grid sm:grid-cols-2 gap-[16px]">
                 <div class="p-[20px] bg-light rounded-[12px] border border-surface">
                   <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Data & Programming</h4>
-                  <p class="text-[14px] text-textMuted">R pro, Microsoft Excel for statistical analysis.</p>
+                  <p class="text-[14px] text-textMuted">R programming, Microsoft Excel for statistical analysis.</p>
                 </div>
                 <div class="p-[20px] bg-light rounded-[12px] border border-surface">
                   <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Applications & Documentation</h4>
-                  <p class="text-[14px] text-textMuted">Microsoft Word, MS PowerPoint, and advanced internet browsing.</p>
+                  <p class="text-[14px] text-textMuted">MS Office Tools, Linux system tools, and advanced internet browsing.</p>
                 </div>
               </div>
             </div>
@@ -273,7 +276,7 @@
         </div>
       </section>
 
-      <!-- EDUCATION SECTION (নতুন যোগ করা হয়েছে আপনার সিভির তথ্য অনুযায়ী) -->
+      <!-- EDUCATION SECTION -->
       <section id="education" class="py-[96px] px-[24px] bg-surface">
         <div class="max-w-[896px] mx-auto">
           <div class="text-center mb-[64px] fade-up">
@@ -282,7 +285,6 @@
           </div>
 
           <div class="grid gap-[24px] fade-up">
-            <!-- B.Sc. -->
             <div class="bg-white p-[32px] rounded-[24px] border border-surface shadow-sm flex flex-col sm:flex-row sm:justify-between sm:items-center gap-[16px]">
               <div>
                 <span class="text-[12px] font-bold tracking-wider text-accent bg-accent/10 px-[12px] py-[4px] rounded-full uppercase">2023 - 2027</span>
@@ -295,7 +297,6 @@
               </div>
             </div>
 
-            <!-- HSC -->
             <div class="bg-white p-[32px] rounded-[24px] border border-surface shadow-sm flex flex-col sm:flex-row sm:justify-between sm:items-center gap-[16px]">
               <div>
                 <span class="text-[12px] font-bold tracking-wider text-textMuted bg-surface px-[12px] py-[4px] rounded-full uppercase">Passing Year: 2021</span>
@@ -308,7 +309,6 @@
               </div>
             </div>
 
-            <!-- SSC & JSC Combined for spacing -->
             <div class="grid sm:grid-cols-2 gap-[24px]">
               <div class="bg-white p-[24px] rounded-[24px] border border-surface shadow-sm">
                 <span class="text-[12px] font-bold text-textMuted bg-surface px-[12px] py-[4px] rounded-full">Passing Year: 2019</span>
@@ -323,41 +323,113 @@
                 <p class="text-[16px] font-bold text-primary mt-[12px]">GPA 4.60</p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- FIELD WORK GALLERY -->
+      <!-- FIELD WORK GALLERY (3-Sec Slideshow & Modal Feature) -->
       <section id="fieldwork" class="py-[96px] px-[24px] bg-light">
-        <div class="max-w-[1152px] mx-auto">
-          <div class="text-center mb-[64px] fade-up">
+        <div class="max-w-[896px] mx-auto">
+          <div class="text-center mb-[48px] fade-up">
             <h2 class="font-serif text-[30px] md:text-[40px] font-bold text-dark mb-[8px]">Field Work Gallery</h2>
             <p class="text-textMuted text-[18px]">Snapshots from my research plots and field visits.</p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] auto-rows-[280px]">
-            <div class="lg:col-span-2 relative group overflow-hidden rounded-[24px] fade-up">
-              <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?auto=format&fit=crop&w=1200&q=80" alt="Field Work" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-              <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex items-end p-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div>
-                  <h4 class="text-white font-serif font-bold text-[22px]">Soil Sampling</h4>
-                  <p class="text-light/90 text-[14px] mt-[6px]">Collecting core samples for lab analysis</p>
-                </div>
+          <!-- AUTOMATIC SLIDESHOW CONTAINER -->
+          <div class="relative w-full h-[300px] sm:h-[450px] overflow-hidden rounded-[32px] shadow-lg border border-surface fade-up bg-dark">
+            
+            <!-- Slide 1 -->
+            <div class="slide active">
+              <img src="images/field-1.jpg" alt="Field Work 1" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent flex items-end p-[24px] sm:p-[40px]">
+                <p class="text-white font-serif text-[18px] sm:text-[22px]">Soil Core Sampling & Diagnostics</p>
               </div>
             </div>
-            <div class="relative group overflow-hidden rounded-[24px] fade-up delay-100">
-              <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=800&q=80" alt="Rice Variety" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-              <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex items-end p-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div>
-                  <h4 class="text-white font-serif font-bold text-[22px]">Variety Trial</h4>
-                  <p class="text-light/90 text-[14px] mt-[6px]">Monitoring growth stages</p>
-                </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img src="images/field-2.jpg" alt="Field Work 2" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent flex items-end p-[24px] sm:p-[40px]">
+                <p class="text-white font-serif text-[18px] sm:text-[22px]">Monitoring Crop Growth Trial Plots</p>
               </div>
             </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img src="images/field-3.jpg" alt="Field Work 3" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent flex items-end p-[24px] sm:p-[40px]">
+                <p class="text-white font-serif text-[18px] sm:text-[22px]">Sustainable Nitrogen Management Field Testing</p>
+              </div>
+            </div>
+
+            <!-- Slideshow Controls -->
+            <button onclick="prevSlide()" class="absolute left-[16px] top-1/2 -translate-y-1/2 w-[40px] h-[40px] bg-white/20 hover:bg-white/40 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-all">
+              <i data-lucide="chevron-left" class="w-[24px] h-[24px]"></i>
+            </button>
+            <button onclick="nextSlide()" class="absolute right-[16px] top-1/2 -translate-y-1/2 w-[40px] h-[40px] bg-white/20 hover:bg-white/40 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-all">
+              <i data-lucide="chevron-right" class="w-[24px] h-[24px]"></i>
+            </button>
+          </div>
+
+          <!-- MORE OPTION / VIEW ALL BUTTON -->
+          <div class="text-center mt-[32px] fade-up">
+            <button onclick="openGalleryModal()" class="inline-flex items-center gap-[8px] px-[32px] py-[14px] bg-white border border-surface text-dark font-medium rounded-[100px] hover:bg-primary hover:text-white transition-all shadow-sm group">
+              <i data-lucide="images" class="w-[20px] h-[20px] text-primary group-hover:text-white transition-colors"></i> View More Photos
+            </button>
           </div>
         </div>
       </section>
+
+      <!-- FULL GALLERY MODAL -->
+      <div id="gallery-modal" class="fixed inset-0 bg-dark/95 hidden z-50 overflow-y-auto p-[24px] backdrop-blur-md transition-all duration-300">
+        <div class="max-w-[1152px] mx-auto mt-[40px] relative">
+          
+          <!-- Close Button -->
+          <button onclick="closeGalleryModal()" class="absolute -top-[20px] right-0 text-white hover:text-accent flex items-center gap-[6px] font-medium text-[16px]">
+            Close <i data-lucide="x" class="w-[24px] h-[24px]"></i>
+          </button>
+
+          <div class="text-center my-[40px]">
+            <h3 class="font-serif text-[28px] text-white font-bold">Complete Research Gallery</h3>
+            <p class="text-light/60 text-[16px] mt-[8px]">All field works, lab tests, and academic visits cataloged</p>
+          </div>
+
+          <!-- GRID OF ALL IMAGES (এখানে আপনার ইচ্ছেমতো গিটহাব ফোল্ডার থেকে ছবির নাম বসিয়ে দিন) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px]">
+            
+            <div class="overflow-hidden rounded-[16px] border border-white/10 bg-white/5 group">
+              <img src="images/field-1.jpg" class="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500" alt="Gallery 1">
+              <p class="text-[14px] text-light/80 p-[12px]">Soil Core Sampling Analysis</p>
+            </div>
+
+            <div class="overflow-hidden rounded-[16px] border border-white/10 bg-white/5 group">
+              <img src="images/field-2.jpg" class="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500" alt="Gallery 2">
+              <p class="text-[14px] text-light/80 p-[12px]">Crop Growth Under Stress Trials</p>
+            </div>
+
+            <div class="overflow-hidden rounded-[16px] border border-white/10 bg-white/5 group">
+              <img src="images/field-3.jpg" class="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500" alt="Gallery 3">
+              <p class="text-[14px] text-light/80 p-[12px]">Sustainable Plot Overview</p>
+            </div>
+
+            <div class="overflow-hidden rounded-[16px] border border-white/10 bg-white/5 group">
+              <img src="images/field-4.jpg" class="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500" alt="Gallery 4">
+              <p class="text-[14px] text-light/80 p-[12px]">Field Inspection & Community Survey</p>
+            </div>
+
+            <div class="overflow-hidden rounded-[16px] border border-white/10 bg-white/5 group">
+              <img src="images/field-5.jpg" class="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500" alt="Gallery 5">
+              <p class="text-[14px] text-light/80 p-[12px]">Data Collection From Local Farmers</p>
+            </div>
+
+            <div class="overflow-hidden rounded-[16px] border border-white/10 bg-white/5 group">
+              <img src="images/field-6.jpg" class="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500" alt="Gallery 6">
+              <p class="text-[14px] text-light/80 p-[12px]">Harvest Data Mapping & Records</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       <!-- RESEARCH TIMELINE SECTION -->
       <section id="research" class="py-[96px] px-[24px] bg-surface">
@@ -376,9 +448,9 @@
                   <p class="text-[14px] text-accent mt-[4px] font-bold">Ongoing Research</p>
                 </div>
                 <div class="md:col-span-3 mt-[12px] md:mt-0 bg-white p-[32px] rounded-[16px] border border-surface shadow-sm">
-                  <h4 class="font-serif font-bold text-[20px] md:text-[22px] text-dark mb-[12px]">Climate Resilience in Local Rice Genotypes</h4>
+                  <h4 class="font-serif font-bold text-[20px] md:text-[20px] text-dark mb-[12px]">Sustainable Mustard (Brassica spp.) Production</h4>
                   <p class="text-textMuted text-[16px] leading-relaxed">
-                    Investigating the effect of temperature stress on yield parameters. Involves field surveying of regional farmers and statistical analysis of phenotypic data.
+                    A Holistic Study of Input Economics, Pollination Ecology, and Farmer Adaptation in Bangladesh
                   </p>
                 </div>
               </div>
@@ -387,7 +459,7 @@
         </div>
       </section>
 
-      <!-- REFERENCES SECTION (নতুন যোগ করা হয়েছে আপনার সিভি অনুযায়ী) -->
+      <!-- REFERENCES SECTION -->
       <section class="py-[80px] px-[24px] bg-light border-t border-surface">
         <div class="max-w-[1152px] mx-auto">
           <div class="text-center mb-[48px] fade-up">
@@ -395,14 +467,12 @@
             <p class="text-textMuted text-[18px]">Academic mentors who can vouch for my work.</p>
           </div>
           <div class="grid md:grid-cols-2 gap-[24px] max-w-[896px] mx-auto fade-up">
-            <!-- Ref 1 -->
             <div class="p-[32px] bg-white border border-surface rounded-[24px] shadow-sm">
-              <h4 class="font-serif font-bold text-[20px] text-dark">Dr. Md Hafizur Rahman</h4>
+              <h4 class="font-serif font-bold text-[20px] text-dark">Dr. Nurul Alam</h4>
               <p class="text-primary font-medium text-[14px] mt-[2px]">Professor</p>
               <p class="text-textMuted text-[14px] mt-[8px]">Department of Crop Science and Technology,<br>University of Rajshahi, Rajshahi - 6205.</p>
-              <p class="text-dark font-medium text-[14px] mt-[12px] flex items-center gap-[6px]"><i data-lucide="phone" class="w-[14px] h-[14px] text-accent"></i> 01784-553058</p>
+              <p class="text-dark font-medium text-[14px] mt-[12px] flex items-center gap-[6px]"><i data-lucide="phone" class="w-[14px] h-[14px] text-accent"></i> 01751-332380</p>
             </div>
-            <!-- Ref 2 -->
             <div class="p-[32px] bg-white border border-surface rounded-[24px] shadow-sm">
               <h4 class="font-serif font-bold text-[20px] text-dark">Dr. Md Saiful Islam</h4>
               <p class="text-primary font-medium text-[14px] mt-[2px]">Professor</p>
@@ -413,8 +483,8 @@
         </div>
       </section>
 
-      <!-- CONTACT SECTION (Updated Mobile Link from CV) -->
-      <section id="contact" class="py-[80px] px-[24px] bg-dark text-white text-center">
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="py-[70px] px-[24px] bg-dark text-white text-center">
         <div class="max-w-[896px] mx-auto fade-up">
           <h2 class="font-serif text-[30px] md:text-[40px] font-bold mb-[24px]">Let's Connect</h2>
           <p class="text-light/80 mb-[48px] text-[16px] md:text-[18px] font-light max-w-[576px] mx-auto">
@@ -422,9 +492,7 @@
           </p>
 
           <div class="flex flex-wrap justify-center gap-[16px] max-w-[550px] mx-auto">
-            
-            <!-- Updated Phone number to +8801571339512 -->
-            <a href="tel:+8801571339512" class="flex items-center justify-center gap-[10px] w-[150px] sm:w-[160px] py-[14px] bg-white/5 rounded-[12px] hover:bg-primary transition-all border border-white/10">
+            <a href="tel:+8809696339512" class="flex items-center justify-center gap-[10px] w-[150px] sm:w-[160px] py-[14px] bg-white/5 rounded-[12px] hover:bg-primary transition-all border border-white/10">
               <i data-lucide="phone" class="w-[18px] h-[18px]"></i> <span class="text-[14px] sm:text-[16px] font-medium">Mobile</span>
             </a>
             
@@ -437,7 +505,6 @@
               <span class="text-[14px] sm:text-[16px] font-medium">LinkedIn</span>
             </a>
             
-            <!-- Updated WhatsApp number to +8801571339512 -->
             <a href="https://wa.me/8801571339512" target="_blank" class="flex items-center justify-center gap-[10px] w-[150px] sm:w-[160px] py-[14px] bg-white/5 rounded-[12px] hover:bg-[#25D366] hover:border-[#25D366] transition-all border border-white/10">
               <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.88-.788-1.472-1.761-1.645-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span class="text-[14px] sm:text-[16px] font-medium">WhatsApp</span>
@@ -452,7 +519,7 @@
       </section>
 
       <!-- FOOTER -->
-      <footer class="bg-dark text-textMuted py-[24px] text-center text-[14px] border-t border-white/5">
+      <footer class="bg-dark text-textMuted py-[26px] text-center text-[15px] border-t border-white/5">
         <p>&copy; 2026 Pias Ahmed. All Rights Reserved.</p>
       </footer>
 
@@ -463,13 +530,13 @@
   <script>
     lucide.createIcons();
 
+    // MOBILE MENU
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mainContent = document.getElementById('main-content');
     
     function toggleMenu() {
       menuBtn.classList.toggle('menu-active');
-      
       if (menuBtn.classList.contains('menu-active')) {
         mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
         mainContent.style.transform = `translateY(${mobileMenu.scrollHeight}px)`;
@@ -480,6 +547,7 @@
     }
     menuBtn.addEventListener('click', toggleMenu);
 
+    // TAB SWITCHER
     function switchTab(tabName) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -490,6 +558,45 @@
       activeBtn.className = 'tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] bg-white text-primary shadow-sm font-bold transition-all text-[16px]';
     }
 
+    // 3-SECOND SLIDESHOW LOGIC
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = (index + slides.length) % slides.length;
+      slides[currentSlideIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlideIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlideIndex - 1);
+    }
+
+    // Auto run slideshow every 3 seconds
+    let slideInterval = setInterval(nextSlide, 3000);
+
+    const slideshowContainer = document.querySelector('#fieldwork .relative');
+    slideshowContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    slideshowContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 3000));
+
+    // MODAL GALLERY LOGIC (VIEW MORE)
+    const modal = document.getElementById('gallery-modal');
+    
+    function openGalleryModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeGalleryModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto'; 
+    }
+
+    // FADE UP OBSERVER
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
