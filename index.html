@@ -6,38 +6,30 @@
   <title>Pias Ahmed | B.Sc. Agriculture & Researcher</title>
   <meta name="description" content="Portfolio of Pias Ahmed, specializing in Soil Science, Agronomy, and Climate Resilience Research.">
   
-  <!-- 
-    ========================================================================
-    ১. BROWSER TAB ICON (FAVICON) - ন্যাভবারের পাতার আইকনটি এখানে যুক্ত করা হয়েছে 
-    ========================================================================
-  -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzQ1RTM3IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTExIDIwQTcgNyAwIDAgMSA5LjggNi4xQzE1LjUgNSAxNyA0LjQ4IDE5IDJjMSAyIDIgMy41IDEgOS44YTcgNyAwIDAgMS0xMy45LjIiPjwvcGF0aD48cGF0aCBkPSJNOSAyMnYtNGg0Ij48L3BhdGggPjwvc3ZnPg==">
+  <!-- BROWSER TAB ICON (FAVICON) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzQ1RTM3IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTExIDIwQTcgNyAwIDAgMSA5LjggNi4xQzE1LjUgNSAxNyA0LjQ4IDE5IDJjMSAyIDIgMy41IDEgOS44YTcgNyAwIDAgMS0xMy45LjIiPjwvcGF0aD48wpathCBkPSJNOSAyMnYtNGg0Ij48L3BhdGggPjwvc3ZnPg==">
 
   <!-- Google Fonts: Merriweather (Serif) & Roboto (Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght=0,300;0,400;0,700;1,300;1,400&family=Roboto:wght=300;400;500;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS & Lucide Icons Scripts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <!-- 
-    ========================================================================
-    ২. THEME COLORS CONFIGURATION - এখান থেকে ওয়েবসাইটের কালার চেঞ্জ করতে পারবেন 
-    ========================================================================
-  -->
+  <!-- THEME COLORS CONFIGURATION -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#345E37',   /* এগ্রিকালচারাল গাঢ় সবুজ (Agronomy Green) */
-            accent: '#8B9A46',    /* হালকা পাতার রঙ (Leaf/Wheat Green) */
-            light: '#F9FAF7',     /* ব্যাকগ্রাউন্ডের জন্য অফ-হোয়াইট (Organic Off-white) */
-            surface: '#EEF0E9',   /* কার্ড বা ইমেজের পিছনের মাটির রঙ (Earthy Surface) */
-            dark: '#1C261D',      /* টেক্সট ও ডার্ক সেকশনের জন্য মাটির গাঢ় রঙ (Deep Soil) */
-            textMuted: '#5C665D'  /* একটু হালকা টেক্সটের কালার (Soft Natural Text) */
+            primary: '#345E37',   
+            accent: '#8B9A46',    
+            light: '#F9FAF7',     
+            surface: '#EEF0E9',   
+            dark: '#1C261D',      
+            textMuted: '#5C665D'  
           },
           fontFamily: {
             sans: ['Roboto', 'sans-serif'],
@@ -50,13 +42,11 @@
 
   <!-- Custom CSS for Scrollbar and Animations -->
   <style>
-    /* স্ক্রলবার ডিজাইন */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #F9FAF7; }
     ::-webkit-scrollbar-thumb { background: #8B9A46; border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: #345E37; }
     
-    /* স্ক্রল অ্যানিমেশন ইফেক্ট (Fade In Up) */
     .fade-up {
       opacity: 0;
       transform: translateY(20px);
@@ -67,7 +57,6 @@
       transform: translateY(0);
     }
 
-    /* মোবাইল মেনু বাটন অ্যানিমেশন */
     .line-1, .line-2, .line-3 {
       transition: all 0.3s ease-in-out;
       transform-origin: center;
@@ -79,36 +68,30 @@
 </head>
 <body class="bg-light text-dark font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
 
-  <!-- মূল কন্টেইনার (মোবাইলে স্ক্রিন যেন ডানে-বামে নড়াচড়া না করে) -->
+  <!-- মূল কন্টেইনার -->
   <div class="overflow-hidden max-w-full relative">
 
-    <!-- 
-      ========================================================================
-      ৩. NAVIGATION BAR (ন্যাভিগেশন বার - শ্যাডো এবং সলিড ব্যাকগ্রাউন্ডসহ)
-      ========================================================================
-    -->
+    <!-- NAVIGATION BAR -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-surface/50 transition-all duration-300">
-      <!-- h-[80px] = ন্যাভবারের উচ্চতা ৮০ পিক্সেল, px-[24px] = ডানে-বামে ২৪ পিক্সেল প্যাডিং -->
       <div class="max-w-[1280px] mx-auto px-[24px] h-[80px] flex items-center justify-between relative z-20 bg-transparent">
         
-        <!-- লোগো এবং আইকন (text-[24px] = ফন্ট সাইজ ২৪px) -->
         <a href="#" class="font-serif text-[24px] font-bold text-dark flex items-center gap-[8px] group">
           <i data-lucide="leaf" class="text-primary group-hover:rotate-12 transition-transform duration-300"></i> Pias Ahmed
         </a>
         
-        <!-- ডেস্কটপ মেনু (text-[14px] = ফন্ট সাইজ ১৪px, gap-[32px] = একটি লিংক থেকে আরেকটির দূরত্ব ৩২px) -->
-        <div class="hidden md:flex items-center gap-[32px] font-medium text-[14px] text-textMuted">
+        <!-- ডেস্কটপ মেনু -->
+        <div class="hidden md:flex items-center gap-[32px] font-medium text-[16px] text-textMuted">
           <a href="#about" class="hover:text-primary transition-colors">About</a>
           <a href="#expertise" class="hover:text-primary transition-colors">Expertise</a>
+          <a href="#education" class="hover:text-primary transition-colors">Education</a>
           <a href="#fieldwork" class="hover:text-primary transition-colors">Field Work</a>
           <a href="#research" class="hover:text-primary transition-colors">Research</a>
-          <!-- CV ডাউনলোড বাটন (px-[24px] = ডানেবামে ২৪px, py-[10px] = উপরে নিচে ১০px প্যাডিং) -->
           <a href="Resume_Pias.pdf" class="px-[24px] py-[10px] bg-dark text-white rounded-[100px] hover:bg-primary transition-all shadow-md">
             Download CV
           </a>
         </div>
 
-        <!-- মোবাইল মেনু টগল বাটন (w-[40px] h-[40px] = সাইজ ৪০ পিক্সেল) -->
+        <!-- মোবাইল মেনু টগল বাটন -->
         <button id="menu-btn" class="md:hidden w-[40px] h-[40px] flex flex-col justify-center items-center gap-[6px] focus:outline-none">
           <span class="line-1 w-[24px] h-[2px] bg-dark block"></span>
           <span class="line-2 w-[24px] h-[2px] bg-dark block"></span>
@@ -116,51 +99,42 @@
         </button>
       </div>
       
-      <!-- মোবাইল ড্রপডাউন মেনু (মোবাইল স্ক্রিনে বাটনে ক্লিক করলে এটি নামবে) -->
+      <!-- মোবাইল ড্রপডাউন মেনু -->
       <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-b border-surface overflow-hidden max-h-0 transition-all duration-500 ease-in-out md:hidden z-10 shadow-md">
         <div class="flex flex-col items-center justify-center gap-[24px] py-[24px] px-[24px]">
-          <a href="#about" onclick="toggleMenu()" class="text-[18px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">About</a>
-          <a href="#expertise" onclick="toggleMenu()" class="text-[18px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Expertise</a>
-          <a href="#fieldwork" onclick="toggleMenu()" class="text-[18px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Field Work</a>
-          <a href="#research" onclick="toggleMenu()" class="text-[18px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Research</a>
-          <a href="Resume_Pias.pdf" class="px-[32px] py-[12px] bg-dark text-white rounded-[100px] mt-[8px] w-full text-center">Download CV</a>
+          <a href="#about" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">About</a>
+          <a href="#expertise" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Expertise</a>
+          <a href="#education" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Education</a>
+          <a href="#fieldwork" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Field Work</a>
+          <a href="#research" onclick="toggleMenu()" class="text-[20px] font-serif text-dark hover:text-primary transition-colors w-full text-center border-b border-surface pb-[8px]">Research</a>
+          <a href="Resume_Pias.pdf" class="px-[32px] py-[12px] bg-dark text-white rounded-[100px] mt-[8px] w-full text-center text-[18px]">Download CV</a>
         </div>
       </div>
     </nav>
 
-    <!-- মেইন কন্টেন্ট র্যাপার (মোবাইল মেনু পুশ ইফেক্টের জন্য) -->
+    <!-- মেইন কন্টেন্ট র্যাপার -->
     <main id="main-content" class="transition-transform duration-500 ease-in-out">
       
-      <!-- 
-        ========================================================================
-        ৪. HERO SECTION (হেডার/মূল আকর্ষণ সেকশন)
-        ========================================================================
-      -->
-      <!-- pt-[128px] pb-[80px] = মোবাইল স্ক্রিনে প্যাডিং, md:pt-[192px] md:pb-[128px] = বড় স্ক্রিনে প্যাডিং -->
+      <!-- HERO SECTION -->
       <header class="relative pt-[128px] pb-[80px] md:pt-[192px] md:pb-[128px] px-[24px] flex items-center justify-center bg-light">
-        <!-- পিছনের সফট গ্লো/ব্লার ব্যাকগ্রাউন্ড বৃত্ত (max-w-[600px] h-[600px] = সাইজ ৬০০px) -->
         <div class="absolute top-[80px] left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[600px] bg-accent/10 rounded-[1000px] blur-[100px] -z-10"></div>
         
         <div class="relative z-10 text-center max-w-[896px] mx-auto fade-up mt-[32px]">
-          <!-- ছোট ব্যাজ বাটন (mb-[32px] = নিচে ৩২px মার্জিন) -->
-          <div class="inline-flex items-center gap-[8px] px-[16px] py-[8px] rounded-[100px] bg-white text-textMuted text-[12px] font-semibold tracking-widest uppercase mb-[32px] border border-surface shadow-sm">
+          <div class="inline-flex items-center gap-[8px] px-[16px] py-[8px] rounded-[100px] bg-white text-textMuted text-[14px] font-semibold tracking-widest uppercase mb-[32px] border border-surface shadow-sm">
             <span class="w-[8px] h-[8px] rounded-[100px] bg-accent animate-pulse"></span>
             B.Sc. Agriculture Graduate
           </div>
           
-          <!-- মেইন টাইটেল (text-[36px] = মোবাইলে ৩৬px, sm:text-[48px] = ট্যাবে ৪৮px, md:text-[72px] = পিসিতে ৭২px সাইজ) -->
           <h1 class="font-serif text-[36px] sm:text-[48px] md:text-[72px] font-bold text-dark mb-[24px] leading-tight">
             Bridging Science & <br>
             <span class="text-primary italic font-light">Sustainable Farming</span>
           </h1>
           
-          <!-- সাবটাইটেল বা ছোট বিবরণ (text-[16px] = ফন্ট সাইজ ১৬px, md:text-[18px] = পিসিতে ১৮px) -->
-          <p class="text-[16px] sm:text-[18px] text-textMuted mb-[40px] max-w-[672px] mx-auto leading-relaxed">
+          <p class="text-[18px] sm:text-[20px] text-textMuted mb-[40px] max-w-[672px] mx-auto leading-relaxed">
             Specializing in Soil Science, Agronomic Research, and Climate-Resilient Crop Solutions. Dedicated to optimizing yield through data-driven field practices.
           </p>
           
-          <!-- হিরো সেকশনের অ্যাকশন বাটনসমূহ -->
-          <div class="flex flex-col sm:flex-row gap-[16px] justify-center items-center w-full max-w-[448px] mx-auto sm:max-w-none">
+          <div class="flex flex-col sm:flex-row gap-[16px] justify-center items-center w-full max-w-[448px] mx-auto sm:max-w-none text-[16px]">
             <a href="#fieldwork" class="px-[32px] py-[14px] bg-primary text-white font-medium rounded-[100px] hover:bg-dark transition-all w-full sm:w-auto text-center shadow-lg shadow-primary/20">
               Explore My Work
             </a>
@@ -171,100 +145,85 @@
         </div>
       </header>
 
-      <!-- 
-        ========================================================================
-        ৫. ABOUT SECTION (আপনার নতুন লিফ শেপ প্রোফাইল পিকচার এবং বিবরণ)
-        ========================================================================
-      -->
+      <!-- ABOUT SECTION -->
       <section id="about" class="py-[96px] px-[24px] bg-surface">
         <div class="max-w-[1152px] mx-auto grid md:grid-cols-2 gap-[64px] items-center">
           
-          <!-- আপনার ইমেজ কন্টেইনার (নতুন লিফ শেপ ডিজাইন) -->
           <div class="relative fade-up flex justify-center items-center w-full max-w-[350px] sm:max-w-[400px] mx-auto">
-            
-            <!-- পিছনের আলংকারিক পাতার মতো ব্যাকগ্রাউন্ড শেড -->
             <div class="absolute top-[16px] left-[16px] sm:top-[24px] sm:left-[24px] w-full h-full bg-primary/20 rounded-tl-[120px] rounded-br-[120px] rounded-tr-[32px] rounded-bl-[32px] -z-10 transition-transform duration-500"></div>
-            
-            <!-- মূল ইমেজ: profile.jpg (অর্গানিক শেপ) -->
             <img src="profile.jpg" alt="Pias Ahmed" class="w-full h-auto aspect-square object-cover rounded-tl-[120px] rounded-br-[120px] rounded-tr-[32px] rounded-bl-[32px] shadow-2xl border-[6px] border-white hover:scale-[1.03] transition-transform duration-500">
-            
-            <!-- ছোট্ট একটি ডেকোরেশন এলিমেন্ট (অপশনাল সুন্দর্যের জন্য) -->
             <div class="absolute -bottom-[20px] -right-[20px] w-[80px] h-[80px] bg-accent/20 rounded-full blur-[16px] -z-20"></div>
           </div>
           
-          <!-- আপনার বিবরণী টেক্সট পার্ট -->
           <div class="fade-up delay-100">
-            <h2 class="font-serif text-[30px] md:text-[36px] font-bold text-dark mb-[24px]">About Pias Ahmed</h2>
-            <p class="text-textMuted leading-relaxed mb-[24px] text-[16px]">
-              I am a final-year B.Sc. Agriculture student with a profound passion for <strong class="text-primary font-semibold">Soil Science</strong> and <strong class="text-primary font-semibold">Agronomy</strong>. My academic journey is defined by rigorous laboratory analysis and extensive fieldwork across diverse agro-ecological zones.
-            </p>
-            <p class="text-textMuted leading-relaxed mb-[40px] text-[16px]">
-              My research focuses on sustainable nutrient management and climate adaptation strategies. I combine traditional farming knowledge with modern statistical tools to derive actionable insights for farmers.
+            <h2 class="font-serif text-[30px] md:text-[40px] font-bold text-dark mb-[24px]">About Pias Ahmed</h2>
+            
+            <p class="text-textMuted leading-relaxed mb-[16px] text-[18px]">
+              I am a B.Sc. Agriculture student at the <strong class="text-primary font-semibold">University of Rajshahi</strong> with a profound passion for Soil Science and Agronomy. My academic journey is defined by rigorous laboratory analysis and extensive fieldwork.
             </p>
             
-            <!-- ৩টি স্ট্যাটস/কাউন্টার বক্স (text-[24px] = ২৪px সাইজ) -->
+            <!-- Career Objective added from CV -->
+            <blockquote class="border-l-4 border-primary pl-[16px] italic text-[16px] text-textMuted bg-white/50 p-[12px] rounded-r-[8px] mb-[24px]">
+              "I aim to contribute my full experience to an organization that prioritizes honesty and excellence, fostering a partnership where my contributions fuel both company prosperity and my own career development."
+            </blockquote>
+            
+            <!-- CGPA Updated to 3.70 from CV -->
             <div class="grid grid-cols-3 gap-[16px] sm:gap-[24px]">
               <div>
-                <h3 class="text-[24px] sm:text-[30px] font-serif font-bold text-primary">3.8+</h3>
-                <p class="text-[10px] sm:text-[12px] text-textMuted uppercase tracking-widest mt-[8px] font-medium">CGPA</p>
+                <h3 class="text-[28px] sm:text-[36px] font-serif font-bold text-primary">3.70</h3>
+                <p class="text-[12px] sm:text-[14px] text-textMuted uppercase tracking-widest mt-[8px] font-medium">CGPA (RU)</p>
               </div>
               <div>
-                <h3 class="text-[24px] sm:text-[30px] font-serif font-bold text-primary">500+</h3>
-                <p class="text-[10px] sm:text-[12px] text-textMuted uppercase tracking-widest mt-[8px] font-medium">Field Hrs</p>
+                <h3 class="text-[28px] sm:text-[36px] font-serif font-bold text-primary">500+</h3>
+                <p class="text-[12px] sm:text-[14px] text-textMuted uppercase tracking-widest mt-[8px] font-medium">Field Hrs</p>
               </div>
               <div>
-                <h3 class="text-[24px] sm:text-[30px] font-serif font-bold text-primary">10+</h3>
-                <p class="text-[10px] sm:text-[12px] text-textMuted uppercase tracking-widest mt-[8px] font-medium">Lab Tests</p>
+                <h3 class="text-[28px] sm:text-[36px] font-serif font-bold text-primary">10+</h3>
+                <p class="text-[12px] sm:text-[14px] text-textMuted uppercase tracking-widest mt-[8px] font-medium">Lab Tests</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 
-        ========================================================================
-        ৬. EXPERTISE SECTION (ট্যাব সিস্টেমসহ টেকনিক্যাল স্কিলসমূহ)
-        ========================================================================
-      -->
+      <!-- EXPERTISE SECTION -->
       <section id="expertise" class="py-[96px] px-[24px] bg-light">
         <div class="max-w-[896px] mx-auto">
           <div class="text-center mb-[64px] fade-up">
-            <h2 class="font-serif text-[30px] md:text-[36px] font-bold text-dark mb-[16px]">Technical Expertise</h2>
-            <p class="text-textMuted text-[16px]">A comprehensive blend of laboratory precision and field-ready skills.</p>
+            <h2 class="font-serif text-[30px] md:text-[40px] font-bold text-dark mb-[16px]">Technical Expertise</h2>
+            <p class="text-textMuted text-[18px]">A comprehensive blend of laboratory precision and field-ready skills.</p>
           </div>
 
-          <!-- ট্যাব বাটন গ্রুপ (প্যাকিং ও রাউন্ডিং পিক্সেল ফরম্যাটে করা) -->
           <div class="flex flex-col sm:flex-row justify-center gap-[12px] mb-[40px] fade-up bg-surface p-[8px] sm:rounded-[100px] w-full sm:w-fit mx-auto rounded-[16px]">
-            <button onclick="switchTab('lab')" id="btn-lab" class="tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] bg-white text-primary shadow-sm font-bold transition-all text-[14px]">
+            <button onclick="switchTab('lab')" id="btn-lab" class="tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] bg-white text-primary shadow-sm font-bold transition-all text-[16px]">
               Laboratory
             </button>
-            <button onclick="switchTab('field')" id="btn-field" class="tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] text-textMuted hover:text-dark font-medium transition-all text-[14px]">
+            <button onclick="switchTab('field')" id="btn-field" class="tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] text-textMuted hover:text-dark font-medium transition-all text-[16px]">
               Field Work
             </button>
-            <button onclick="switchTab('data')" id="btn-data" class="tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] text-textMuted hover:text-dark font-medium transition-all text-[14px]">
+            <button onclick="switchTab('data')" id="btn-data" class="tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] text-textMuted hover:text-dark font-medium transition-all text-[16px]">
               Data & Tech
             </button>
           </div>
 
-          <!-- ট্যাব কন্টেন্ট বক্স (rounded-[32px] = ৩২px গোল কোণা) -->
           <div class="fade-up">
             <!-- ল্যাব কন্টেন্ট -->
             <div id="content-lab" class="tab-content border border-surface rounded-[32px] p-[24px] sm:p-[48px] bg-white shadow-sm">
               <div class="flex items-center gap-[16px] mb-[24px]">
-                <div class="w-[48px] h-[48px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
-                  <i data-lucide="flask-conical"></i>
+                <div class="w-[56px] h-[56px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
+                  <i data-lucide="flask-conical" class="w-[28px] h-[28px]"></i>
                 </div>
-                <h3 class="text-[20px] sm:text-[24px] font-serif font-bold text-dark">Soil & Plant Analysis</h3>
+                <h3 class="text-[22px] sm:text-[28px] font-serif font-bold text-dark">Soil & Plant Analysis</h3>
               </div>
-              <p class="text-textMuted mb-[24px] text-[14px] sm:text-[16px]">Proficient in standard chemical protocols for determining soil health and plant nutrient status.</p>
+              <p class="text-textMuted mb-[32px] text-[16px] sm:text-[18px]">Proficient in standard chemical protocols for determining soil health and plant nutrient status.</p>
               <div class="grid sm:grid-cols-2 gap-[16px]">
-                <div class="p-[16px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[14px] mb-[4px]">Soil Carbon Testing</h4>
-                  <p class="text-[12px] text-textMuted">Walkley-Black method for organic matter determination.</p>
+                <div class="p-[20px] bg-light rounded-[12px] border border-surface">
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Soil Carbon Testing</h4>
+                  <p class="text-[14px] text-textMuted">Walkley-Black method for organic matter determination.</p>
                 </div>
-                <div class="p-[16px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[14px] mb-[4px]">pH & EC Measurement</h4>
-                  <p class="text-[12px] text-textMuted">Potentiometric analysis for soil acidity and salinity.</p>
+                <div class="p-[20px] bg-light rounded-[12px] border border-surface">
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">pH & EC Measurement</h4>
+                  <p class="text-[14px] text-textMuted">Potentiometric analysis for soil acidity and salinity.</p>
                 </div>
               </div>
             </div>
@@ -272,41 +231,41 @@
             <!-- ফিল্ড কন্টেন্ট -->
             <div id="content-field" class="tab-content hidden border border-surface rounded-[32px] p-[24px] sm:p-[48px] bg-white shadow-sm">
               <div class="flex items-center gap-[16px] mb-[24px]">
-                <div class="w-[48px] h-[48px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
-                  <i data-lucide="tractor"></i>
+                <div class="w-[56px] h-[56px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
+                  <i data-lucide="tractor" class="w-[28px] h-[28px]"></i>
                 </div>
-                <h3 class="text-[20px] sm:text-[24px] font-serif font-bold text-dark">Agronomic Practices</h3>
+                <h3 class="text-[22px] sm:text-[28px] font-serif font-bold text-dark">Agronomic Practices</h3>
               </div>
-              <p class="text-textMuted mb-[24px] text-[14px] sm:text-[16px]">Hands-on experience in managing crop life cycles and implementing sustainable practices.</p>
+              <p class="text-textMuted mb-[32px] text-[16px] sm:text-[18px]">Hands-on experience in managing crop life cycles and implementing sustainable practices.</p>
               <div class="grid sm:grid-cols-2 gap-[16px]">
-                <div class="p-[16px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[14px] mb-[4px]">Crop Cutting</h4>
-                  <p class="text-[12px] text-textMuted">Yield estimation and harvest index calculation directly from plots.</p>
+                <div class="p-[20px] bg-light rounded-[12px] border border-surface">
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Crop Cutting</h4>
+                  <p class="text-[14px] text-textMuted">Yield estimation and harvest index calculation directly from plots.</p>
                 </div>
-                <div class="p-[16px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[14px] mb-[4px]">IPM Strategies</h4>
-                  <p class="text-[12px] text-textMuted">Identification of pests and eco-friendly control measures.</p>
+                <div class="p-[20px] bg-light rounded-[12px] border border-surface">
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">IPM Strategies</h4>
+                  <p class="text-[14px] text-textMuted">Identification of pests and eco-friendly control measures.</p>
                 </div>
               </div>
             </div>
 
-            <!-- ডাটা কন্টেন্ট -->
+            <!-- ডাটা কন্টেন্ট (Updated with Skills from CV) -->
             <div id="content-data" class="tab-content hidden border border-surface rounded-[32px] p-[24px] sm:p-[48px] bg-white shadow-sm">
               <div class="flex items-center gap-[16px] mb-[24px]">
-                <div class="w-[48px] h-[48px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
-                  <i data-lucide="bar-chart-3"></i>
+                <div class="w-[56px] h-[56px] bg-surface rounded-[12px] flex items-center justify-center text-primary shrink-0">
+                  <i data-lucide="bar-chart-3" class="w-[28px] h-[28px]"></i>
                 </div>
-                <h3 class="text-[20px] sm:text-[24px] font-serif font-bold text-dark">Research & Analysis</h3>
+                <h3 class="text-[22px] sm:text-[28px] font-serif font-bold text-dark">Software & Analysis</h3>
               </div>
-              <p class="text-textMuted mb-[24px] text-[14px] sm:text-[16px]">Transforming raw field data into meaningful scientific conclusions.</p>
+              <p class="text-textMuted mb-[32px] text-[16px] sm:text-[18px]">Transforming raw field data into meaningful scientific conclusions using industry tools.</p>
               <div class="grid sm:grid-cols-2 gap-[16px]">
-                <div class="p-[16px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[14px] mb-[4px]">Statistical Analysis</h4>
-                  <p class="text-[12px] text-textMuted">ANOVA, DMRT using Statistix 10 & Microsoft Excel.</p>
+                <div class="p-[20px] bg-light rounded-[12px] border border-surface">
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Data & Programming</h4>
+                  <p class="text-[14px] text-textMuted">R pro, Microsoft Excel for statistical analysis.</p>
                 </div>
-                <div class="p-[16px] bg-light rounded-[12px] border border-surface">
-                  <h4 class="font-semibold text-dark text-[14px] mb-[4px]">Technical Reporting</h4>
-                  <p class="text-[12px] text-textMuted">Drafting comprehensive research papers and reports.</p>
+                <div class="p-[20px] bg-light rounded-[12px] border border-surface">
+                  <h4 class="font-semibold text-dark text-[16px] mb-[6px]">Applications & Documentation</h4>
+                  <p class="text-[14px] text-textMuted">Microsoft Word, MS PowerPoint, and advanced internet browsing.</p>
                 </div>
               </div>
             </div>
@@ -314,35 +273,85 @@
         </div>
       </section>
 
-      <!-- 
-        ========================================================================
-        ৭. FIELD WORK GALLERY (গ্যালারি সেকশন)
-        ========================================================================
-      -->
-      <section id="fieldwork" class="py-[96px] px-[24px] bg-surface">
-        <div class="max-w-[1152px] mx-auto">
+      <!-- EDUCATION SECTION (নতুন যোগ করা হয়েছে আপনার সিভির তথ্য অনুযায়ী) -->
+      <section id="education" class="py-[96px] px-[24px] bg-surface">
+        <div class="max-w-[896px] mx-auto">
           <div class="text-center mb-[64px] fade-up">
-            <h2 class="font-serif text-[30px] md:text-[36px] font-bold text-dark mb-[8px]">Field Work Gallery</h2>
-            <p class="text-textMuted text-[16px]">Snapshots from my research plots and field visits.</p>
+            <h2 class="font-serif text-[30px] md:text-[40px] font-bold text-dark mb-[16px]">Educational Qualifications</h2>
+            <p class="text-textMuted text-[18px]">Academic milestones and background achievements.</p>
           </div>
 
-          <!-- গ্রিড লেআউট (auto-rows-[250px] = প্রতিটা সারির উচ্চতা ২৫০px) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] auto-rows-[250px]">
+          <div class="grid gap-[24px] fade-up">
+            <!-- B.Sc. -->
+            <div class="bg-white p-[32px] rounded-[24px] border border-surface shadow-sm flex flex-col sm:flex-row sm:justify-between sm:items-center gap-[16px]">
+              <div>
+                <span class="text-[12px] font-bold tracking-wider text-accent bg-accent/10 px-[12px] py-[4px] rounded-full uppercase">2023 - 2027</span>
+                <h3 class="font-serif font-bold text-[22px] text-dark mt-[8px]">B.Sc. in Agriculture (B.Sc.Ag)</h3>
+                <p class="text-textMuted text-[16px] mt-[4px]">Faculty of Agriculture, University of Rajshahi</p>
+              </div>
+              <div class="sm:text-right">
+                <span class="text-[20px] font-bold text-primary block">CGPA 3.70</span>
+                <span class="text-[14px] text-textMuted">Scale: 4.00</span>
+              </div>
+            </div>
+
+            <!-- HSC -->
+            <div class="bg-white p-[32px] rounded-[24px] border border-surface shadow-sm flex flex-col sm:flex-row sm:justify-between sm:items-center gap-[16px]">
+              <div>
+                <span class="text-[12px] font-bold tracking-wider text-textMuted bg-surface px-[12px] py-[4px] rounded-full uppercase">Passing Year: 2021</span>
+                <h3 class="font-serif font-bold text-[22px] text-dark mt-[8px]">Higher Secondary Certificate (H.S.C)</h3>
+                <p class="text-textMuted text-[16px] mt-[4px]">Darshana Government College, Chuadanga (Science)</p>
+              </div>
+              <div class="sm:text-right">
+                <span class="text-[20px] font-bold text-primary block">GPA 5.00</span>
+                <span class="text-[14px] text-textMuted">Scale: 5.00</span>
+              </div>
+            </div>
+
+            <!-- SSC & JSC Combined for spacing -->
+            <div class="grid sm:grid-cols-2 gap-[24px]">
+              <div class="bg-white p-[24px] rounded-[24px] border border-surface shadow-sm">
+                <span class="text-[12px] font-bold text-textMuted bg-surface px-[12px] py-[4px] rounded-full">Passing Year: 2019</span>
+                <h4 class="font-serif font-bold text-[18px] text-dark mt-[12px]">Secondary School Certificate (S.S.C)</h4>
+                <p class="text-[14px] text-textMuted mt-[4px]">Victoria Jubilee Govt High School, Chuadanga</p>
+                <p class="text-[16px] font-bold text-primary mt-[12px]">GPA 4.33</p>
+              </div>
+              <div class="bg-white p-[24px] rounded-[24px] border border-surface shadow-sm">
+                <span class="text-[12px] font-bold text-textMuted bg-surface px-[12px] py-[4px] rounded-full">Passing Year: 2016</span>
+                <h4 class="font-serif font-bold text-[18px] text-dark mt-[12px]">Junior School Certificate (J.S.C)</h4>
+                <p class="text-[14px] text-textMuted mt-[4px]">Victoria Jubilee Govt High School, Chuadanga</p>
+                <p class="text-[16px] font-bold text-primary mt-[12px]">GPA 4.60</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FIELD WORK GALLERY -->
+      <section id="fieldwork" class="py-[96px] px-[24px] bg-light">
+        <div class="max-w-[1152px] mx-auto">
+          <div class="text-center mb-[64px] fade-up">
+            <h2 class="font-serif text-[30px] md:text-[40px] font-bold text-dark mb-[8px]">Field Work Gallery</h2>
+            <p class="text-textMuted text-[18px]">Snapshots from my research plots and field visits.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] auto-rows-[280px]">
             <div class="lg:col-span-2 relative group overflow-hidden rounded-[24px] fade-up">
               <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?auto=format&fit=crop&w=1200&q=80" alt="Field Work" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-              <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex items-end p-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex items-end p-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div>
-                  <h4 class="text-white font-serif font-bold text-[18px]">Soil Sampling</h4>
-                  <p class="text-light/80 text-[12px] mt-[4px]">Collecting core samples for lab analysis</p>
+                  <h4 class="text-white font-serif font-bold text-[22px]">Soil Sampling</h4>
+                  <p class="text-light/90 text-[14px] mt-[6px]">Collecting core samples for lab analysis</p>
                 </div>
               </div>
             </div>
             <div class="relative group overflow-hidden rounded-[24px] fade-up delay-100">
               <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=800&q=80" alt="Rice Variety" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-              <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex items-end p-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex items-end p-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div>
-                  <h4 class="text-white font-serif font-bold text-[18px]">Variety Trial</h4>
-                  <p class="text-light/80 text-[12px] mt-[4px]">Monitoring growth stages</p>
+                  <h4 class="text-white font-serif font-bold text-[22px]">Variety Trial</h4>
+                  <p class="text-light/90 text-[14px] mt-[6px]">Monitoring growth stages</p>
                 </div>
               </div>
             </div>
@@ -350,16 +359,12 @@
         </div>
       </section>
 
-      <!-- 
-        ========================================================================
-        ৮. RESEARCH TIMELINE SECTION (টাইমলাইন সেকশন)
-        ========================================================================
-      -->
-      <section id="research" class="py-[96px] px-[24px] bg-light">
+      <!-- RESEARCH TIMELINE SECTION -->
+      <section id="research" class="py-[96px] px-[24px] bg-surface">
         <div class="max-w-[896px] mx-auto">
           <div class="text-center mb-[64px] fade-up">
-            <h2 class="font-serif text-[30px] md:text-[36px] font-bold text-dark mb-[16px]">Research & Journey</h2>
-            <p class="text-textMuted text-[16px]">My academic path and ongoing investigations.</p>
+            <h2 class="font-serif text-[30px] md:text-[40px] font-bold text-dark mb-[16px]">Research & Journey</h2>
+            <p class="text-textMuted text-[18px]">My academic path and ongoing investigations.</p>
           </div>
 
           <div class="relative border-l-2 border-surface ml-[12px] md:ml-0 space-y-[48px]">
@@ -367,12 +372,12 @@
               <div class="absolute -left-[7px] top-[6px] w-[12px] h-[12px] rounded-[100px] bg-primary ring-4 ring-light"></div>
               <div class="md:grid md:grid-cols-4 gap-[32px] items-start">
                 <div class="md:col-span-1 md:text-right md:pr-[24px]">
-                  <h3 class="text-[14px] font-bold text-dark uppercase tracking-wider">Present</h3>
-                  <p class="text-[12px] text-accent mt-[4px] font-bold">Ongoing Research</p>
+                  <h3 class="text-[16px] font-bold text-dark uppercase tracking-wider">Present</h3>
+                  <p class="text-[14px] text-accent mt-[4px] font-bold">Ongoing Research</p>
                 </div>
-                <div class="md:col-span-3 mt-[12px] md:mt-0 bg-white p-[24px] rounded-[16px] border border-surface shadow-sm">
-                  <h4 class="font-serif font-bold text-[18px] text-dark mb-[8px]">Climate Resilience in Local Rice Genotypes</h4>
-                  <p class="text-textMuted text-[14px] leading-relaxed">
+                <div class="md:col-span-3 mt-[12px] md:mt-0 bg-white p-[32px] rounded-[16px] border border-surface shadow-sm">
+                  <h4 class="font-serif font-bold text-[20px] md:text-[22px] text-dark mb-[12px]">Climate Resilience in Local Rice Genotypes</h4>
+                  <p class="text-textMuted text-[16px] leading-relaxed">
                     Investigating the effect of temperature stress on yield parameters. Involves field surveying of regional farmers and statistical analysis of phenotypic data.
                   </p>
                 </div>
@@ -382,78 +387,82 @@
         </div>
       </section>
 
-      <!-- 
-        ========================================================================
-        ৯. CONTACT SECTION (২ লাইনে সাজানো সমান সাইজের সোশ্যাল ও কন্টাক্ট বাটন)
-        ========================================================================
-      -->
-      <section id="contact" class="py-[64px] px-[24px] bg-dark text-white text-center">
+      <!-- REFERENCES SECTION (নতুন যোগ করা হয়েছে আপনার সিভি অনুযায়ী) -->
+      <section class="py-[80px] px-[24px] bg-light border-t border-surface">
+        <div class="max-w-[1152px] mx-auto">
+          <div class="text-center mb-[48px] fade-up">
+            <h2 class="font-serif text-[30px] md:text-[40px] font-bold text-dark mb-[8px]">References</h2>
+            <p class="text-textMuted text-[18px]">Academic mentors who can vouch for my work.</p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-[24px] max-w-[896px] mx-auto fade-up">
+            <!-- Ref 1 -->
+            <div class="p-[32px] bg-white border border-surface rounded-[24px] shadow-sm">
+              <h4 class="font-serif font-bold text-[20px] text-dark">Dr. Md Hafizur Rahman</h4>
+              <p class="text-primary font-medium text-[14px] mt-[2px]">Professor</p>
+              <p class="text-textMuted text-[14px] mt-[8px]">Department of Crop Science and Technology,<br>University of Rajshahi, Rajshahi - 6205.</p>
+              <p class="text-dark font-medium text-[14px] mt-[12px] flex items-center gap-[6px]"><i data-lucide="phone" class="w-[14px] h-[14px] text-accent"></i> 01784-553058</p>
+            </div>
+            <!-- Ref 2 -->
+            <div class="p-[32px] bg-white border border-surface rounded-[24px] shadow-sm">
+              <h4 class="font-serif font-bold text-[20px] text-dark">Dr. Md Saiful Islam</h4>
+              <p class="text-primary font-medium text-[14px] mt-[2px]">Professor</p>
+              <p class="text-textMuted text-[14px] mt-[8px]">Department of Crop Science and Technology,<br>University of Rajshahi, Rajshahi - 6205.</p>
+              <p class="text-dark font-medium text-[14px] mt-[12px] flex items-center gap-[6px]"><i data-lucide="phone" class="w-[14px] h-[14px] text-accent"></i> 01746-108333</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION (Updated Mobile Link from CV) -->
+      <section id="contact" class="py-[80px] px-[24px] bg-dark text-white text-center">
         <div class="max-w-[896px] mx-auto fade-up">
-          <h2 class="font-serif text-[30px] md:text-[36px] font-bold mb-[16px]">Let's Connect</h2>
-          <p class="text-light/70 mb-[40px] text-[14px] md:text-[16px] font-light max-w-[576px] mx-auto">
+          <h2 class="font-serif text-[30px] md:text-[40px] font-bold mb-[24px]">Let's Connect</h2>
+          <p class="text-light/80 mb-[48px] text-[16px] md:text-[18px] font-light max-w-[576px] mx-auto">
             Interested in collaboration, research opportunities, or field visits? Feel free to reach out.
           </p>
 
-          <!-- 
-            বাটনের সাইজ এখানে পিক্সেল পারফেক্ট করা:
-            max-w-[500px] = ২ লাইনে ৩টা করে বাটন সুন্দরভাবে আটবে।
-            w-[140px] sm:w-[150px] = মোবাইলে ১৪০px এবং পিসিতে ১৫০px ফিক্সড উইডথ বাটন সাইজ।
-          -->
-          <div class="flex flex-wrap justify-center gap-[12px] md:gap-[16px] max-w-[500px] mx-auto">
+          <div class="flex flex-wrap justify-center gap-[16px] max-w-[550px] mx-auto">
             
-            <!-- Mobile বাটন -->
-            <a href="tel:+8809696339512" class="flex items-center justify-center gap-[8px] w-[140px] sm:w-[150px] py-[12px] bg-white/5 rounded-[12px] hover:bg-primary transition-all border border-white/10">
-              <i data-lucide="phone" class="w-[16px] h-[16px]"></i> <span class="text-[12px] sm:text-[14px] font-medium">Mobile</span>
+            <!-- Updated Phone number to +8801571339512 -->
+            <a href="tel:+8801571339512" class="flex items-center justify-center gap-[10px] w-[150px] sm:w-[160px] py-[14px] bg-white/5 rounded-[12px] hover:bg-primary transition-all border border-white/10">
+              <i data-lucide="phone" class="w-[18px] h-[18px]"></i> <span class="text-[14px] sm:text-[16px] font-medium">Mobile</span>
             </a>
             
-            <!-- Email বাটন -->
-            <a href="mailto:pias@mailfence.com" class="flex items-center justify-center gap-[8px] w-[140px] sm:w-[150px] py-[12px] bg-white/5 rounded-[12px] hover:bg-primary transition-all border border-white/10">
-              <i data-lucide="mail" class="w-[16px] h-[16px]"></i> <span class="text-[12px] sm:text-[14px] font-medium">Email</span>
+            <a href="mailto:pias@mailfence.com" class="flex items-center justify-center gap-[10px] w-[150px] sm:w-[160px] py-[14px] bg-white/5 rounded-[12px] hover:bg-primary transition-all border border-white/10">
+              <i data-lucide="mail" class="w-[18px] h-[18px]"></i> <span class="text-[14px] sm:text-[16px] font-medium">Email</span>
             </a>
             
-            <!-- LinkedIn বাটন (Custom SVG আইকন) -->
-            <a href="https://www.linkedin.com/in/piasofficial-bd" target="_blank" class="flex items-center justify-center gap-[8px] w-[140px] sm:w-[150px] py-[12px] bg-white/5 rounded-[12px] hover:bg-[#0A66C2] hover:border-[#0A66C2] transition-all border border-white/10">
-              <svg class="w-[16px] h-[16px] fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              <span class="text-[12px] sm:text-[14px] font-medium">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/piasofficial-bd" target="_blank" class="flex items-center justify-center gap-[10px] w-[150px] sm:w-[160px] py-[14px] bg-white/5 rounded-[12px] hover:bg-[#0A66C2] hover:border-[#0A66C2] transition-all border border-white/10">
+              <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span class="text-[14px] sm:text-[16px] font-medium">LinkedIn</span>
             </a>
             
-            <!-- WhatsApp বাটন (Custom SVG আইকন) -->
-            <a href="https://wa.me/8809696339512" target="_blank" class="flex items-center justify-center gap-[8px] w-[140px] sm:w-[150px] py-[12px] bg-white/5 rounded-[12px] hover:bg-[#25D366] hover:border-[#25D366] transition-all border border-white/10">
-              <svg class="w-[16px] h-[16px] fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.88-.788-1.472-1.761-1.645-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              <span class="text-[12px] sm:text-[14px] font-medium">WhatsApp</span>
+            <!-- Updated WhatsApp number to +8801571339512 -->
+            <a href="https://wa.me/8801571339512" target="_blank" class="flex items-center justify-center gap-[10px] w-[150px] sm:w-[160px] py-[14px] bg-white/5 rounded-[12px] hover:bg-[#25D366] hover:border-[#25D366] transition-all border border-white/10">
+              <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.88-.788-1.472-1.761-1.645-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span class="text-[14px] sm:text-[16px] font-medium">WhatsApp</span>
             </a>
             
-            <!-- GitHub বাটন (Custom SVG আইকন) -->
-            <a href="https://github.com/Pias-ru" target="_blank" class="flex items-center justify-center gap-[8px] w-[140px] sm:w-[150px] py-[12px] bg-white/5 rounded-[12px] hover:bg-white hover:text-dark transition-all border border-white/10">
-              <svg class="w-[16px] h-[16px] fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              <span class="text-[12px] sm:text-[14px] font-medium">GitHub</span>
+            <a href="https://github.com/Pias-ru" target="_blank" class="flex items-center justify-center gap-[10px] w-[150px] sm:w-[160px] py-[14px] bg-white/5 rounded-[12px] hover:bg-white hover:text-dark transition-all border border-white/10">
+              <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span class="text-[14px] sm:text-[16px] font-medium">GitHub</span>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- 
-        ========================================================================
-        ১০. FOOTER (ফুটার সেকশন)
-        ========================================================================
-      -->
-      <footer class="bg-dark text-textMuted py-[24px] text-center text-[12px] border-t border-white/5">
+      <!-- FOOTER -->
+      <footer class="bg-dark text-textMuted py-[24px] text-center text-[14px] border-t border-white/5">
         <p>&copy; 2026 Pias Ahmed. All Rights Reserved.</p>
       </footer>
 
-    </main> <!-- মেইন কন্টেন্ট র্যাপার শেষ -->
-  </div> <!-- মূল স্ক্রিন কন্টেইনার শেষ -->
+    </main>
+  </div>
 
-  <!-- 
-    ========================================================================
-    ১১. JAVASCRIPT FUNCTIONS (মেনু ও ট্যাব ফাংশনালিটি)
-    ========================================================================
-  -->
+  <!-- JAVASCRIPT FUNCTIONS -->
   <script>
-    // Lucide লাইব্রেরির আইকনগুলো রেন্ডার করার জন্য
     lucide.createIcons();
 
-    // মোবাইল মেনু লজিক (বাটন ক্লিক করলে মেনু নিচে নামবে)
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mainContent = document.getElementById('main-content');
@@ -471,22 +480,16 @@
     }
     menuBtn.addEventListener('click', toggleMenu);
 
-    // টেকনিক্যাল এক্সপার্টাইজ ট্যাব পরিবর্তনের লজিক
     function switchTab(tabName) {
-      // সব কন্টেন্ট আগে হাইড (লুকিয়ে) করা হচ্ছে
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-      // সব বাটনের একটিভ কালার রিসেট করে নরমাল করা হচ্ছে
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.className = 'tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] text-textMuted hover:text-dark font-medium transition-all text-[14px]';
+        btn.className = 'tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] text-textMuted hover:text-dark font-medium transition-all text-[16px]';
       });
-      // ক্লিক করা নির্দিষ্ট ট্যাবটি শো করা হচ্ছে
       document.getElementById(`content-${tabName}`).classList.remove('hidden');
-      // ক্লিক করা বাটনটিকে হাইলাইট/একটিভ কালার দেওয়া হচ্ছে
       const activeBtn = document.getElementById(`btn-${tabName}`);
-      activeBtn.className = 'tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] bg-white text-primary shadow-sm font-bold transition-all text-[14px]';
+      activeBtn.className = 'tab-btn w-full sm:w-auto px-[24px] py-[12px] sm:py-[10px] rounded-[12px] sm:rounded-[100px] bg-white text-primary shadow-sm font-bold transition-all text-[16px]';
     }
 
-    // স্ক্রল অ্যানিমেশন অবজারভার (পেজ স্ক্রল করলে কন্টেন্টগুলো স্মুথলি ভেসে উঠবে)
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
