@@ -394,6 +394,52 @@
             <p class="text-light/60 text-[16px] mt-[8px]">All field works, lab tests, and academic visits cataloged</p>
           </div>
 
+          <div id="research-modal" class="fixed inset-0 bg-dark/95 hidden z-50 overflow-y-auto p-[24px] backdrop-blur-md transition-all duration-300">
+  <div class="max-w-[896px] mx-auto mt-[40px] relative">
+    
+    <button onclick="closeResearchModal()" class="absolute -top-[20px] right-0 text-white hover:text-accent flex items-center gap-[6px] font-medium text-[16px]">
+      Close <i data-lucide="x" class="w-[24px] h-[24px]"></i>
+    </button>
+
+    <div class="text-center my-[40px]">
+      <h3 class="font-serif text-[28px] text-white font-bold">All Research Papers & Publications</h3>
+      <p class="text-light/60 text-[16px] mt-[8px]">A comprehensive list of my academic publications, projects, and working papers</p>
+    </div>
+
+    <div class="space-y-[24px]">
+      
+      <div class="bg-white/5 border border-white/10 p-[24px] sm:p-[32px] rounded-[24px] transition-all hover:border-primary/50">
+        <div class="flex items-center gap-[12px] mb-[12px]">
+          <span class="text-[12px] font-bold tracking-wider text-accent bg-accent/10 px-[12px] py-[4px] rounded-full uppercase">Paper 01</span>
+          <span class="text-[14px] text-light/60">Ongoing Research • 2026</span>
+        </div>
+        <h4 class="font-serif font-bold text-[20px] text-white mb-[8px]">Climate Resilience in Local Rice Genotypes</h4>
+        <p class="text-light/70 text-[15px] leading-relaxed mb-[20px]">
+          Investigating the effect of temperature stress on yield parameters. Involves field surveying of regional farmers and statistical analysis of phenotypic data.
+        </p>
+        <a href="papers/rice-resilience.pdf" target="_blank" class="inline-flex items-center gap-[6px] text-accent hover:text-white font-medium text-[15px] transition-colors">
+          Read Full Paper <i data-lucide="external-link" class="w-[16px] h-[16px]"></i>
+        </a>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 p-[24px] sm:p-[32px] rounded-[24px] transition-all hover:border-primary/50">
+        <div class="flex items-center gap-[12px] mb-[12px]">
+          <span class="text-[12px] font-bold tracking-wider text-accent bg-accent/10 px-[12px] py-[4px] rounded-full uppercase">Paper 02</span>
+          <span class="text-[14px] text-light/60">Project Study</span>
+        </div>
+        <h4 class="font-serif font-bold text-[20px] text-white mb-[8px]">Sustainable Mustard (Brassica spp.) Production</h4>
+        <p class="text-light/70 text-[15px] leading-relaxed mb-[20px]">
+          A Holistic Study of Input Economics, Pollination Ecology, and Farmer Adaptation in Bangladesh.
+        </p>
+        <a href="papers/mustard-production.pdf" target="_blank" class="inline-flex items-center gap-[6px] text-accent hover:text-white font-medium text-[15px] transition-colors">
+          Read Full Paper <i data-lucide="external-link" class="w-[16px] h-[16px]"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
           <!-- GRID OF ALL IMAGES (এখানে আপনার ইচ্ছেমতো গিটহাব ফোল্ডার থেকে ছবির নাম বসিয়ে দিন) -->
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[20px]">
             
@@ -456,6 +502,43 @@
               </div>
             </div>
           </div>
+
+          <!-- RESEARCH TIMELINE SECTION -->
+<section id="research" class="py-[96px] px-[24px] bg-surface">
+  <div class="max-w-[896px] mx-auto">
+    <div class="text-center mb-[64px] fade-up">
+      <h2 class="font-serif text-[30px] md:text-[40px] font-bold text-dark mb-[16px]">Research & Journey</h2>
+      <p class="text-textMuted text-[18px]">My academic path and ongoing investigations.</p>
+    </div>
+
+    <div class="relative border-l-2 border-surface ml-[12px] md:ml-0 space-y-[48px]">
+      <div class="relative pl-[32px] md:pl-0 fade-up">
+        <div class="absolute -left-[7px] top-[6px] w-[12px] h-[12px] rounded-[100px] bg-primary ring-4 ring-light"></div>
+        <div class="md:grid md:grid-cols-4 gap-[32px] items-start">
+          <div class="md:col-span-1 md:text-right md:pr-[24px]">
+            <h3 class="text-[16px] font-bold text-dark uppercase tracking-wider">Present</h3>
+            <p class="text-[14px] text-accent mt-[4px] font-bold">Ongoing Research</p>
+          </div>
+          <div class="md:col-span-3 mt-[12px] md:mt-0 bg-white p-[32px] rounded-[16px] border border-surface shadow-sm">
+            <h4 class="font-serif font-bold text-[20px] md:text-[20px] text-dark mb-[12px]">Sustainable Mustard (Brassica spp.) Production</h4>
+            <p class="text-textMuted text-[16px] leading-relaxed">
+              A Holistic Study of Input Economics, Pollination Ecology, and Farmer Adaptation in Bangladesh
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- নতুন যুক্ত করা বাটন -->
+    <div class="text-center mt-[48px] fade-up">
+      <button onclick="openResearchModal()" class="inline-flex items-center gap-[8px] px-[32px] py-[14px] bg-white border border-surface text-dark font-medium rounded-[100px] hover:bg-primary hover:text-white transition-all shadow-sm group">
+        <i data-lucide="book-open" class="w-[20px] h-[20px] text-primary group-hover:text-white transition-colors"></i> View All Research Papers
+      </button>
+    </div>
+
+  </div>
+</section>
+        
         </div>
       </section>
 
@@ -519,7 +602,7 @@
       </section>
 
       <!-- FOOTER -->
-      <footer class="bg-dark text-textMuted py-[26px] text-center text-[15px] border-t border-white/5">
+      <footer class="bg-white text-textMuted py-[26px] text-center text-[15px] border-t border-white/5">
         <p>&copy; 2026 Pias Ahmed. All Rights Reserved.</p>
       </footer>
 
@@ -595,6 +678,21 @@
       modal.classList.add('hidden');
       document.body.style.overflow = 'auto'; 
     }
+
+    function openResearchModal() {
+  const modal = document.getElementById('research-modal');
+  modal.classList.remove('hidden');
+  document.body.classList.add('overflow-hidden'); // ব্যাকগ্রাউন্ড স্ক্রোল অফ করবে
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons(); // মোডালের ভেতরের Lucide আইকন রেন্ডার করবে
+  }
+}
+
+function closeResearchModal() {
+  const modal = document.getElementById('research-modal');
+  modal.classList.add('hidden');
+  document.body.classList.remove('overflow-hidden'); // স্ক্রোল আবার অন করবে
+}
 
     // FADE UP OBSERVER
     const observer = new IntersectionObserver((entries) => {
