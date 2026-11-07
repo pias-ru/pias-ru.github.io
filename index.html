@@ -3,442 +3,693 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pias Ahmed — Agriculture Researcher, University of Rajshahi</title>
-<meta name="description" content="Academic portfolio of Pias Ahmed, B.Sc. Agriculture (Honours) student at the University of Rajshahi. Research in sustainable crop production, pollination ecology and input economics." />
-<meta property="og:title" content="Pias Ahmed — Agriculture Researcher" />
-<meta property="og:description" content="Sustainable agriculture, applied crop production and climate adaptation in Bangladesh." />
-<meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+<title>Pias Ahmed | Agriculture Scholar &amp; Researcher</title>
+<meta name="description" content="Pias Ahmed, agriculture scholar and researcher in plant pathology, crop management, soil productivity and ecology, working toward a better-nourished Bangladesh." />
+<meta name="author" content="Pias Ahmed" />
+<meta property="og:title" content="Pias Ahmed | Agriculture Scholar &amp; Researcher" />
+<meta property="og:type" content="profile" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js" defer></script>
 <style>
 :root{
-  --bg:#FAFAF6; --paper:#FFFFFF; --ink:#1B241C; --muted:#586259; --line:#E2E5DA;
-  --green:#2F5A33; --green-d:#1F3F23; --olive:#7E8C3C; --tint:#EFF2E8;
-  --serif:'Source Serif 4',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
-  --nav:68px; --shadow:0 10px 30px rgba(27,36,28,.08);
+  --deep:#1E1B18;--green:#2B2723;--leaf:#8C7A5B;--gold:#B8924A;--cream:#F6F1E7;--ink:#1C1A17;--muted:#6A645A;--line:#E7E0D2;--paper:#fff;
+  --sans:'Plus Jakarta Sans',system-ui,sans-serif;--util:36px;--bar:72px;--shadow:0 24px 48px -28px rgba(30,27,24,.55)
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 12px);-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+*{-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + 16px);-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);line-height:1.7;color:var(--ink);background:var(--paper);overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-h1,h2,h3{font-family:var(--serif);line-height:1.2;letter-spacing:-.01em}
-:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
-::selection{background:rgba(47,90,51,.18)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
-section{padding:5.5rem 0}
-.sec-head{display:flex;align-items:baseline;gap:1.25rem;margin-bottom:2.5rem}
-.sec-head h2{font-size:clamp(1.7rem,3.2vw,2.3rem);white-space:nowrap}
-.sec-head::after{content:'';flex:1;height:1px;background:var(--line)}
-.muted{color:var(--muted)}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;touch-action:manipulation}
+h1,h2,h3{line-height:1.14;letter-spacing:-.02em;font-weight:800}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+button:focus:not(:focus-visible),a:focus:not(:focus-visible),summary:focus:not(:focus-visible){outline:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.5rem}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--deep);padding:.6rem 1rem;z-index:200;font-weight:700}
+.skip:focus{left:1rem;top:1rem}
+svg.lucide{width:18px;height:18px;stroke-width:1.9}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-size:.9rem;font-weight:700;padding:.85rem 1.55rem;border-radius:999px;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--deep)}.btn-gold:hover{background:#CBA24A}
+.btn-white{border-color:rgba(255,255,255,.5);color:#fff}.btn-white:hover{background:#fff;color:var(--deep)}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--deep)}
+.btn-line{border-color:var(--line);background:#fff}.btn-line:hover{border-color:var(--green);color:var(--green)}
+.btn-s{padding:.6rem 1.2rem;font-size:.82rem}
 
-/* NAV */
-#nav{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--nav);background:rgba(250,250,246,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
-#nav.scrolled{border-color:var(--line);box-shadow:0 4px 20px rgba(27,36,28,.05)}
-#nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;max-width:1180px}
-.brand{font-family:var(--serif);font-weight:700;font-size:1.15rem;display:flex;align-items:center;gap:.6rem;color:var(--green-d)}
-.brand i{width:20px;height:20px;color:var(--olive)}
-.links{display:flex;align-items:center;gap:1.9rem}
-.links a.lk{font-size:.86rem;font-weight:500;color:var(--muted);padding:.3rem 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
-.links a.lk:hover,.links a.lk.active{color:var(--green);border-color:var(--green)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-size:.88rem;font-weight:600;padding:.7rem 1.4rem;border-radius:999px;transition:background .2s,transform .2s,box-shadow .2s,color .2s,border-color .2s}
-.btn i{width:16px;height:16px}
-.btn-dark{background:var(--green);color:#fff}
-.btn-dark:hover{background:var(--green-d);transform:translateY(-2px);box-shadow:var(--shadow)}
-.btn-line{border:1.5px solid var(--line);background:var(--paper)}
-.btn-line:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
-.burger{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--paper);align-items:center;justify-content:center}
-.burger i{width:20px;height:20px}
-#mmenu{display:none;position:absolute;top:calc(100% + 8px);left:1rem;right:1rem;background:var(--paper);border:1px solid var(--line);border-radius:1.25rem;box-shadow:var(--shadow);padding:.5rem 1.25rem 1.25rem;flex-direction:column}
-#mmenu.open{display:flex;animation:drop .22s ease}
-#mmenu a.lk{padding:.85rem 0;border-bottom:1px solid var(--line);font-weight:500}
-#mmenu .btn{margin-top:1rem}
-@keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+/* HEADER (two-tier) */
+#hd{position:fixed;inset:0 0 auto;z-index:70;background:#fff;box-shadow:0 1px 0 var(--line)}
+.util{height:var(--util);background:var(--deep);color:rgba(255,255,255,.85);font-size:.74rem;overflow:hidden;transition:height .3s,opacity .3s}
+#hd.sc .util{height:0;opacity:0}
+.util .wrap{height:var(--util);display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:1280px}
+.util span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.util nav{display:flex;align-items:center;gap:.25rem}
+.util a{width:30px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:6px;transition:background .2s,color .2s}
+.util a:hover{background:rgba(255,255,255,.14);color:var(--gold)}
+.util svg{width:15px;height:15px}
+.bar{position:relative;height:var(--bar)}
+.bar>.wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;max-width:1280px}
+.brand{display:flex;align-items:center;gap:.7rem;flex:0 0 auto}
+.brand i{width:42px;height:42px;border-radius:12px;background:var(--green);color:var(--gold);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:800;font-size:.95rem}
+.brand b{display:block;font-size:1.08rem;font-weight:800;line-height:1.1;letter-spacing:-.01em}
+.brand small{display:block;font-size:.68rem;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.nav{height:100%;display:flex;align-items:center;list-style:none}
+.ni{height:100%;display:flex;align-items:center}
+.nb{height:100%;display:flex;align-items:center;gap:.35rem;padding:0 1.15rem;font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;position:relative;transition:color .2s}
+.nb svg{width:15px;height:15px;transition:transform .25s}
+.nb::after{content:'';position:absolute;left:1.15rem;right:1.15rem;bottom:0;height:4px;background:var(--gold);border-radius:4px 4px 0 0;transform:scaleY(0);transform-origin:bottom;transition:transform .25s}
+.ni:hover .nb,.ni.open .nb,.ni.cur .nb{color:var(--green)}
+.ni.open .nb::after,.ni.cur .nb::after{transform:scaleY(1)}
+.ni.open .nb svg{transform:rotate(180deg)}
+.mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--line);box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .22s,transform .22s,visibility .22s}
+.ni.open .mega{opacity:1;visibility:visible;transform:none}
+.mega .in{max-width:1160px;margin:0 auto;padding:1.75rem 1.5rem 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem 1.5rem}
+.mega a{display:flex;gap:1rem;align-items:flex-start;padding:1rem;border-radius:1rem;transition:background .2s}
+.mega a:hover{background:var(--cream)}
+.mi{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:var(--cream);color:var(--green);display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.mega a:hover .mi{background:var(--green);color:var(--gold)}
+.mega b{display:block;font-size:.98rem;font-weight:800}
+.mega small{display:block;font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:.1rem}
+.cta-wrap{display:flex;align-items:center;gap:.6rem;flex:0 0 auto}
+.burger{display:none;position:relative;width:44px;height:44px;border-radius:50%;background:var(--cream);color:var(--green)}
+.burger .ic{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;transition:opacity .25s,transform .35s}
+.burger .ic-x{opacity:0;transform:rotate(-90deg) scale(.6)}
+.burger.open .ic-m{opacity:0;transform:rotate(90deg) scale(.6)}
+.burger.open .ic-x{opacity:1;transform:none}
+#mmenu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--line);box-shadow:var(--shadow);padding:.5rem 1.5rem 1.4rem;max-height:calc(100vh - var(--bar));overflow-y:auto}
+#mmenu.open{display:block}
+#mmenu details{border-bottom:1px solid var(--line)}
+#mmenu summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:1rem 0;font-size:.85rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+#mmenu summary::-webkit-details-marker{display:none}
+#mmenu summary svg{transition:transform .25s}
+#mmenu details[open] summary svg{transform:rotate(180deg)}
+#mmenu details a{display:block;padding:.65rem 0 .65rem .9rem;font-weight:600;color:var(--muted);border-left:3px solid var(--line);margin-bottom:.35rem}
+#mmenu details a:active{color:var(--green);border-color:var(--gold)}
+#mmenu details[open]{padding-bottom:.6rem}
+#mmenu .btn{width:100%;margin-top:1.1rem}
 
 /* HERO */
-#hero{padding:calc(var(--nav) + 4.5rem) 0 5rem;background:
-  radial-gradient(900px 380px at 85% 0%,rgba(126,140,60,.14),transparent 70%),var(--bg)}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:4rem;align-items:center}
-.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:500;color:var(--green);background:var(--tint);padding:.4rem .95rem;border-radius:999px;margin-bottom:1.5rem}
-.status::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--olive);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(126,140,60,.6)}100%{box-shadow:0 0 0 10px rgba(126,140,60,0)}}
-.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700;color:var(--green-d);margin-bottom:.6rem}
-.hero .role{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2.2vw,1.4rem);color:var(--muted);margin-bottom:1.4rem}
-.hero p.lead{max-width:34rem;color:var(--muted);font-size:1.05rem;margin-bottom:1.75rem}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
-.chip{font-size:.8rem;font-weight:500;padding:.35rem .85rem;border:1px solid var(--line);background:var(--paper);border-radius:999px;color:var(--ink)}
-.actions{display:flex;flex-wrap:wrap;gap:.8rem}
-.portrait{position:relative;max-width:340px;margin-inline:auto;width:100%}
-.portrait::before{content:'';position:absolute;inset:14px -14px -14px 14px;border:2px solid var(--olive);border-radius:1.5rem;opacity:.5}
-.portrait .ph{position:relative;aspect-ratio:4/5;border-radius:1.5rem;overflow:hidden;background:var(--tint);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}
+.hero{position:relative;color:#fff;overflow:hidden;padding:calc(var(--util) + var(--bar) + 4rem) 0 9.5rem;
+  background:radial-gradient(700px 420px at 84% 20%,rgba(140,122,91,.42),transparent 70%),radial-gradient(500px 300px at 0% 100%,rgba(184,146,74,.16),transparent 70%),linear-gradient(135deg,var(--deep),#3A342D)}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 46px);pointer-events:none}
+.wheat{position:absolute;right:3%;bottom:4%;width:230px;color:var(--gold);opacity:.14;transform:rotate(12deg);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:3.5rem;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:.55rem;font-size:.78rem;font-weight:700;padding:.45rem 1rem;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);margin-bottom:1.5rem}
+.pill::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.hero h1{font-size:clamp(3rem,7.2vw,5.4rem);margin-bottom:1.2rem}
+.hero h1 span{color:var(--gold)}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.22rem);color:rgba(255,255,255,.85);max-width:32rem;margin-bottom:2.1rem;font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.portrait{position:relative;width:min(320px,80%);aspect-ratio:1;margin:0 auto}
+.portrait::before{content:'';position:absolute;inset:-13px;border-radius:50%;background:conic-gradient(from 200deg,var(--gold),var(--leaf),var(--gold))}
+.portrait::after{content:'';position:absolute;inset:-32px;border-radius:50%;border:2px dashed rgba(255,255,255,.28)}
+.portrait .im{position:relative;z-index:1;width:100%;height:100%;border-radius:50%;overflow:hidden;border:8px solid var(--deep);background:#3A342D;display:flex;align-items:center;justify-content:center}
 .portrait img{width:100%;height:100%;object-fit:cover}
-.portrait .fb{font-family:var(--serif);font-size:4.5rem;font-weight:700;color:var(--green)}
+.portrait .fb{font-size:4.5rem;font-weight:800;color:var(--gold)}
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3.5rem}
-.about-grid p{margin-bottom:1rem;color:var(--muted);max-width:42rem}
-.about-grid p strong{color:var(--ink)}
-.quote{font-family:var(--serif);font-style:italic;font-size:1.15rem;border-left:3px solid var(--olive);padding:.4rem 0 .4rem 1.25rem;margin-top:1.5rem;max-width:36rem}
-.facts{background:var(--paper);border:1px solid var(--line);border-radius:1.25rem;padding:1.5rem 1.75rem;align-self:start}
-.facts h3{font-size:1.05rem;margin-bottom:1rem}
-.facts dl{display:grid;gap:.9rem}
-.facts dt{font-size:.75rem;color:var(--muted);font-weight:500}
-.facts dd{font-weight:600;font-size:.95rem}
+/* FEATURE STRIP (like CIMMYT "Features") */
+.feats{position:relative;z-index:3;margin-top:-5.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.ft{background:#fff;border-radius:1.4rem;padding:1.6rem 1.7rem;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;flex-direction:column;gap:.55rem;transition:transform .25s,border-color .25s}
+.ft:hover{transform:translateY(-5px);border-color:var(--gold)}
+.tg{display:inline-flex;align-items:center;gap:.45rem;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
+.tg svg{width:15px;height:15px;color:var(--gold)}
+.ft h3{font-size:1.2rem}
+.ft p{font-size:.9rem;color:var(--muted)}
+.more{margin-top:auto;display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:800;color:var(--green);transition:gap .2s}
+.ft:hover .more{gap:.7rem}
 
-/* EDUCATION */
-.tl{position:relative;border-left:2px solid var(--line);margin-left:.5rem;padding-left:2rem;display:grid;gap:1.5rem}
-.tl-item{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:1.25rem;padding:1.5rem 1.75rem;display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.tl-item::before{content:'';position:absolute;left:calc(-2rem - 7px);top:1.9rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--muted)}
-.tl-item.now{border-color:rgba(47,90,51,.35)}
-.tl-item.now::before{border-color:var(--green);background:var(--green)}
-.tl-year{font-size:.8rem;font-weight:600;color:var(--green);margin-bottom:.35rem}
-.tl-item h3{font-size:1.2rem;margin-bottom:.3rem}
-.tl-item p{font-size:.92rem;color:var(--muted)}
-.gpa{text-align:right;align-self:center}
-.gpa b{display:block;font-family:var(--serif);font-size:1.9rem;color:var(--green);line-height:1}
-.gpa span{font-size:.75rem;color:var(--muted)}
+/* SECTIONS */
+.sec{padding:5.5rem 0}
+.sec.cream{background:var(--cream)}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.kick{display:inline-block;font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
+.kick::before{content:'';display:inline-block;width:28px;height:3px;border-radius:3px;background:var(--gold);vertical-align:middle;margin-right:.7rem}
+.sh h2{font-size:clamp(1.9rem,4vw,2.7rem)}
+.sh p{color:var(--muted);max-width:30rem;font-size:.98rem}
+.two{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:4rem;align-items:start}
+.two p{color:var(--muted);font-size:1.04rem}.two p+p{margin-top:1rem}
+.nums{display:flex;gap:2.75rem;margin-top:2.25rem;padding-top:1.75rem;border-top:1px solid var(--line);flex-wrap:wrap}
+.nums b{display:block;font-size:2.5rem;font-weight:800;color:var(--green);line-height:1}
+.nums span{font-size:.8rem;font-weight:600;color:var(--muted)}
+.focus{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.f{background:var(--cream);border-radius:1.2rem;padding:1.4rem;transition:transform .25s,box-shadow .25s}
+.f:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.f .ico{width:46px;height:46px;border-radius:14px;background:#fff;color:var(--green);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+.f .ico svg{width:24px;height:24px}
+.f h3{font-size:1rem}
 
-/* RESEARCH */
-.paper{background:var(--paper);border:1px solid var(--line);border-radius:1.5rem;padding:2.25rem 2.5rem;box-shadow:var(--shadow)}
-.paper .meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1rem}
-.tag{font-size:.76rem;font-weight:600;padding:.25rem .75rem;border-radius:999px;background:var(--tint);color:var(--green)}
-.tag.g{background:#F1F2EE;color:var(--muted)}
-.paper h3{font-size:clamp(1.25rem,2.4vw,1.7rem);margin-bottom:.9rem}
-.paper .role{font-size:.9rem;font-weight:600;color:var(--green);margin-bottom:1rem}
-.paper p{color:var(--muted);max-width:46rem}
-details{margin-top:1.25rem}
-summary{cursor:pointer;font-weight:600;font-size:.9rem;color:var(--green);list-style:none;display:inline-flex;align-items:center;gap:.4rem}
-summary::-webkit-details-marker{display:none}
-summary::after{content:'+';font-size:1.2rem;transition:transform .25s}
-details[open] summary::after{transform:rotate(45deg)}
-details .more{margin-top:1rem;padding:1rem 1.25rem;background:var(--tint);border-radius:1rem;font-size:.92rem;color:var(--muted)}
-details .more ul{padding-left:1.1rem;display:grid;gap:.4rem}
+.edu{background:#fff;border:1px solid var(--line);border-radius:1.4rem;overflow:hidden}
+.e{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:1.5rem;align-items:center;padding:1.5rem 1.75rem;border-bottom:1px solid var(--line);position:relative}
+.e:last-child{border-bottom:0}
+.e.now{background:var(--green);color:#fff}
+.yr{font-size:.78rem;font-weight:800;padding:.35rem .85rem;border-radius:999px;background:var(--cream);color:var(--green);justify-self:start;white-space:nowrap}
+.e.now .yr{background:var(--gold);color:var(--deep)}
+.e h3{font-size:1.15rem}
+.e p{font-size:.88rem;color:var(--muted)}.e.now p{color:rgba(255,255,255,.8)}
+.sc{text-align:right;font-size:1.9rem;font-weight:800;color:var(--green);line-height:1}
+.e.now .sc{color:var(--gold)}
+.sc small{display:block;font-size:.7rem;font-weight:600;color:var(--muted);margin-top:.3rem}.e.now .sc small{color:rgba(255,255,255,.75)}
 
-/* SKILLS */
-.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.skill{background:var(--paper);border:1px solid var(--line);border-radius:1.25rem;padding:1.6rem}
-.skill i{width:26px;height:26px;color:var(--olive);margin-bottom:.9rem}
-.skill h3{font-size:1.05rem;margin-bottom:.8rem}
-.skill ul{list-style:none;display:grid;gap:.55rem;font-size:.9rem;color:var(--muted)}
-.skill li{padding-left:1rem;position:relative}
-.skill li::before{content:'';position:absolute;left:0;top:.65em;width:5px;height:5px;border-radius:50%;background:var(--olive)}
+.rg{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:1.25rem}
+.rc{background:#fff;border:1px solid var(--line);border-radius:1.5rem;padding:2.1rem;display:flex;flex-direction:column;gap:.9rem;transition:box-shadow .25s,border-color .25s}
+.rc:hover{box-shadow:var(--shadow);border-color:var(--leaf)}
+.rc.main{background:linear-gradient(135deg,var(--deep),var(--green));color:#fff;border:0}
+.rc.main .tg{color:#E8DFCB}
+.dt{font-size:.78rem;font-weight:700;color:var(--muted);display:flex;gap:.9rem;flex-wrap:wrap}
+.rc.main .dt{color:rgba(255,255,255,.75)}
+.rc h3{font-size:clamp(1.25rem,2.4vw,1.7rem)}
+.rc p{font-size:.92rem;color:var(--muted)}.rc.main p{color:rgba(255,255,255,.85)}
+.rc .btn{align-self:flex-start;margin-top:.4rem}
 
-/* GALLERY */
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.gal figure{position:relative;aspect-ratio:4/3;border-radius:1.1rem;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
-.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.gal figure:hover img{transform:scale(1.04)}
-.gal figcaption{position:absolute;inset:auto 0 0 0;padding:1.6rem 1rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:.85rem;font-weight:500}
-.gal .empty{display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:.85rem;padding:1rem;text-align:center}
+.tabs{display:inline-flex;gap:.3rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:.3rem;margin-bottom:1.6rem;max-width:100%}
+.tab{padding:.65rem 1.4rem;border-radius:999px;font-size:.85rem;font-weight:700;color:var(--muted);white-space:nowrap;transition:background .2s,color .2s}
+.tab.active{background:var(--green);color:#fff}
+.pane{display:none;grid-template-columns:1fr 1fr;gap:1.25rem}
+.pane.active{display:grid}
+.x{position:relative;background:#fff;border:1px solid var(--line);border-radius:1.2rem;padding:1.6rem;display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.1rem;transition:transform .25s,box-shadow .25s}
+.x:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.x .ico{grid-row:1/span 2;width:48px;height:48px;border-radius:14px;background:var(--cream);color:var(--green);display:flex;align-items:center;justify-content:center}
+.x .ico svg{width:24px;height:24px}
+.x h3{font-size:1.08rem;padding-right:4.5rem}
+.x p{font-size:.9rem;color:var(--muted)}
+.chip{position:absolute;top:1.1rem;right:1.1rem;font-size:.68rem;font-weight:800;padding:.22rem .7rem;border-radius:999px;background:var(--gold);color:var(--deep)}
 
-/* REFERENCES */
+.car{position:relative;aspect-ratio:16/8;border-radius:1.6rem;overflow:hidden;background:var(--deep);box-shadow:var(--shadow)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s;display:flex;align-items:flex-end;padding:2rem 2.25rem}
+.slide.active{opacity:1;z-index:2}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 60%)}
+.b1{background:linear-gradient(135deg,#2B2723,#1E1B18)}.b2{background:linear-gradient(135deg,#9C7A2E,#2B2723)}.b3{background:linear-gradient(135deg,#8C7A5B,#3A342D)}
+.slide h3{position:relative;z-index:3;color:#fff;font-size:clamp(1.2rem,2.6vw,1.8rem)}
+.cbtn{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.22);backdrop-filter:blur(8px);color:#fff;display:flex;align-items:center;justify-content:center}
+.cbtn:hover{background:var(--gold);color:var(--deep)}.cbtn.prev{left:1rem}.cbtn.next{right:1rem}
+.cdots{position:absolute;bottom:1.1rem;right:1.6rem;z-index:5;display:flex;gap:.4rem}
+.cdots button{width:7px;height:7px;border-radius:9px;background:rgba(255,255,255,.5);transition:width .3s,background .3s}
+.cdots button.active{width:24px;background:var(--gold)}
+.cmore{margin-top:1.4rem;text-align:center}
+
 .refs{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-.ref{background:var(--paper);border:1px solid var(--line);border-radius:1.25rem;padding:1.75rem}
-.ref h3{font-size:1.15rem}
-.ref .t{font-size:.85rem;font-weight:600;color:var(--green);margin:.2rem 0 .7rem}
-.ref p{font-size:.9rem;color:var(--muted);margin-bottom:1rem}
-.ref a{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;padding:.45rem .9rem;border-radius:.7rem;background:var(--tint);transition:background .2s,color .2s}
-.ref a:hover{background:var(--green);color:#fff}
-.ref a i{width:15px;height:15px}
+.r{background:#fff;border:1px solid var(--line);border-radius:1.3rem;padding:1.6rem;display:flex;gap:1.2rem;align-items:center}
+.av{flex:0 0 auto;width:56px;height:56px;border-radius:50%;background:var(--green);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem}
+.r h3{font-size:1.1rem}
+.r .t{font-size:.8rem;font-weight:700;color:var(--green);margin:.05rem 0 .5rem}
+.r a{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:700;padding:.45rem .95rem;border-radius:999px;background:var(--cream);color:var(--green);transition:background .2s,color .2s}
+.r a:hover{background:var(--green);color:#fff}
 
-/* CONTACT */
-#contact{background:var(--green-d);color:#fff;border-radius:2.5rem 2.5rem 0 0;text-align:center;padding:5.5rem 0 2.5rem}
-#contact h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:1rem}
-#contact p.sub{color:rgba(255,255,255,.72);max-width:34rem;margin:0 auto 2.25rem}
-.c-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-bottom:3.5rem}
-.c-links a{display:inline-flex;align-items:center;gap:.55rem;padding:.75rem 1.5rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-weight:500;font-size:.9rem;transition:background .2s,color .2s,transform .2s}
-.c-links a:hover{background:#fff;color:var(--green-d);transform:translateY(-2px)}
-.c-links i,.c-links svg{width:17px;height:17px}
-.copy{border-top:1px solid rgba(255,255,255,.12);padding-top:1.5rem;font-size:.8rem;color:rgba(255,255,255,.5)}
+/* CONTACT PANEL */
+.ct{background:var(--deep);padding:5.5rem 0;color:#fff;position:relative;overflow:hidden}
+.ct::before{content:'';position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(140,122,91,.32),transparent)}
+.cp{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);background:#fff;color:var(--ink);border-radius:1.8rem;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.ci{background:linear-gradient(160deg,var(--green),var(--deep));color:#fff;padding:2.75rem 2.5rem;display:flex;flex-direction:column;gap:1.5rem}
+.ci h2{font-size:clamp(1.9rem,3.4vw,2.5rem)}
+.ci h2 span{color:var(--gold)}
+.ci>p{color:rgba(255,255,255,.8);font-size:.95rem}
+.rows{display:grid;gap:.4rem}
+.rows a,.rows div{display:flex;align-items:center;gap:.9rem;padding:.7rem .8rem;border-radius:.9rem;font-size:.92rem;font-weight:600;transition:background .2s}
+.rows a:hover{background:rgba(255,255,255,.1)}
+.rows .ri{flex:0 0 auto;width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.12);color:var(--gold);display:flex;align-items:center;justify-content:center}
+.rows small{display:block;font-size:.7rem;font-weight:600;color:rgba(255,255,255,.65);letter-spacing:.05em;text-transform:uppercase}
+.soc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:auto;padding-top:.5rem}
+.soc a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s}
+.soc a:hover{background:var(--gold);border-color:var(--gold);color:var(--deep)}
+.soc svg.ico{width:18px;height:18px}
+.cf{padding:2.75rem 2.5rem;display:flex;flex-direction:column;gap:1rem}
+.cf h3{font-size:1.4rem}
+.cf>p{font-size:.88rem;color:var(--muted);margin-top:-.5rem}
+.fld{display:flex;flex-direction:column;gap:.35rem}
+.fld label{font-size:.76rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.fld input,.fld textarea{font:inherit;font-size:.95rem;padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:.8rem;background:var(--cream);color:var(--ink);transition:border-color .2s,background .2s;width:100%}
+.fld textarea{min-height:120px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--green);background:#fff}
+.cf .btn{align-self:flex-start}
+.ft2{background:#141210;color:rgba(255,255,255,.65);font-size:.8rem;padding:1.4rem 0}
+.ft2 .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.ft2 a{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;color:var(--gold)}
 
-/* CV DRAWER */
-#cv-ov{position:fixed;inset:0;background:rgba(10,16,11,.55);backdrop-filter:blur(6px);z-index:90;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+/* OVERLAYS */
+.ov{position:fixed;inset:0;z-index:100;background:rgba(20,18,16,.65);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:1.25rem}
+.ov.open{display:flex}
+.modal{background:#fff;border-radius:1.4rem;width:100%;max-width:900px;max-height:90vh;display:flex;flex-direction:column;overflow:hidden}
+.modal.sm{max-width:640px}
+.m-h{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.6rem;background:var(--cream)}
+.m-h h3{font-size:1.15rem}
+.m-b{overflow-y:auto;padding:1.6rem}
+.m-b ul{list-style:none;display:grid;gap:.8rem;margin:0 0 1.75rem;color:var(--muted)}
+.m-b li{padding-left:1.5rem;position:relative}
+.m-b li::before{content:'';position:absolute;left:0;top:.6em;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.m-b .acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.g-item{position:relative;aspect-ratio:1;border-radius:1rem;overflow:hidden;color:#fff}
+.g-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.g-item span{position:absolute;inset:auto 0 0;padding:1.5rem .8rem .75rem;background:linear-gradient(transparent,rgba(0,0,0,.7));font-size:.82rem;font-weight:600;text-align:center}
+.xb{width:38px;height:38px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.xb:hover{background:var(--green);color:#fff}
+#cv-ov{position:fixed;inset:0;background:rgba(20,18,16,.6);backdrop-filter:blur(6px);z-index:90;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
 #cv-ov.open{opacity:1;visibility:visible}
-#cv{position:fixed;top:0;right:0;bottom:0;width:100%;max-width:640px;z-index:91;background:var(--bg);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .45s cubic-bezier(.16,1,.3,1);box-shadow:-12px 0 50px rgba(0,0,0,.2)}
+#cv{position:fixed;top:0;right:0;bottom:0;width:100%;max-width:640px;z-index:91;background:#fff;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .45s cubic-bezier(.16,1,.3,1)}
 #cv.open{transform:none}
-.cv-h,.cv-f{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.5rem;background:var(--paper)}
-.cv-h{border-bottom:1px solid var(--line)}.cv-f{border-top:1px solid var(--line)}
-.cv-b{flex:1;padding:1rem;background:var(--tint)}
-.cv-b iframe{width:100%;height:100%;border:1px solid var(--line);border-radius:.9rem;background:#fff}
-.x{width:38px;height:38px;border-radius:50%;background:var(--tint);display:flex;align-items:center;justify-content:center}
-.x:hover{background:var(--green);color:#fff}
-.cv-f .btn{flex:1;padding:.7rem 1rem}
-
-/* MOTION: one load reveal only */
-.hero .rise{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
-.hero .rise:nth-child(2){animation-delay:.08s}.hero .rise:nth-child(3){animation-delay:.16s}.hero .rise:nth-child(4){animation-delay:.24s}.hero .rise:nth-child(5){animation-delay:.32s}
-@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.cv-h,.cv-f{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.5rem}
+.cv-h{background:var(--cream)}.cv-f{border-top:1px solid var(--line)}.cv-f .btn{flex:1}
+.cv-b{flex:1;padding:1rem;background:var(--cream)}
+.cv-b iframe{width:100%;height:100%;border:1px solid var(--line);border-radius:.8rem;background:#fff}
 
 /* RESPONSIVE */
-@media(max-width:900px){
-  .links{display:none}.burger{display:flex}
-  .hero-grid,.about-grid{grid-template-columns:1fr;gap:2.5rem}
-  .portrait{max-width:260px;order:-1;margin:0 auto 1rem 0}
-  .skill-grid,.gal{grid-template-columns:1fr 1fr}
+@media(max-width:1060px){
+  .nav,.cta-wrap .btn{display:none}.burger{display:flex}
+  .util .hide-s{display:none}
+}
+@media(max-width:960px){
+  .hero{padding-bottom:8.5rem}
+  .hero-grid{grid-template-columns:1fr;gap:3rem;text-align:center}
+  .hero p.lead{margin-inline:auto}.cta{justify-content:center}
+  .portrait{order:-1;width:min(250px,68%)}
+  .wheat{width:150px}
+  .feats{grid-template-columns:1fr;margin-top:-5rem}
+  .two,.rg,.cp{grid-template-columns:1fr}
+  .two{gap:2.5rem}
+  .e{grid-template-columns:1fr auto;gap:.5rem 1rem}
+  .e .yr{grid-column:1/-1}
+  .sc{grid-row:2/span 2;grid-column:2;align-self:center}
 }
 @media(max-width:640px){
-  section{padding:4rem 0}
-  #hero{padding-top:calc(var(--nav) + 2.5rem)}
-  .skill-grid,.gal,.refs{grid-template-columns:1fr}
-  .tl{padding-left:1.4rem}.tl-item::before{left:calc(-1.4rem - 7px)}
-  .gpa{text-align:left}
-  .paper{padding:1.6rem}
-  .sec-head h2{white-space:normal}
-  .actions .btn{flex:1 1 100%}
-  #contact{border-radius:1.75rem 1.75rem 0 0}
+  :root{--util:0px;--bar:64px}
+  .util{display:none}
+  .wrap{padding:0 1.15rem}
+  .hero{padding-top:calc(var(--bar) + 2.5rem)}
+  .brand small{display:none}
+  .sec{padding:4rem 0}
+  .focus,.pane,.refs{grid-template-columns:1fr}
+  .tabs{display:flex;width:100%}.tab{flex:1;padding:.65rem .3rem;font-size:.78rem;text-align:center}
+  .car{aspect-ratio:4/3}.slide{padding:1.25rem}
+  .g-grid{grid-template-columns:1fr 1fr}
+  .cta .btn{flex:1 1 100%}
+  .nums{gap:1.5rem}.nums b{font-size:2rem}
+  .rc{padding:1.6rem}
+  .ci,.cf{padding:2rem 1.4rem}
+  .cf .btn{align-self:stretch}
+  .ft2 .wrap{flex-direction:column;align-items:flex-start}
 }
-@media print{#nav,#cv,#cv-ov,.burger{display:none!important}section{padding:1.5rem 0}body{background:#fff}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{#hd,#cv,#cv-ov{display:none!important}.hero{padding:1rem 0;background:none;color:#000}}
+
+/* ═══ CLASSICAL REFINEMENT ═══ */
+:root{--serif:'Newsreader',Georgia,'Times New Roman',serif}
+body{background:#FDFBF6}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.012em}
+.hero h1{font-weight:500;letter-spacing:-.025em}
+.brand b,.nums b,.sc,.nb{font-family:var(--serif)}
+.nb{font-size:.9rem;letter-spacing:.1em;font-weight:600}
+.nums b,.sc{font-weight:500}
+.kick{letter-spacing:.2em;font-weight:700}
+.btn{border-radius:.55rem;letter-spacing:.01em}
+.pill,.yr,.chip{border-radius:.4rem}
+.ft,.rc,.x,.r,.edu,.car,.modal,.mega a,.tabs{border-radius:.9rem}
+.tab{border-radius:.6rem}
+.ft,.rc{box-shadow:0 18px 36px -26px rgba(30,27,24,.55)}
+.hero{background:radial-gradient(700px 420px at 84% 20%,rgba(140,122,91,.38),transparent 70%),radial-gradient(520px 300px at 0% 100%,rgba(184,146,74,.14),transparent 70%),linear-gradient(135deg,#171512,#3A342D)}
+.hero::before{opacity:.7}
+.portrait::before{background:conic-gradient(from 200deg,#B8924A,#8C7A5B,#B8924A)}
+.cbtn:hover,.chip{color:#1E1B18}
+.rc.main{background:linear-gradient(135deg,#1E1B18,#2B2723)}
+
+/* Research interests: formal list, no cards */
+.ints{border-left:2px solid var(--gold);padding:.25rem 0 .25rem 2rem}
+.kick2{display:block;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:.6rem}
+.kick2.on-dark{color:var(--gold)}
+.ints ul{list-style:none}
+.ints li{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.65rem);color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--line);transition:padding .25s,color .25s}
+.ints li:last-child{border-bottom:0}
+.ints li:hover{padding-left:.6rem;color:var(--green)}
+
+/* Contact + footer: one compact dark block */
+.ct{padding:4.25rem 0 0;background:linear-gradient(170deg,#141210,#24201C);color:#F3EEDD}
+.ct::before{opacity:.6}
+.cl{position:relative;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:4.5rem;align-items:start;padding-bottom:3.25rem}
+.cl h2{font-size:clamp(2rem,4vw,2.7rem);color:#fff;margin-bottom:.7rem}
+.cl>div>p{color:rgba(243,238,221,.74);max-width:25rem;margin-bottom:1.4rem;font-size:.96rem}
+.cinf{list-style:none}
+.cinf a,.cinf li>span{display:flex;align-items:center;gap:.85rem;padding:.5rem 0;font-size:.95rem;color:#F3EEDD;transition:color .2s}
+.cinf svg{color:var(--gold);flex:0 0 auto}
+.cinf a:hover{color:var(--gold)}
+.cform{display:grid;gap:1.35rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.fl{display:flex;flex-direction:column;gap:.15rem}
+.fl label{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,238,221,.6)}
+.fl input,.fl textarea{background:transparent;border:0;border-bottom:1px solid rgba(243,238,221,.32);border-radius:0;color:#fff;font:inherit;font-size:.98rem;padding:.55rem 0;width:100%;transition:border-color .2s}
+.fl textarea{resize:none}
+.fl input:focus,.fl textarea:focus{outline:none;border-color:var(--gold)}
+.fa{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+.fa small{font-size:.74rem;color:rgba(243,238,221,.55)}
+.fx{position:relative;border-top:1px solid rgba(243,238,221,.14)}
+.fx-in{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem;padding-top:1.15rem;padding-bottom:1.15rem}
+.fb2{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:#fff}
+.fx nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.2rem 1.5rem}
+.fx nav a{font-size:.78rem;font-weight:600;color:rgba(243,238,221,.75);transition:color .2s}
+.fx nav a:hover{color:var(--gold)}
+.soc2{display:flex;gap:.35rem}
+.soc2 a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(243,238,221,.26);display:flex;align-items:center;justify-content:center;color:#F3EEDD;transition:background .2s,color .2s,border-color .2s}
+.soc2 a:hover{background:var(--gold);border-color:var(--gold);color:#1E1B18}
+.soc2 svg{width:15px;height:15px}
+.fx-copy{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-top:1px solid rgba(243,238,221,.09);padding-top:.9rem;padding-bottom:1.15rem;font-size:.74rem;color:rgba(243,238,221,.55)}
+.fx-copy a{display:inline-flex;align-items:center;gap:.35rem;font-weight:700;color:var(--gold)}
+.fx-copy svg{width:14px;height:14px}
+@media(max-width:960px){
+  .ints{margin-top:.5rem}
+  .cl{grid-template-columns:1fr;gap:2.25rem}
+  .fx-in{grid-template-columns:1fr;gap:1rem;justify-items:start}
+  .fx nav{justify-content:flex-start}
+}
+@media(max-width:640px){
+  .ct{padding-top:3.25rem}
+  .row2{grid-template-columns:1fr;gap:1.35rem}
+  .fa .btn{flex:1 1 100%}
+  .ints{padding-left:1.25rem}
+}
 </style>
 </head>
 <body>
+<a class="skip" href="#about">Skip to content</a>
 
-<header id="nav">
-  <div class="wrap">
-    <a href="#top" class="brand"><i data-lucide="sprout"></i>Pias Ahmed</a>
-    <nav class="links" aria-label="Main">
-      <a class="lk" href="#about">About</a>
-      <a class="lk" href="#education">Education</a>
-      <a class="lk" href="#research">Research</a>
-      <a class="lk" href="#skills">Skills</a>
-      <a class="lk" href="#references">References</a>
-      <a class="lk" href="#contact">Contact</a>
-      <button class="btn btn-dark" onclick="openCV()"><i data-lucide="file-text"></i>View CV</button>
+<header id="hd">
+  <div class="util"><div class="wrap">
+    <span class="hide-s">Agriculture Scholar &amp; Researcher &middot; Rajshahi, Bangladesh</span>
+    <nav aria-label="Profiles">
+      <a href="mailto:pias@mailfence.com" aria-label="Email" title="Email"><i data-lucide="mail"></i></a>
+      <a href="https://orcid.org/0009-0000-8360-7884" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><text x="12" y="15.2" text-anchor="middle" font-size="8.5" font-weight="800" font-family="Inter,sans-serif" fill="#1E1B18">iD</text></svg></a>
+      <a href="https://scholar.google.com/citations?hl=en&user=HCkg2JAAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i data-lucide="graduation-cap"></i></a>
+      <a href="https://www.linkedin.com/in/piasofficial-bd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+      <a href="https://www.twitter.com/PiasOfficial" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter"><i data-lucide="twitter"></i></a>
+      <a href="https://www.facebook.com/A.PiasOfficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><i data-lucide="facebook"></i></a>
     </nav>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><i data-lucide="menu"></i></button>
+  </div></div>
+  <div class="bar"><div class="wrap">
+    <a href="#top" class="brand" aria-label="Pias Ahmed, home"><i>PA</i><span><b>Pias Ahmed</b><small>Agriculture Scholar &amp; Researcher</small></span></a>
+    <ul class="nav" aria-label="Main">
+      <li class="ni" data-ids="about education references"><button class="nb" aria-expanded="false" aria-haspopup="true">Who I am<i data-lucide="chevron-down"></i></button>
+        <div class="mega"><div class="in">
+          <a href="#about"><span class="mi"><i data-lucide="user-round"></i></span><span><b>About</b><small>Background and research focus</small></span></a>
+          <a href="#education"><span class="mi"><i data-lucide="book-open"></i></span><span><b>Education</b><small>Academic record, 2019 to 2027</small></span></a>
+          <a href="#references"><span class="mi"><i data-lucide="users"></i></span><span><b>References</b><small>Academic mentors</small></span></a>
+        </div></div></li>
+      <li class="ni" data-ids="research expertise fieldwork"><button class="nb" aria-expanded="false" aria-haspopup="true">My work<i data-lucide="chevron-down"></i></button>
+        <div class="mega"><div class="in">
+          <a href="#research"><span class="mi"><i data-lucide="flask-conical"></i></span><span><b>Research</b><small>Current study and professional activity</small></span></a>
+          <a href="#expertise"><span class="mi"><i data-lucide="layers"></i></span><span><b>Expertise</b><small>Skills, data and leadership</small></span></a>
+          <a href="#fieldwork"><span class="mi"><i data-lucide="camera"></i></span><span><b>Field work</b><small>Photos from the field</small></span></a>
+        </div></div></li>
+      <li class="ni" data-ids="contact"><button class="nb" aria-expanded="false" aria-haspopup="true">Connect<i data-lucide="chevron-down"></i></button>
+        <div class="mega"><div class="in">
+          <a href="#contact"><span class="mi"><i data-lucide="mail"></i></span><span><b>Contact</b><small>Send a message</small></span></a>
+          <a href="#" data-cv><span class="mi"><i data-lucide="file-text"></i></span><span><b>Curriculum vitae</b><small>View or download the CV</small></span></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=HCkg2JAAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer"><span class="mi"><i data-lucide="graduation-cap"></i></span><span><b>Google Scholar</b><small>Publications profile</small></span></a>
+        </div></div></li>
+    </ul>
+    <div class="cta-wrap">
+      <button class="btn btn-gold btn-s" onclick="openCV()"><i data-lucide="file-text"></i>View CV</button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mmenu"><span class="ic ic-m"><i data-lucide="menu"></i></span><span class="ic ic-x"><i data-lucide="x"></i></span></button>
+    </div>
   </div>
   <div id="mmenu">
-    <a class="lk" href="#about">About</a>
-    <a class="lk" href="#education">Education</a>
-    <a class="lk" href="#research">Research</a>
-    <a class="lk" href="#skills">Skills</a>
-    <a class="lk" href="#references">References</a>
-    <a class="lk" href="#contact">Contact</a>
-    <button class="btn btn-dark" onclick="closeMenu();openCV()"><i data-lucide="file-text"></i>View CV</button>
-  </div>
+    <details><summary>Who I am<i data-lucide="chevron-down"></i></summary><a href="#about">About</a><a href="#education">Education</a><a href="#references">References</a></details>
+    <details><summary>My work<i data-lucide="chevron-down"></i></summary><a href="#research">Research</a><a href="#expertise">Expertise</a><a href="#fieldwork">Field work</a></details>
+    <details><summary>Connect<i data-lucide="chevron-down"></i></summary><a href="#contact">Contact</a><a href="https://scholar.google.com/citations?hl=en&user=HCkg2JAAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer">Google Scholar</a></details>
+    <button class="btn btn-green" onclick="closeMenu();openCV()"><i data-lucide="file-text"></i>View CV</button>
+  </div></div>
 </header>
 
-<main id="top">
-<section id="hero" class="hero">
+<section class="hero" id="top">
+  <svg class="wheat" viewBox="0 0 120 420" fill="currentColor" aria-hidden="true">
+    <defs><g id="gr"><ellipse cx="40" cy="0" rx="19" ry="7.5" transform="rotate(-38 40 0)"/><ellipse cx="80" cy="0" rx="19" ry="7.5" transform="rotate(38 80 0)"/></g></defs>
+    <rect x="58" y="40" width="4" height="380" rx="2"/><ellipse cx="60" cy="24" rx="8" ry="20"/>
+    <use href="#gr" y="70"/><use href="#gr" y="110"/><use href="#gr" y="150"/><use href="#gr" y="190"/><use href="#gr" y="230"/><use href="#gr" y="270"/>
+  </svg>
   <div class="wrap hero-grid">
     <div>
-      <div class="status rise">B.Sc. Agriculture (Honours) · University of Rajshahi</div>
-      <h1 class="rise">Pias Ahmed</h1>
-      <p class="role rise">Agriculture scholar and researcher</p>
-      <p class="lead rise">I study how crops, pollinators and input costs shape farm outcomes, and how Bangladeshi farmers adapt to a changing climate.</p>
-      <div class="chips rise" aria-label="Research interests">
-        <span class="chip">Integrated Pest Management</span>
-        <span class="chip">Input Economics</span>
-        <span class="chip">Pollination Ecology</span>
-        <span class="chip">Climate Adaptation</span>
-      </div>
-      <div class="actions rise">
-        <button class="btn btn-dark" onclick="openCV()"><i data-lucide="file-text"></i>View CV</button>
-        <a class="btn btn-line" href="#research"><i data-lucide="flask-conical"></i>Current research</a>
-        <a class="btn btn-line" href="#contact"><i data-lucide="mail"></i>Contact</a>
+      <span class="pill">Agriculture Scholar &amp; Researcher</span>
+      <h1>Pias <span>Ahmed</span></h1>
+      <p class="lead">Bridging science and sustainable farming, from the laboratory to the field, for a better-nourished Bangladesh.</p>
+      <div class="cta">
+        <button class="btn btn-gold" onclick="openCV()"><i data-lucide="file-text"></i>View CV</button>
+        <a class="btn btn-white" href="#contact"><i data-lucide="mail"></i>Get in touch</a>
       </div>
     </div>
-    <div class="portrait rise">
-      <div class="ph"><img src="profile.jpg" alt="Portrait of Pias Ahmed" id="pimg" width="340" height="425" fetchpriority="high" /></div>
-    </div>
+    <div class="portrait"><div class="im"><img src="profile.jpg" alt="Portrait of Pias Ahmed" id="pimg" width="320" height="320" fetchpriority="high" /></div></div>
   </div>
 </section>
 
-<section id="about">
-  <div class="wrap">
-    <div class="sec-head"><h2>About</h2></div>
-    <div class="about-grid">
+<div class="wrap">
+  <div class="feats">
+    <a class="ft" href="#research"><span class="tg"><i data-lucide="flask-conical"></i>Research</span><h3>Mustard production study</h3><p>Input economics, pollination ecology and farmer adaptation in Bangladesh.</p><span class="more">Read more<i data-lucide="arrow-right"></i></span></a>
+    <a class="ft" href="#education"><span class="tg"><i data-lucide="book-open"></i>Education</span><h3>B.Sc. Agriculture (Honours)</h3><p>Crop Science and Technology, University of Rajshahi. Expected 2027.</p><span class="more">Read more<i data-lucide="arrow-right"></i></span></a>
+    <a class="ft" href="#fieldwork"><span class="tg"><i data-lucide="camera"></i>Field work</span><h3>In the field</h3><p>Soil sampling, crop yield measurement and farmer surveys.</p><span class="more">View photos<i data-lucide="arrow-right"></i></span></a>
+  </div>
+</div>
+
+<main>
+  <section class="sec" id="about">
+    <div class="wrap two">
       <div>
-        <p>I am a B.Sc. Agriculture (Honours) student at the <strong>University of Rajshahi</strong>, Department of Crop Science and Technology. My work connects laboratory findings with what actually happens in farmers' fields.</p>
-        <p>My research interests are Integrated Pest Management, input economics and plant pollination ecology. I work with local farmers to evaluate adaptation methods and turn scientific techniques into practice that suits the region.</p>
-        <blockquote class="quote">True innovation in agriculture happens where the soil meets the science.</blockquote>
+        <span class="kick">About</span>
+        <h2 style="font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:1.1rem">Where the soil meets the science</h2>
+        <p>I am a B.Sc. Agriculture (Honours) student at the University of Rajshahi. I connect laboratory findings with what actually happens in farmers' fields, turning scientific techniques into practice that suits the region.</p>
+        <p>I work closely with local farmers to evaluate adaptation methods, with additional interests in integrated pest management, input economics and pollination ecology.</p>
+        <div class="nums">
+          <div><b data-target="3.5" data-suffix="+">0</b><span>CGPA (RU)</span></div>
+          <div><b data-target="500" data-suffix="+">0</b><span>Field hours</span></div>
+          <div><b data-target="10" data-suffix="+">0</b><span>Lab tests</span></div>
+        </div>
       </div>
-      <aside class="facts" aria-label="Quick facts">
-        <h3>At a glance</h3>
-        <dl>
-          <div><dt>Institution</dt><dd>University of Rajshahi</dd></div>
-          <div><dt>Department</dt><dd>Crop Science and Technology</dd></div>
-          <div><dt>Expected graduation</dt><dd>2027</dd></div>
-          <div><dt>Current CGPA</dt><dd>3.5+ / 4.00</dd></div>
-        </dl>
-      </aside>
+      <div class="ints" aria-label="Research interests">
+        <span class="kick2">Research interests</span>
+        <ul><li>Plant Pathology</li><li>Crop Management</li><li>Soil Productivity</li><li>Plant Ecology</li></ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="education" style="background:var(--tint)">
-  <div class="wrap">
-    <div class="sec-head"><h2>Education</h2></div>
-    <div class="tl">
-      <article class="tl-item now">
-        <div>
-          <div class="tl-year">2023 – expected 2027</div>
-          <h3>B.Sc. in Agriculture (Honours)</h3>
-          <p>Dept. of Crop Science and Technology, Faculty of Agriculture<br>University of Rajshahi</p>
-        </div>
-        <div class="gpa"><b>3.5+</b><span>Current CGPA / 4.00</span></div>
-      </article>
-      <article class="tl-item">
-        <div>
-          <div class="tl-year">2021</div>
-          <h3>Higher Secondary Certificate (HSC)</h3>
-          <p>Darsana Govt. College, Jessore Board</p>
-        </div>
-        <div class="gpa"><b>5.00</b><span>GPA / 5.00</span></div>
-      </article>
-      <article class="tl-item">
-        <div>
-          <div class="tl-year">2019</div>
-          <h3>Secondary School Certificate (SSC)</h3>
-          <p>Victoria Jubilee Govt. High School, Chuadanga</p>
-        </div>
-        <div class="gpa"><b>4.33</b><span>GPA / 5.00</span></div>
-      </article>
+  <section class="sec cream" id="education">
+    <div class="wrap">
+      <div class="sh"><div><span class="kick">Education</span><h2>Academic background</h2></div></div>
+      <div class="edu">
+        <div class="e now"><span class="yr">2023 – 2027 (expected)</span><div><h3>B.Sc. in Agriculture (Honours)</h3><p>Dept. of Crop Science and Technology, Faculty of Agriculture, University of Rajshahi</p></div><div class="sc">3.5+<small>CGPA / 4.00</small></div></div>
+        <div class="e"><span class="yr">2021</span><div><h3>Higher Secondary Certificate (HSC)</h3><p>Darsana Govt. College, Jessore Board</p></div><div class="sc">5.00<small>GPA / 5.00</small></div></div>
+        <div class="e"><span class="yr">2019</span><div><h3>Secondary School Certificate (SSC)</h3><p>Victoria Jubilee Govt. High School, Chuadanga</p></div><div class="sc">4.33<small>GPA / 5.00</small></div></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="research">
-  <div class="wrap">
-    <div class="sec-head"><h2>Research</h2></div>
-    <article class="paper">
-      <div class="meta"><span class="tag">Manuscript in preparation</span><span class="tag g">2025 – 2026</span></div>
-      <h3>Sustainable Mustard (<i>Brassica</i> spp.) Production: A Holistic Study of Input Economics, Pollination Ecology, and Farmer Adaptation in Bangladesh</h3>
-      <div class="role">Co-author and research contributor</div>
-      <p>Assisted with field research layouts, observed pollination ecology vectors and collected crop yield parameters. Ran quantitative field surveys with local farmers to evaluate adaptation methods and input-output economics.</p>
-      <details>
-        <summary>Project details</summary>
-        <div class="more">
-          <ul>
-            <li>Designed and assisted with field layouts for statistical trials.</li>
-            <li>Recorded pollinator activity and crop yield parameters.</li>
-            <li>Surveyed farmers on adaptation methods and input costs.</li>
-            <li>Compiled raw agronomic datasets for statistical analysis.</li>
-          </ul>
-        </div>
-      </details>
-    </article>
-  </div>
-</section>
-
-<section id="skills" style="background:var(--tint)">
-  <div class="wrap">
-    <div class="sec-head"><h2>Skills and activities</h2></div>
-    <div class="skill-grid">
-      <div class="skill"><i data-lucide="tractor"></i><h3>Field and lab</h3>
-        <ul><li>Crop yield data collection</li><li>Pollination ecology observation</li><li>Field mapping and trial layout</li></ul></div>
-      <div class="skill"><i data-lucide="database"></i><h3>Data and tools</h3>
-        <ul><li>Data analysis in Excel</li><li>Compiling agronomic datasets</li><li>BTEB certified, Computer Office Application (2019)</li></ul></div>
-      <div class="skill"><i data-lucide="users"></i><h3>Leadership</h3>
-        <ul><li>Class Representative (ongoing)</li><li>Volunteer, 1st Alumni Association Programme (2025): registration, certificates, guest hospitality</li></ul></div>
+  <section class="sec" id="research">
+    <div class="wrap">
+      <div class="sh"><div><span class="kick">Research</span><h2>Current work</h2></div><p>Field-based research on production, ecology and the economics of farming.</p></div>
+      <div class="rg">
+        <article class="rc main">
+          <span class="tg"><i data-lucide="tag"></i>Input economics &middot; Pollination ecology &middot; Farmer adaptation</span>
+          <div class="dt"><span>Manuscript in preparation</span><span>2025 – 2026</span></div>
+          <h3>Sustainable Mustard (<i>Brassica</i> spp.) Production: A Holistic Study of Input Economics, Pollination Ecology, and Farmer Adaptation in Bangladesh</h3>
+          <p>Role: co-author and research contributor.</p>
+          <button class="btn btn-gold btn-s" onclick="openOv('res-ov')">Project details<i data-lucide="arrow-right"></i></button>
+        </article>
+        <article class="rc">
+          <span class="tg"><i data-lucide="building-2"></i>Professional activity</span>
+          <div class="dt"><span>Since May 2025</span></div>
+          <h3>Co-Author, Research</h3>
+          <p>Institute of Nature Resources Research and Development<br>Rajshahi 6206, Bangladesh</p>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="gallery">
-  <div class="wrap">
-    <div class="sec-head"><h2>Field work</h2></div>
-    <!-- Put your photos in an "images" folder and keep these file names (or change src). -->
-    <div class="gal">
-      <figure><img src="images/field-1.jpg" alt="Soil core sampling in the field" loading="lazy"><figcaption>Soil core sampling</figcaption></figure>
-      <figure><img src="images/field-2.jpg" alt="Measuring crop yield parameters" loading="lazy"><figcaption>Crop yield measurement</figcaption></figure>
-      <figure><img src="images/field-3.jpg" alt="Farmer survey in the field" loading="lazy"><figcaption>Farmer survey</figcaption></figure>
+  <section class="sec cream" id="expertise">
+    <div class="wrap">
+      <div class="sh"><div><span class="kick">Expertise</span><h2>Skills &amp; leadership</h2></div><p>Field crop management, technical data processing and academic leadership.</p></div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="field">Field &amp; Lab</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="tech">Tech &amp; Data</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="lead">Leadership</button>
+      </div>
+      <div class="pane active" id="tab-field"><div class="x"><div class="ico"><i data-lucide="tractor"></i></div><h3>Crop yield &amp; pollination</h3><p>Collecting crop yield parameters and observing pollination ecology vectors in the field.</p></div><div class="x"><div class="ico"><i data-lucide="sprout"></i></div><h3>Basic field mapping</h3><p>Designing and assisting in field research layouts for statistical trials.</p></div></div>
+      <div class="pane" id="tab-tech"><div class="x"><div class="ico"><i data-lucide="database"></i></div><h3>Data analysis &amp; Excel</h3><p>Applied data analysis and compiling raw agronomic datasets for statistical analysis.</p></div><div class="x"><div class="ico"><i data-lucide="award"></i></div><h3>BTEB certified</h3><p>Computer Office Application (2019), National Skill Standard Basic Course.</p></div></div>
+      <div class="pane" id="tab-lead"><div class="x"><span class="chip">Ongoing</span><div class="ico"><i data-lucide="users"></i></div><h3>Class Representative (CR)</h3><p>Liaising between faculty and students, organizing peer study sessions and coordinating field logistics.</p></div><div class="x"><span class="chip">2025</span><div class="ico"><i data-lucide="calendar-check"></i></div><h3>Event volunteer</h3><p>Registration, certificate distribution and guest hospitality for the 1st Alumni Association Programme.</p></div></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="references" style="background:var(--tint)">
-  <div class="wrap">
-    <div class="sec-head"><h2>Academic references</h2></div>
-    <div class="refs">
-      <article class="ref">
-        <h3>Dr. Nurul Alam</h3><div class="t">Professor</div>
-        <p>Department of Crop Science and Technology<br>University of Rajshahi, Rajshahi 6205</p>
-        <a href="tel:+8801751332380"><i data-lucide="phone"></i>+88 01751-332380</a>
-      </article>
-      <article class="ref">
-        <h3>Dr. Md Saiful Islam</h3><div class="t">Professor</div>
-        <p>Department of Crop Science and Technology<br>University of Rajshahi, Rajshahi 6205</p>
-        <a href="tel:+8801746108333"><i data-lucide="phone"></i>+88 01746-108333</a>
-      </article>
+  <section class="sec" id="fieldwork">
+    <div class="wrap">
+      <div class="sh"><div><span class="kick">Field work</span><h2>In the field</h2></div></div>
+      <!-- Photos go in an "images" folder: field-1.jpg ... field-6.jpg -->
+      <div class="car" id="car">
+        <div class="slide b1 active"><img src="images/field-1.jpg" alt="" loading="lazy"><h3>Soil core sampling &amp; diagnostics</h3></div>
+        <div class="slide b2"><img src="images/field-2.jpg" alt="" loading="lazy"><h3>Evaluating crop yield parameters</h3></div>
+        <div class="slide b3"><img src="images/field-3.jpg" alt="" loading="lazy"><h3>Sustainable input-output field surveys</h3></div>
+        <button class="cbtn prev" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+        <button class="cbtn next" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+        <div class="cdots"><button class="active" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button></div>
+      </div>
+      <div class="cmore"><button class="btn btn-line btn-s" onclick="openOv('gal-ov')"><i data-lucide="images"></i>View more photos</button></div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="sec cream" id="references">
+    <div class="wrap">
+      <div class="sh"><div><span class="kick">References</span><h2>Academic mentors</h2></div><p>Professors, Dept. of Crop Science and Technology, University of Rajshahi, Rajshahi 6205.</p></div>
+      <div class="refs">
+        <div class="r"><div class="av">N</div><div><h3>Dr. Nurul Alam</h3><div class="t">Professor</div><a href="tel:+8801751332380"><i data-lucide="phone"></i>+88 01751-332380</a></div></div>
+        <div class="r"><div class="av">S</div><div><h3>Dr. Md Saiful Islam</h3><div class="t">Professor</div><a href="tel:+8801746108333"><i data-lucide="phone"></i>+88 01746-108333</a></div></div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer id="contact">
+<section class="ct" id="contact">
   <div class="wrap">
-    <h2>Let's connect</h2>
-    <p class="sub">Field collaboration, research enquiries or academic networking: write to me and I will reply.</p>
-    <div class="c-links">
-      <a href="mailto:pias@mailfence.com"><i data-lucide="mail"></i>Email</a>
-      <a href="tel:+8809696339512"><i data-lucide="phone"></i>Call</a>
-      <a href="https://www.linkedin.com/in/piasofficial-bd" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>LinkedIn</a>
+    <div class="cl">
+      <div>
+        <span class="kick2 on-dark">Contact</span>
+        <h2>Get in touch</h2>
+        <p>Research collaboration, field work or academic enquiries are welcome.</p>
+        <ul class="cinf">
+          <li><a href="mailto:pias@mailfence.com"><i data-lucide="mail"></i>pias@mailfence.com</a></li>
+          <li><a href="tel:+8809696339512"><i data-lucide="phone"></i>+880 9696-339512</a></li>
+          <li><span><i data-lucide="map-pin"></i>Rajshahi, Bangladesh</span></li>
+        </ul>
+      </div>
+      <form class="cform" id="cf">
+        <div class="row2">
+          <div class="fl"><label for="fn">Name</label><input id="fn" type="text" autocomplete="name" required /></div>
+          <div class="fl"><label for="fe">Email</label><input id="fe" type="email" autocomplete="email" required /></div>
+        </div>
+        <div class="fl"><label for="fm">Message</label><textarea id="fm" rows="3" required></textarea></div>
+        <div class="fa"><button class="btn btn-gold btn-s" type="submit"><i data-lucide="send"></i>Send message</button><small>Opens your email app, ready to send.</small></div>
+      </form>
     </div>
-    <div class="copy">&copy; 2026 Pias Ahmed. All rights reserved.</div>
   </div>
-</footer>
+  <footer class="fx">
+    <div class="wrap fx-in">
+      <b class="fb2">Pias Ahmed</b>
+      <nav aria-label="Footer"><a href="#about">About</a><a href="#education">Education</a><a href="#research">Research</a><a href="#expertise">Expertise</a><a href="#fieldwork">Field work</a><a href="#references">References</a></nav>
+      <div class="soc2">
+        <a href="https://orcid.org/0009-0000-8360-7884" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><text x="12" y="15.2" text-anchor="middle" font-size="8.5" font-weight="800" font-family="Inter,sans-serif" fill="#1E1B18">iD</text></svg></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=HCkg2JAAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i data-lucide="graduation-cap"></i></a>
+        <a href="https://www.linkedin.com/in/piasofficial-bd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="https://www.twitter.com/PiasOfficial" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="https://www.facebook.com/A.PiasOfficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><i data-lucide="facebook"></i></a>
+      </div>
+    </div>
+    <div class="wrap fx-copy"><span>&copy; 2026 Pias Ahmed. All rights reserved.</span><a href="#top">Back to top<i data-lucide="arrow-up"></i></a></div>
+  </footer>
+</section>
+
+<div class="ov" id="gal-ov"><div class="modal" role="dialog" aria-modal="true" aria-label="Field work gallery">
+  <div class="m-h"><h3>Field work</h3><button class="xb" onclick="closeOv()" aria-label="Close"><i data-lucide="x"></i></button></div>
+  <div class="m-b"><div class="g-grid">
+    <div class="g-item b1"><img src="images/field-4.jpg" alt="" loading="lazy"><span>Soil analysis in lab</span></div>
+    <div class="g-item b2"><img src="images/field-5.jpg" alt="" loading="lazy"><span>Field plot preparation</span></div>
+    <div class="g-item b3"><img src="images/field-6.jpg" alt="" loading="lazy"><span>Crop yield measurement</span></div>
+  </div></div></div></div>
+
+<div class="ov" id="res-ov"><div class="modal sm" role="dialog" aria-modal="true" aria-label="Project details">
+  <div class="m-h"><h3>Project details</h3><button class="xb" onclick="closeOv()" aria-label="Close"><i data-lucide="x"></i></button></div>
+  <div class="m-b">
+    <ul>
+      <li>Assisted in field research layouts, observing pollination ecology vectors and collecting crop yield parameters.</li>
+      <li>Conducted quantitative field surveys with local farmers to evaluate adaptation methods and input-output economic data.</li>
+      <li>Compiled raw agronomic datasets for structural statistical analysis.</li>
+    </ul>
+    <div class="acts"><a class="btn btn-green btn-s" href="Academic%20CV.pdf" target="_blank" rel="noopener"><i data-lucide="eye"></i>View manuscript</a><a class="btn btn-line btn-s" href="Academic%20CV.pdf" download><i data-lucide="download"></i>Download PDF</a></div>
+  </div></div></div>
 
 <div id="cv-ov"></div>
 <aside id="cv" role="dialog" aria-modal="true" aria-label="Academic CV" aria-hidden="true">
-  <div class="cv-h"><h3 style="font-size:1.1rem">Academic CV</h3><button class="x" onclick="closeCV()" aria-label="Close CV"><i data-lucide="x"></i></button></div>
+  <div class="cv-h"><h3 style="font-size:1.15rem">Academic CV</h3><button class="xb" onclick="closeCV()" aria-label="Close CV"><i data-lucide="x"></i></button></div>
   <div class="cv-b"><iframe src="" data-src="Academic%20CV.pdf" title="Academic CV (PDF)"></iframe></div>
-  <div class="cv-f">
-    <a class="btn btn-line" href="Academic%20CV.pdf" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Full view</a>
-    <a class="btn btn-dark" href="Academic%20CV.pdf" download><i data-lucide="download"></i>Download</a>
-  </div>
+  <div class="cv-f"><a class="btn btn-line btn-s" href="Academic%20CV.pdf" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Full view</a><a class="btn btn-green btn-s" href="Academic%20CV.pdf" download><i data-lucide="download"></i>Download</a></div>
 </aside>
 
 <script>
-window.addEventListener('DOMContentLoaded',()=>{
+addEventListener('DOMContentLoaded',()=>{
   window.lucide&&lucide.createIcons();
+  const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 
-  // Portrait fallback
-  const p=document.getElementById('pimg');
-  const fb=()=>{p.parentElement.innerHTML='<div class="fb">PA</div>'};
-  p.addEventListener('error',fb); if(p.complete&&!p.naturalWidth)fb();
+  const p=$('#pimg'),fb=()=>{p.parentElement.innerHTML='<div class="fb">PA</div>'};
+  p.addEventListener('error',fb);if(p.complete&&!p.naturalWidth)fb();
+  $$('.slide img,.g-item img').forEach(i=>i.addEventListener('error',()=>i.remove()));
 
-  // Gallery fallback when photo is missing
-  document.querySelectorAll('.gal img').forEach(i=>i.addEventListener('error',()=>{
-    i.outerHTML='<div class="empty">Photo coming soon</div>';
-  }));
+  // Header: collapse utility bar on scroll
+  const hd=$('#hd');
+  const sc=()=>hd.classList.toggle('sc',scrollY>30);sc();addEventListener('scroll',sc,{passive:true});
 
-  // Nav: scrolled state + scrollspy
-  const nav=document.getElementById('nav');
-  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});
-  const links=[...document.querySelectorAll('.links a.lk')];
+  // Mega menu (hover on desktop, click/tap everywhere)
+  const items=$$('.ni'),canHover=matchMedia('(hover:hover)');
+  const closeMega=()=>items.forEach(i=>{i.classList.remove('open');i.querySelector('.nb').setAttribute('aria-expanded','false')});
+  const openMega=i=>{closeMega();i.classList.add('open');i.querySelector('.nb').setAttribute('aria-expanded','true')};
+  items.forEach(i=>{
+    i.querySelector('.nb').addEventListener('click',e=>{e.stopPropagation();i.classList.contains('open')?closeMega():openMega(i)});
+    i.addEventListener('mouseenter',()=>{if(canHover.matches)openMega(i)});
+    i.addEventListener('mouseleave',()=>{if(canHover.matches)closeMega()});
+    i.querySelectorAll('.mega a').forEach(a=>a.addEventListener('click',closeMega));
+  });
+  $$('[data-cv]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();closeMega();openCV()}));
+
+  // Scrollspy: highlight the menu group of the section in view
   const spy=new IntersectionObserver(es=>es.forEach(e=>{
-    if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
-  }),{rootMargin:'-45% 0px -50% 0px'});
-  document.querySelectorAll('main section[id], #contact').forEach(s=>spy.observe(s));
+    if(e.isIntersecting)items.forEach(i=>i.classList.toggle('cur',(i.dataset.ids||'').split(' ').includes(e.target.id)));
+  }),{rootMargin:'-35% 0px -55% 0px'});
+  $$('main .sec,#contact').forEach(s=>spy.observe(s));
 
   // Mobile menu
-  const b=document.getElementById('burger'),m=document.getElementById('mmenu');
-  window.closeMenu=()=>{m.classList.remove('open');b.setAttribute('aria-expanded','false');b.innerHTML='<i data-lucide="menu"></i>';lucide.createIcons()};
-  b.addEventListener('click',()=>{
-    const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);
-    b.innerHTML=`<i data-lucide="${o?'x':'menu'}"></i>`;lucide.createIcons();
-  });
+  const b=$('#burger'),m=$('#mmenu');
+  const setMenu=o=>{m.classList.toggle('open',o);b.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o))};
+  window.closeMenu=()=>setMenu(false);
+  b.addEventListener('click',e=>{e.stopPropagation();setMenu(!m.classList.contains('open'))});
   m.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-  document.addEventListener('click',e=>{if(!nav.contains(e.target))closeMenu()});
+  document.addEventListener('click',e=>{if(!hd.contains(e.target)){closeMenu();closeMega()}});
 
-  // CV drawer (PDF loads only when opened)
-  const ov=document.getElementById('cv-ov'),cv=document.getElementById('cv'),fr=cv.querySelector('iframe');
-  window.openCV=()=>{
-    if(!fr.src||fr.src===location.href)fr.src=fr.dataset.src;
-    ov.classList.add('open');cv.classList.add('open');cv.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';cv.querySelector('.x').focus();
-  };
-  window.closeCV=()=>{
-    ov.classList.remove('open');cv.classList.remove('open');cv.setAttribute('aria-hidden','true');
-    document.body.style.overflow='';
-  };
+  // Tabs
+  $$('.tab').forEach(t=>t.addEventListener('click',()=>{
+    $$('.tab').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false')});
+    $$('.pane').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');t.setAttribute('aria-selected','true');$('#tab-'+t.dataset.tab).classList.add('active');
+  }));
+
+  // Counters
+  const so=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;const el=e.target,tg=parseFloat(el.dataset.target),sf=el.dataset.suffix||'',fl=tg%1!==0,t0=performance.now();
+    (function f(t){const k=Math.min((t-t0)/1500,1),v=tg*(1-Math.pow(1-k,3));el.textContent=(fl?v.toFixed(1):Math.floor(v))+sf;if(k<1)requestAnimationFrame(f)})(t0);
+    so.unobserve(el);
+  }),{threshold:.6});
+  $$('[data-target]').forEach(el=>so.observe(el));
+
+  // Carousel
+  const car=$('#car'),sl=[...car.querySelectorAll('.slide')],dt=[...car.querySelectorAll('.cdots button')];
+  let ci=0,ct;
+  const go=n=>{sl[ci].classList.remove('active');dt[ci].classList.remove('active');ci=(n+sl.length)%sl.length;sl[ci].classList.add('active');dt[ci].classList.add('active')};
+  const play=()=>{clearInterval(ct);ct=setInterval(()=>go(ci+1),4000)};
+  car.querySelector('.prev').onclick=()=>{go(ci-1);play()};
+  car.querySelector('.next').onclick=()=>{go(ci+1);play()};
+  dt.forEach((d,i)=>d.onclick=()=>{go(i);play()});
+  car.addEventListener('mouseenter',()=>clearInterval(ct));car.addEventListener('mouseleave',play);
+  if(!matchMedia('(prefers-reduced-motion:reduce)').matches)play();
+
+  // Contact form -> opens the visitor's email app (no server needed)
+  $('#cf').addEventListener('submit',e=>{
+    e.preventDefault();
+    const n=$('#fn').value.trim(),em=$('#fe').value.trim(),msg=$('#fm').value.trim();
+    const subject=encodeURIComponent('Message from '+n+' (portfolio)');
+    const body=encodeURIComponent(msg+'\n\n'+n+'\n'+em);
+    location.href='mailto:pias@mailfence.com?subject='+subject+'&body='+body;
+  });
+
+  // Modals + CV drawer
+  const ov=$('#cv-ov'),cv=$('#cv'),fr=cv.querySelector('iframe');
+  window.openOv=id=>{$('#'+id).classList.add('open');document.body.style.overflow='hidden'};
+  window.closeOv=()=>{$$('.ov.open').forEach(o=>o.classList.remove('open'));if(!cv.classList.contains('open'))document.body.style.overflow=''};
+  $$('.ov').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeOv()}));
+  window.openCV=()=>{if(!fr.getAttribute('src'))fr.src=fr.dataset.src;ov.classList.add('open');cv.classList.add('open');cv.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};
+  window.closeCV=()=>{ov.classList.remove('open');cv.classList.remove('open');cv.setAttribute('aria-hidden','true');document.body.style.overflow=''};
   ov.addEventListener('click',closeCV);
-  addEventListener('keydown',e=>{if(e.key==='Escape'){closeCV();closeMenu()}});
+  addEventListener('keydown',e=>{if(e.key==='Escape'){closeCV();closeMenu();closeMega();closeOv()}});
 });
 </script>
 </body>
