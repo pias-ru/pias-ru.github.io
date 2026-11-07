@@ -107,9 +107,9 @@ svg.lucide{width:18px;height:18px;stroke-width:1.9}
 .portrait{position:relative;width:min(320px,80%);aspect-ratio:1;margin:0 auto}
 .portrait::before{content:'';position:absolute;inset:-13px;border-radius:50%;background:conic-gradient(from 200deg,var(--gold),var(--leaf),var(--gold))}
 .portrait::after{content:'';position:absolute;inset:-32px;border-radius:50%;border:2px dashed rgba(255,255,255,.28)}
-.portrait .im{position:relative;z-index:1;width:100%;height:100%;border-radius:50%;overflow:hidden;border:8px solid var(--deep);background:#3A342D;display:flex;align-items:center;justify-content:center}
+.portrait .im{position:relative;z-index:1;width:100%;height:100%;border-radius:50%;overflow:hidden;border:8px solid var(--deep);background:linear-gradient(165deg,#F6F1E7,#E3D7BD);display:flex;align-items:center;justify-content:center}
 .portrait img{width:100%;height:100%;object-fit:cover}
-.portrait .fb{font-size:4.5rem;font-weight:800;color:var(--gold)}
+.portrait .fb{font-size:4.5rem;font-weight:800;color:var(--green)}
 
 /* FEATURE STRIP (like CIMMYT "Features") */
 .feats{position:relative;z-index:3;margin-top:-5.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -454,7 +454,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.012em}
         <a class="btn btn-white" href="#contact"><i data-lucide="mail"></i>Get in touch</a>
       </div>
     </div>
-    <div class="portrait"><div class="im"><img src="profile.jpg" alt="Portrait of Pias Ahmed" id="pimg" width="320" height="320" fetchpriority="high" /></div></div>
+    <div class="portrait"><div class="im"><img src="profile-cutout.webp" alt="Portrait of Pias Ahmed" id="pimg" width="320" height="320" fetchpriority="high" /></div></div>
   </div>
 </section>
 
@@ -536,16 +536,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.012em}
   <section class="sec" id="fieldwork">
     <div class="wrap">
       <div class="sh"><div><span class="kick">Field work</span><h2>In the field</h2></div></div>
-      <!-- Photos go in an "images" folder: field-1.jpg ... field-6.jpg -->
       <div class="car" id="car">
-        <div class="slide b1 active"><img src="images/field-1.jpg" alt="" loading="lazy"><h3>Soil core sampling &amp; diagnostics</h3></div>
-        <div class="slide b2"><img src="images/field-2.jpg" alt="" loading="lazy"><h3>Evaluating crop yield parameters</h3></div>
-        <div class="slide b3"><img src="images/field-3.jpg" alt="" loading="lazy"><h3>Sustainable input-output field surveys</h3></div>
         <button class="cbtn prev" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
         <button class="cbtn next" aria-label="Next"><i data-lucide="chevron-right"></i></button>
-        <div class="cdots"><button class="active" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button></div>
+        <div class="cdots"></div>
       </div>
-      <div class="cmore"><button class="btn btn-line btn-s" onclick="openOv('gal-ov')"><i data-lucide="images"></i>View more photos</button></div>
+      <div class="cmore"><button class="btn btn-line btn-s" onclick="openOv('gal-ov')"><i data-lucide="images"></i>View all photos</button></div>
     </div>
   </section>
 
@@ -601,10 +597,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.012em}
 
 <div class="ov" id="gal-ov"><div class="modal" role="dialog" aria-modal="true" aria-label="Field work gallery">
   <div class="m-h"><h3>Field work</h3><button class="xb" onclick="closeOv()" aria-label="Close"><i data-lucide="x"></i></button></div>
-  <div class="m-b"><div class="g-grid">
-    <div class="g-item b1"><img src="images/field-4.jpg" alt="" loading="lazy"><span>Soil analysis in lab</span></div>
-    <div class="g-item b2"><img src="images/field-5.jpg" alt="" loading="lazy"><span>Field plot preparation</span></div>
-    <div class="g-item b3"><img src="images/field-6.jpg" alt="" loading="lazy"><span>Crop yield measurement</span></div>
+  <div class="m-b"><div class="g-grid" id="gg">
   </div></div></div></div>
 
 <div class="ov" id="res-ov"><div class="modal sm" role="dialog" aria-modal="true" aria-label="Project details">
@@ -615,7 +608,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.012em}
       <li>Conducted quantitative field surveys with local farmers to evaluate adaptation methods and input-output economic data.</li>
       <li>Compiled raw agronomic datasets for structural statistical analysis.</li>
     </ul>
-    <div class="acts"><a class="btn btn-green btn-s" href="Academic%20CV.pdf" target="_blank" rel="noopener"><i data-lucide="eye"></i>View manuscript</a><a class="btn btn-line btn-s" href="Academic%20CV.pdf" download><i data-lucide="download"></i>Download PDF</a></div>
+    <div class="acts" id="pp-acts"><a class="btn btn-green btn-s" id="pp-view" href="paper.pdf" target="_blank" rel="noopener"><i data-lucide="eye"></i>View manuscript</a><a class="btn btn-line btn-s" id="pp-dl" href="paper.pdf" download><i data-lucide="download"></i>Download PDF</a></div>
+    <p id="pp-note" hidden style="font-size:.9rem;color:var(--muted)">The manuscript will be available here once it is ready.</p>
   </div></div></div>
 
 <div id="cv-ov"></div>
@@ -626,13 +620,40 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.012em}
 </aside>
 
 <script>
+/* ═══════════════════════════════════════════════════════════════
+   EDIT HERE: the only part you need to change
+   ═══════════════════════════════════════════════════════════════
+   paper   : file name of your manuscript, placed next to index.html
+             (e.g. 'paper.pdf'). Use '' to hide the buttons for now.
+             The CV uses its own file: Academic CV.pdf
+
+   gallery : one line per photo. "src" can be any of these:
+             1) a file in the images folder      'images/field-1.jpg'
+             2) a Google Drive share link        'https://drive.google.com/file/d/FILE_ID/view?usp=sharing'
+                (Drive: Share > General access > "Anyone with the link")
+             3) any direct image link            'https://example.com/photo.jpg'
+             4) a Dropbox share link             'https://www.dropbox.com/s/.../photo.jpg?dl=0'
+             "caption" is optional. The first 4 photos play in the slider;
+             "View all photos" shows every photo. Add or remove lines freely. */
+window.SITE={
+  paper:'paper.pdf',
+  gallery:[
+    {src:'images/field-1.jpg',caption:'Soil core sampling & diagnostics'},
+    {src:'images/field-2.jpg',caption:'Evaluating crop yield parameters'},
+    {src:'images/field-3.jpg',caption:'Sustainable input-output field surveys'},
+    {src:'images/field-4.jpg',caption:'Soil analysis in lab'},
+    {src:'images/field-5.jpg',caption:'Field plot preparation'},
+    {src:'images/field-6.jpg',caption:'Crop yield measurement'}
+  ]
+};
+</script>
+<script>
 addEventListener('DOMContentLoaded',()=>{
   window.lucide&&lucide.createIcons();
   const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 
   const p=$('#pimg'),fb=()=>{p.parentElement.innerHTML='<div class="fb">PA</div>'};
   p.addEventListener('error',fb);if(p.complete&&!p.naturalWidth)fb();
-  $$('.slide img,.g-item img').forEach(i=>i.addEventListener('error',()=>i.remove()));
 
   // Header: collapse utility bar on scroll
   const hd=$('#hd');
@@ -679,16 +700,45 @@ addEventListener('DOMContentLoaded',()=>{
   }),{threshold:.6});
   $$('[data-target]').forEach(el=>so.observe(el));
 
+  // Gallery: built from SITE.gallery (see the EDIT HERE block)
+  const SITE=window.SITE||{};
+  const direct=u=>{u=String(u).trim();
+    let m=u.match(/drive\.google\.com\/file\/d\/([^/?#]+)/)||u.match(/drive\.google\.com\/(?:open|uc)\?(?:[^#]*&)?id=([^&#]+)/);
+    if(m)return 'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w1600';
+    if(/dropbox\.com/.test(u)){u=u.replace(/[?&]dl=\d/,'');return u+(u.includes('?')?'&':'?')+'raw=1'}
+    return u};
+  const mkImg=g=>{const im=new Image();im.alt=g.caption||'';im.loading='lazy';im.referrerPolicy='no-referrer';im.addEventListener('error',()=>im.remove());im.src=direct(g.src);return im};
+  const G=(SITE.gallery||[]).map(g=>typeof g==='string'?{src:g,caption:''}:g).filter(g=>g&&g.src);
+  const MAIN=4,car=$('#car'),dotsBox=car.querySelector('.cdots'),prevBtn=car.querySelector('.cbtn.prev');
+  if(!G.length)$('#fieldwork').hidden=true;
+  G.slice(0,MAIN).forEach((g,i)=>{
+    const d=document.createElement('div');d.className='slide b'+(i%3+1)+(i?'':' active');d.append(mkImg(g));
+    if(g.caption){const h=document.createElement('h3');h.textContent=g.caption;d.append(h)}
+    car.insertBefore(d,prevBtn);
+    const bt=document.createElement('button');bt.setAttribute('aria-label','Photo '+(i+1));if(!i)bt.className='active';dotsBox.append(bt);
+  });
+  G.forEach((g,i)=>{
+    const d=document.createElement('div');d.className='g-item b'+(i%3+1);d.append(mkImg(g));
+    if(g.caption){const sp=document.createElement('span');sp.textContent=g.caption;d.append(sp)}
+    $('#gg').append(d);
+  });
+  if(G.length<=MAIN)$('.cmore').hidden=true;
+  if(G.length<2)car.querySelectorAll('.cbtn,.cdots').forEach(e=>e.hidden=true);
+
+  // Manuscript links (separate from the CV)
+  if(SITE.paper){$('#pp-view').href=SITE.paper;$('#pp-dl').href=SITE.paper}
+  else{$('#pp-acts').hidden=true;$('#pp-note').hidden=false}
+
   // Carousel
-  const car=$('#car'),sl=[...car.querySelectorAll('.slide')],dt=[...car.querySelectorAll('.cdots button')];
+  const sl=[...car.querySelectorAll('.slide')],dt=[...car.querySelectorAll('.cdots button')];
   let ci=0,ct;
   const go=n=>{sl[ci].classList.remove('active');dt[ci].classList.remove('active');ci=(n+sl.length)%sl.length;sl[ci].classList.add('active');dt[ci].classList.add('active')};
   const play=()=>{clearInterval(ct);ct=setInterval(()=>go(ci+1),4000)};
-  car.querySelector('.prev').onclick=()=>{go(ci-1);play()};
-  car.querySelector('.next').onclick=()=>{go(ci+1);play()};
+  prevBtn.onclick=()=>{go(ci-1);play()};
+  car.querySelector('.cbtn.next').onclick=()=>{go(ci+1);play()};
   dt.forEach((d,i)=>d.onclick=()=>{go(i);play()});
   car.addEventListener('mouseenter',()=>clearInterval(ct));car.addEventListener('mouseleave',play);
-  if(!matchMedia('(prefers-reduced-motion:reduce)').matches)play();
+  if(sl.length>1&&!matchMedia('(prefers-reduced-motion:reduce)').matches)play();
 
   // Contact form -> opens the visitor's email app (no server needed)
   $('#cf').addEventListener('submit',e=>{
